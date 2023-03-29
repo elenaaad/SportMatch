@@ -21,6 +21,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.SportMatch" >
         <activity
+            android:name="com.example.sportmatch.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.sportmatch.MainActivity"
             android:exported="true" >
             <intent-filter>
