@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/buton"
+        android:id="@+id/button_login"
         android:layout_width="125dp"
         android:layout_height="89dp"
         android:layout_marginTop="68dp"
@@ -16,12 +16,12 @@
         tools:layout_editor_absoluteX="30dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button_register"
         android:layout_width="356dp"
         android:layout_height="280dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buton"
+        app:layout_constraintTop_toBottomOf="@+id/button_login"
         tools:layout_editor_absoluteX="30dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
