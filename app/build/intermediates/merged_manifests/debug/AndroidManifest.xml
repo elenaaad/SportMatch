@@ -21,6 +21,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.SportMatch" >
         <activity
+            android:name="com.example.sportmatch.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sportmatch.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.sportmatch.LoginActivity"
             android:exported="false" />
         <activity
