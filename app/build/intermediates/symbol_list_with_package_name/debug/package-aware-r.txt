@@ -1772,6 +1772,12 @@ color test_mtrl_calendar_day
 color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
+color verde1
+color verde2
+color verde3
+color verde4
+color verde5
+color verdeFundal
 color white
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
@@ -2461,6 +2467,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable logo
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
 drawable m3_radiobutton_ripple
@@ -2502,6 +2509,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable sports
 drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
@@ -2576,6 +2584,9 @@ id action_mode_close_button
 id action_text
 id actions
 id activity_chooser_view_content
+id activity_main_loginButton
+id activity_main_passwordEditText
+id activity_main_usernameEditText
 id add
 id alertTitle
 id aligned
@@ -2604,6 +2615,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id buton
+id button
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2720,6 +2733,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id immediateStop
 id included
 id info
@@ -3067,6 +3081,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_login
 layout activity_main
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -3158,6 +3173,7 @@ layout text_view_without_line_height
 menu example_menu
 menu example_menu2
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 string abc_action_bar_home_description
