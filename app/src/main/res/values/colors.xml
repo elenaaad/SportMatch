@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="verde1">#a7c957</color>
+    <color name="verde2">#8cc84b</color>
+    <color name="verde3">#6ab04c</color>
+    <color name="verde4">#4e844c</color>
+    <color name="verde5">#364d5b</color>
+    <color name="verdeFundal">#C2D596</color>
+
 </resources>

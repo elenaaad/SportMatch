@@ -1,74 +1,146 @@
 [
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/layout_activity_main.xml.flat",
-        "source": "com.example.sportmatch.app-main-27:/layout/activity_main.xml"
+        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.sportmatch.app-main-27:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.example.sportmatch.app-merged_res-45:/xml_backup_rules.xml.flat",
+        "source": "com.example.sportmatch.app-main-47:/xml/backup_rules.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.example.sportmatch.app-main-27:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "com.example.sportmatch.app-merged_res-45:/layout_activity_profile.xml.flat",
+        "source": "com.example.sportmatch.app-main-47:/layout/activity_profile.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.sportmatch.app-main-27:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "com.example.sportmatch.app-merged_res-45:/drawable_sports.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/drawable/sports.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.sportmatch.app-main-27:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "com.example.sportmatch.app-merged_res-45:/drawable_logo.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/drawable/logo.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.example.sportmatch.app-main-27:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "com.example.sportmatch.app-merged_res-45:/drawable_editprofile.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/drawable/editprofile.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/xml_data_extraction_rules.xml.flat",
-        "source": "com.example.sportmatch.app-main-27:/xml/data_extraction_rules.xml"
+        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.sportmatch.app-main-27:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "com.example.sportmatch.app-merged_res-45:/layout_activity_menu.xml.flat",
+        "source": "com.example.sportmatch.app-main-47:/layout/activity_menu.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/xml_backup_rules.xml.flat",
-        "source": "com.example.sportmatch.app-main-27:/xml/backup_rules.xml"
+        "merged": "com.example.sportmatch.app-merged_res-45:/layout_content_menu.xml.flat",
+        "source": "com.example.sportmatch.app-main-47:/layout/content_menu.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/mipmap-anydpi-v33_ic_launcher.xml.flat",
-        "source": "com.example.sportmatch.app-main-27:/mipmap-anydpi-v33/ic_launcher.xml"
+        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/mipmap-xxhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.sportmatch.app-main-27:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "com.example.sportmatch.app-merged_res-45:/navigation_nav_graph.xml.flat",
+        "source": "com.example.sportmatch.app-main-47:/navigation/nav_graph.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.example.sportmatch.app-main-27:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.sportmatch.app-main-27:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "com.example.sportmatch.app-merged_res-45:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.sportmatch.app-main-47:/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.sportmatch.app-main-27:/drawable/ic_launcher_background.xml"
+        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/mipmap-mdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.sportmatch.app-main-27:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.example.sportmatch.app-main-27:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.sportmatch.app-main-27:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-25:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.sportmatch.app-main-27:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.example.sportmatch.app-merged_res-45:/drawable_gradientdrawable.xml.flat",
+        "source": "com.example.sportmatch.app-main-47:/drawable/gradientdrawable.xml"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/layout_activity_main.xml.flat",
+        "source": "com.example.sportmatch.app-main-47:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/drawable_usericon.jpg.flat",
+        "source": "com.example.sportmatch.app-main-47:/drawable/usericon.jpg"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/layout_activity_login.xml.flat",
+        "source": "com.example.sportmatch.app-main-47:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/layout_activity_register.xml.flat",
+        "source": "com.example.sportmatch.app-main-47:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.sportmatch.app-main-47:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/layout_activity_editprofile.xml.flat",
+        "source": "com.example.sportmatch.app-main-47:/layout/activity_editprofile.xml"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.sportmatch.app-main-47:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/drawable_roz.jpg.flat",
+        "source": "com.example.sportmatch.app-main-47:/drawable/roz.jpg"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.sportmatch.app-main-47:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/drawable_eventicon.png.flat",
+        "source": "com.example.sportmatch.app-main-47:/drawable/eventicon.png"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-45:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.sportmatch.app-main-47:/xml/data_extraction_rules.xml"
     }
 ]
