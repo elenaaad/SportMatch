@@ -1,5 +1,7 @@
 R_DEF: Internal format may change without notice
 local
+anim slide_in_right
+anim slide_out_left
 color black
 color purple_200
 color purple_500
@@ -14,11 +16,18 @@ color verde5
 color verdeFundal
 color white
 dimen fab_margin
+drawable baseline_add_24
+drawable baseline_home_24
+drawable baseline_manage_accounts_24
+drawable baseline_person_outline_24
+drawable baseline_sports_kabaddi_24
+drawable bottom_background
 drawable editprofile
 drawable eventicon
 drawable gradientdrawable
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable item_selector
 drawable logo
 drawable roz
 drawable sports
@@ -32,6 +41,13 @@ id activity_main_usernameEditText
 id age_profile
 id bio_profile
 id bio_profile_edit
+id bottomNavigationView
+id bottom_admin_events
+id bottom_create_event
+id bottom_events_participates
+id bottom_home
+id bottom_view_profile
+id buttonMenu
 id button_editprofile
 id button_login
 id button_register
@@ -54,13 +70,19 @@ id register_password2
 id register_username
 id signupButton
 id toolbar
+layout activity_admin_events
+layout activity_bottom_nav
+layout activity_create_new_event
 layout activity_editprofile
 layout activity_login
 layout activity_main
 layout activity_menu
+layout activity_only_participates_events
 layout activity_profile
 layout activity_register
+layout activity_view_profile
 layout content_menu
+menu bottom_menu
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
@@ -80,6 +102,7 @@ string previous
 string project_id
 string second_fragment_label
 string title_activity_menu
+style SlideActivityAnimation
 style Theme.SportMatch
 style Theme.SportMatch.AppBarOverlay
 style Theme.SportMatch.NoActionBar
