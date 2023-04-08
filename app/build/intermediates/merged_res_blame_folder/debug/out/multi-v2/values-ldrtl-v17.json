@@ -1,17 +1,10 @@
 {
     "logs": [
         {
-<<<<<<< HEAD
             "outputFile": "com.example.sportmatch.app-mergeDebugResources-44:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
                     "source": "C:\\Users\\tabma\\.gradle\\caches\\transforms-3\\488519bf88b141369e1f2b3fffc88e8e\\transformed\\material-1.8.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
-=======
-            "outputFile": "com.example.sportmatch.app-mergeDebugResources-4:/values-ldrtl-v17/values-ldrtl-v17.xml",
-            "map": [
-                {
-                    "source": "C:\\Users\\Raluca\\.gradle\\caches\\transforms-3\\72ca278d2ea29c144d43af7500e03f82\\transformed\\material-1.5.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
->>>>>>> 05c9955279a4ef986b53dfaa6fc8ec61c6fcb252
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

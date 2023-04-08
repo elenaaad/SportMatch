@@ -17,18 +17,15 @@ color verdeBox
 color verdeFundal
 color white
 dimen fab_margin
-<<<<<<< HEAD
 drawable badminton
-drawable basketball
-drawable bowling
-=======
 drawable baseline_add_24
 drawable baseline_home_24
 drawable baseline_manage_accounts_24
 drawable baseline_person_outline_24
 drawable baseline_sports_kabaddi_24
+drawable basketball
 drawable bottom_background
->>>>>>> 05c9955279a4ef986b53dfaa6fc8ec61c6fcb252
+drawable bowling
 drawable editprofile
 drawable eventicon
 drawable football
@@ -57,18 +54,15 @@ id autocomplete_sport
 id autocomplete_time
 id bio_profile
 id bio_profile_edit
-<<<<<<< HEAD
-id buttonCEvent
-id button_createEvent
-=======
 id bottomNavigationView
 id bottom_admin_events
 id bottom_create_event
 id bottom_events_participates
 id bottom_home
 id bottom_view_profile
+id buttonCEvent
 id buttonMenu
->>>>>>> 05c9955279a4ef986b53dfaa6fc8ec61c6fcb252
+id button_createEvent
 id button_editprofile
 id button_login
 id button_register
@@ -127,23 +121,17 @@ layout activity_eventpreview
 layout activity_login
 layout activity_main
 layout activity_menu
-<<<<<<< HEAD
 layout activity_newevent
-=======
 layout activity_only_participates_events
->>>>>>> 05c9955279a4ef986b53dfaa6fc8ec61c6fcb252
 layout activity_profile
 layout activity_register
 layout activity_view_profile
 layout content_menu
-<<<<<<< HEAD
 layout list_player
 layout list_sport
 layout list_sportfields
 layout list_time
-=======
 menu bottom_menu
->>>>>>> 05c9955279a4ef986b53dfaa6fc8ec61c6fcb252
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round

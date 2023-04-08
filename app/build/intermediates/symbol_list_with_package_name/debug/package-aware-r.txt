@@ -2781,18 +2781,15 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
-<<<<<<< HEAD
 drawable badminton
-drawable basketball
-drawable bowling
-=======
 drawable baseline_add_24
 drawable baseline_home_24
 drawable baseline_manage_accounts_24
 drawable baseline_person_outline_24
 drawable baseline_sports_kabaddi_24
+drawable basketball
 drawable bottom_background
->>>>>>> 05c9955279a4ef986b53dfaa6fc8ec61c6fcb252
+drawable bowling
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2845,11 +2842,8 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
-<<<<<<< HEAD
 drawable ic_search_black_24
-=======
 drawable item_selector
->>>>>>> 05c9955279a4ef986b53dfaa6fc8ec61c6fcb252
 drawable logo
 drawable m3_appbar_background
 drawable m3_avd_hide_password
@@ -3056,11 +3050,8 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
-<<<<<<< HEAD
 id buttonCEvent
-=======
 id buttonMenu
->>>>>>> 05c9955279a4ef986b53dfaa6fc8ec61c6fcb252
 id buttonPanel
 id button_createEvent
 id button_editprofile
@@ -3632,11 +3623,8 @@ layout activity_eventpreview
 layout activity_login
 layout activity_main
 layout activity_menu
-<<<<<<< HEAD
 layout activity_newevent
-=======
 layout activity_only_participates_events
->>>>>>> 05c9955279a4ef986b53dfaa6fc8ec61c6fcb252
 layout activity_profile
 layout activity_register
 layout activity_view_profile
@@ -3724,25 +3712,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
-<<<<<<< HEAD
-=======
-layout test_action_chip
-layout test_chip_zero_corner_radius
-layout test_design_checkbox
-layout test_design_radiobutton
-layout test_navigation_bar_item_layout
-layout test_reflow_chipgroup
-layout test_toolbar
-layout test_toolbar_custom_background
-layout test_toolbar_elevation
-layout test_toolbar_surface
-layout text_view_with_line_height_from_appearance
-layout text_view_with_line_height_from_layout
-layout text_view_with_line_height_from_style
-layout text_view_with_theme_line_height
-layout text_view_without_line_height
 menu bottom_menu
->>>>>>> 05c9955279a4ef986b53dfaa6fc8ec61c6fcb252
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
@@ -4334,23 +4304,7 @@ style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day
 style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen
 style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year
 style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox
-<<<<<<< HEAD
-=======
-style ShapeAppearanceOverlay_TopLeftCut
-style ShapeAppearanceOverlay_TopRightDifferentCornerSize
 style SlideActivityAnimation
-style Test_ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day
-style Test_Theme_MaterialComponents_MaterialCalendar
-style Test_Widget_MaterialComponents_MaterialCalendar
-style Test_Widget_MaterialComponents_MaterialCalendar_Day
-style Test_Widget_MaterialComponents_MaterialCalendar_Day_Selected
-style TestStyleWithLineHeight
-style TestStyleWithLineHeightAppearance
-style TestStyleWithThemeLineHeightAttribute
-style TestStyleWithoutLineHeight
-style TestThemeWithLineHeight
-style TestThemeWithLineHeightDisabled
->>>>>>> 05c9955279a4ef986b53dfaa6fc8ec61c6fcb252
 style TextAppearance_AppCompat
 style TextAppearance_AppCompat_Body1
 style TextAppearance_AppCompat_Body2
