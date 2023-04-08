@@ -32,6 +32,21 @@
         android:testOnly="true"
         android:theme="@style/Theme.SportMatch" >
         <activity
+            android:name="com.example.sportmatch.ViewProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sportmatch.OnlyParticipatesEvents"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sportmatch.CreateNewEventActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sportmatch.AdminEventsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sportmatch.BottomNavActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.sportmatch.EditProfileActivity"
             android:exported="false" />
         <activity

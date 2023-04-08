@@ -29,6 +29,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button_login" />
 
     <Button
+<<<<<<< HEAD
         android:id="@+id/button_createEvent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,5 +40,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.881" />
+=======
+        android:id="@+id/buttonMenu"
+        android:layout_width="115dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="76dp"
+        android:text="Menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintStart_toEndOf="@+id/button_login"
+        app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> 05c9955279a4ef986b53dfaa6fc8ec61c6fcb252
 
 </androidx.constraintlayout.widget.ConstraintLayout>

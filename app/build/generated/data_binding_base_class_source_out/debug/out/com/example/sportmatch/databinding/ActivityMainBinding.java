@@ -26,13 +26,22 @@ public final class ActivityMainBinding implements ViewBinding {
   public final Button buttonLogin;
 
   @NonNull
+  public final Button buttonMenu;
+
+  @NonNull
   public final Button buttonRegister;
 
+<<<<<<< HEAD
   private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonCreateEvent,
       @NonNull Button buttonLogin, @NonNull Button buttonRegister) {
+=======
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonLogin,
+      @NonNull Button buttonMenu, @NonNull Button buttonRegister) {
+>>>>>>> 05c9955279a4ef986b53dfaa6fc8ec61c6fcb252
     this.rootView = rootView;
     this.buttonCreateEvent = buttonCreateEvent;
     this.buttonLogin = buttonLogin;
+    this.buttonMenu = buttonMenu;
     this.buttonRegister = buttonRegister;
   }
 
@@ -75,13 +84,23 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.buttonMenu;
+      Button buttonMenu = ViewBindings.findChildViewById(rootView, id);
+      if (buttonMenu == null) {
+        break missingId;
+      }
+
       id = R.id.button_register;
       Button buttonRegister = ViewBindings.findChildViewById(rootView, id);
       if (buttonRegister == null) {
         break missingId;
       }
 
+<<<<<<< HEAD
       return new ActivityMainBinding((ConstraintLayout) rootView, buttonCreateEvent, buttonLogin,
+=======
+      return new ActivityMainBinding((ConstraintLayout) rootView, buttonLogin, buttonMenu,
+>>>>>>> 05c9955279a4ef986b53dfaa6fc8ec61c6fcb252
           buttonRegister);
     }
     String missingId = rootView.getResources().getResourceName(id);

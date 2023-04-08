@@ -33,12 +33,27 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, RegisterActivity.class));
             }
         });
+<<<<<<< HEAD
         btnCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, CreateEventActivity.class));
             }
         });
+=======
+
+
+
+        /////doar temporar spre meniu
+        Button menuBtn=(Button)findViewById(R.id.buttonMenu);
+        menuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, BottomNavActivity.class));
+            }
+        });
+        /////final meniu
+>>>>>>> 05c9955279a4ef986b53dfaa6fc8ec61c6fcb252
     }
 
 }

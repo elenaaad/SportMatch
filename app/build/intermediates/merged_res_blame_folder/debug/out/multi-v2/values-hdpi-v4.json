@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "com.example.sportmatch.app-mergeDebugResources-44:/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
                     "source": "C:\\Users\\tabma\\.gradle\\caches\\transforms-3\\4a8fc8d4cffe1deef03672f2112cd6a4\\transformed\\appcompat-1.6.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+=======
+            "outputFile": "com.example.sportmatch.app-mergeDebugResources-4:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Raluca\\.gradle\\caches\\transforms-3\\f06924b1c68cdd2ead8c8083e024adb6\\transformed\\appcompat-1.4.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
+>>>>>>> 05c9955279a4ef986b53dfaa6fc8ec61c6fcb252
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
