@@ -1,146 +1,206 @@
 [
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/mipmap-mdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\mipmap-xxxhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/xml_backup_rules.xml.flat",
-        "source": "com.example.sportmatch.app-main-47:/xml/backup_rules.xml"
+        "merged": "com.example.sportmatch.app-merged_res-46:/layout_activity_newevent.xml.flat",
+        "source": "com.example.sportmatch.app-main-48:/layout/activity_newevent.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/layout_activity_profile.xml.flat",
-        "source": "com.example.sportmatch.app-main-47:/layout/activity_profile.xml"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\mipmap-xhdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/drawable_sports.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/drawable/sports.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\drawable_editprofile.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\drawable\\editprofile.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/drawable_logo.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/drawable/logo.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/drawable_editprofile.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/drawable/editprofile.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\layout\\activity_login.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/mipmap-xhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\drawable_logo.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\drawable\\logo.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/layout_activity_menu.xml.flat",
-        "source": "com.example.sportmatch.app-main-47:/layout/activity_menu.xml"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\layout_activity_eventpreview.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\layout\\activity_eventpreview.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/layout_content_menu.xml.flat",
-        "source": "com.example.sportmatch.app-main-47:/layout/content_menu.xml"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\layout_list_sportfields.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\layout\\list_sportfields.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/mipmap-xxhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\drawable_sports.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\drawable\\sports.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/navigation_nav_graph.xml.flat",
-        "source": "com.example.sportmatch.app-main-47:/navigation/nav_graph.xml"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\drawable_handball.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\drawable\\handball.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/mipmap-xxxhdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/drawable-v24_ic_launcher_foreground.xml.flat",
-        "source": "com.example.sportmatch.app-main-47:/drawable-v24/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-mdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/mipmap-mdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\layout_activity_newevent.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\layout\\activity_newevent.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/mipmap-mdpi/ic_launcher.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\drawable_usericon.jpg.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\drawable\\usericon.jpg"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\mipmap-hdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/drawable_gradientdrawable.xml.flat",
-        "source": "com.example.sportmatch.app-main-47:/drawable/gradientdrawable.xml"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/mipmap-xhdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\drawable_badminton.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\drawable\\badminton.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\layout\\activity_register.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/mipmap-hdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\drawable_volleyball.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\drawable\\volleyball.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/layout_activity_main.xml.flat",
-        "source": "com.example.sportmatch.app-main-47:/layout/activity_main.xml"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\drawable_gradientdrawable.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\drawable\\gradientdrawable.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/drawable_usericon.jpg.flat",
-        "source": "com.example.sportmatch.app-main-47:/drawable/usericon.jpg"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\mipmap-xhdpi\\ic_launcher_round.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/layout_activity_login.xml.flat",
-        "source": "com.example.sportmatch.app-main-47:/layout/activity_login.xml"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\layout_list_player.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\layout\\list_player.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/layout_activity_register.xml.flat",
-        "source": "com.example.sportmatch.app-main-47:/layout/activity_register.xml"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\mipmap-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/mipmap-hdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\drawable_roz.jpg.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\drawable\\roz.jpg"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.sportmatch.app-main-47:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/mipmap-hdpi/ic_launcher.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/layout_activity_editprofile.xml.flat",
-        "source": "com.example.sportmatch.app-main-47:/layout/activity_editprofile.xml"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/mipmap-xxhdpi/ic_launcher_round.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\layout_activity_menu.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\layout\\activity_menu.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.sportmatch.app-main-47:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\drawable_tennis.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\drawable\\tennis.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/mipmap-xhdpi/ic_launcher_foreground.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\drawable_ping_pong.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\drawable\\ping_pong.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/drawable_roz.jpg.flat",
-        "source": "com.example.sportmatch.app-main-47:/drawable/roz.jpg"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\drawable_eventicon.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\drawable\\eventicon.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.sportmatch.app-main-47:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/drawable_eventicon.png.flat",
-        "source": "com.example.sportmatch.app-main-47:/drawable/eventicon.png"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-45:/xml_data_extraction_rules.xml.flat",
-        "source": "com.example.sportmatch.app-main-47:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\layout_list_sport.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\layout\\list_sport.xml"
+    },
+    {
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\drawable_bowling.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\drawable\\bowling.png"
+    },
+    {
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\drawable_basketball.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\drawable\\basketball.png"
+    },
+    {
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\layout_list_time.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\layout\\list_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\layout_content_menu.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\layout\\content_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\layout_activity_editprofile.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\layout\\activity_editprofile.xml"
+    },
+    {
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\drawable_football.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\drawable\\football.png"
+    },
+    {
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\drawable-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-46:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-48:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     }
 ]
