@@ -44,6 +44,12 @@
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
+            android:name=".CreateEventActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EventPreview"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

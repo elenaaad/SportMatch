@@ -11,12 +11,12 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     @Override
-    //bunica
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         Button buttonLogin = (Button)findViewById(R.id.button_login);
+        Button btnCreate = (Button)findViewById(R.id.button_createEvent);
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnCreate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CreateEventActivity.class));
+            }
+        });
 
 
         /////doar temporar spre meniu
@@ -45,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         /////final meniu
+
     }
 
 }
