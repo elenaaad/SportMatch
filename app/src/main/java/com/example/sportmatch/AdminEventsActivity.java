@@ -24,22 +24,22 @@ public class AdminEventsActivity extends AppCompatActivity {
                     return true;
                 case R.id.bottom_home:
                     startActivity(new Intent(getApplicationContext(), BottomNavActivity.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
                 case R.id.bottom_create_event:
-                    startActivity(new Intent(getApplicationContext(), CreateNewEventActivity.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    startActivity(new Intent(getApplicationContext(), CreateEventActivity.class));
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
                 case R.id.bottom_events_participates:
                     startActivity(new Intent(getApplicationContext(), OnlyParticipatesEvents.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
                 case R.id.bottom_view_profile:
                     startActivity(new Intent(getApplicationContext(), ViewProfileActivity.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
             }

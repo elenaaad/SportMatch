@@ -62,7 +62,6 @@ id bottom_home
 id bottom_view_profile
 id buttonCEvent
 id buttonMenu
-id button_createEvent
 id button_editprofile
 id button_login
 id button_register
@@ -109,6 +108,7 @@ id register_fullname
 id register_password
 id register_password2
 id register_username
+id scroll
 id signupButton
 id sportImage
 id title

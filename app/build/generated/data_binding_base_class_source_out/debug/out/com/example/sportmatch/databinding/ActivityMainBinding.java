@@ -20,9 +20,6 @@ public final class ActivityMainBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button buttonCreateEvent;
-
-  @NonNull
   public final Button buttonLogin;
 
   @NonNull
@@ -31,10 +28,9 @@ public final class ActivityMainBinding implements ViewBinding {
   @NonNull
   public final Button buttonRegister;
 
-  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonCreateEvent,
-      @NonNull Button buttonLogin, @NonNull Button buttonMenu, @NonNull Button buttonRegister) {
+  private ActivityMainBinding(@NonNull ConstraintLayout rootView, @NonNull Button buttonLogin,
+      @NonNull Button buttonMenu, @NonNull Button buttonRegister) {
     this.rootView = rootView;
-    this.buttonCreateEvent = buttonCreateEvent;
     this.buttonLogin = buttonLogin;
     this.buttonMenu = buttonMenu;
     this.buttonRegister = buttonRegister;
@@ -67,12 +63,6 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button_createEvent;
-      Button buttonCreateEvent = ViewBindings.findChildViewById(rootView, id);
-      if (buttonCreateEvent == null) {
-        break missingId;
-      }
-
       id = R.id.button_login;
       Button buttonLogin = ViewBindings.findChildViewById(rootView, id);
       if (buttonLogin == null) {
@@ -91,8 +81,8 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityMainBinding((ConstraintLayout) rootView, buttonCreateEvent, buttonLogin,
-          buttonMenu, buttonRegister);
+      return new ActivityMainBinding((ConstraintLayout) rootView, buttonLogin, buttonMenu,
+          buttonRegister);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

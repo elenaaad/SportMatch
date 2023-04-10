@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.sportmatch.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
@@ -34,6 +35,9 @@ public final class ActivityNeweventBinding implements ViewBinding {
 
   @NonNull
   public final AutoCompleteTextView autocompleteTime;
+
+  @NonNull
+  public final BottomNavigationView bottomNavigationView;
 
   @NonNull
   public final Button buttonCEvent;
@@ -75,7 +79,8 @@ public final class ActivityNeweventBinding implements ViewBinding {
       @NonNull AutoCompleteTextView autocompleteLoc,
       @NonNull AutoCompleteTextView autocompletePlayers,
       @NonNull AutoCompleteTextView autocompleteSport,
-      @NonNull AutoCompleteTextView autocompleteTime, @NonNull Button buttonCEvent,
+      @NonNull AutoCompleteTextView autocompleteTime,
+      @NonNull BottomNavigationView bottomNavigationView, @NonNull Button buttonCEvent,
       @NonNull TextInputLayout newEventDate, @NonNull TextInputEditText newEventDateEdt,
       @NonNull TextInputLayout newEventDesc, @NonNull TextInputEditText newEventDescEdt,
       @NonNull TextInputLayout newEventLoc, @NonNull TextInputLayout newEventName,
@@ -87,6 +92,7 @@ public final class ActivityNeweventBinding implements ViewBinding {
     this.autocompletePlayers = autocompletePlayers;
     this.autocompleteSport = autocompleteSport;
     this.autocompleteTime = autocompleteTime;
+    this.bottomNavigationView = bottomNavigationView;
     this.buttonCEvent = buttonCEvent;
     this.newEventDate = newEventDate;
     this.newEventDateEdt = newEventDateEdt;
@@ -149,6 +155,12 @@ public final class ActivityNeweventBinding implements ViewBinding {
       id = R.id.autocomplete_time;
       AutoCompleteTextView autocompleteTime = ViewBindings.findChildViewById(rootView, id);
       if (autocompleteTime == null) {
+        break missingId;
+      }
+
+      id = R.id.bottomNavigationView;
+      BottomNavigationView bottomNavigationView = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavigationView == null) {
         break missingId;
       }
 
@@ -225,9 +237,9 @@ public final class ActivityNeweventBinding implements ViewBinding {
       }
 
       return new ActivityNeweventBinding((RelativeLayout) rootView, autocompleteLoc,
-          autocompletePlayers, autocompleteSport, autocompleteTime, buttonCEvent, newEventDate,
-          newEventDateEdt, newEventDesc, newEventDescEdt, newEventLoc, newEventName,
-          newEventNameEdt, newEventPlayers, newEventSport, newEventTime, title);
+          autocompletePlayers, autocompleteSport, autocompleteTime, bottomNavigationView,
+          buttonCEvent, newEventDate, newEventDateEdt, newEventDesc, newEventDescEdt, newEventLoc,
+          newEventName, newEventNameEdt, newEventPlayers, newEventSport, newEventTime, title);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

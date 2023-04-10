@@ -9,6 +9,7 @@
 
 
     <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -191,12 +192,12 @@
                 <TextView
                     android:id="@+id/previewDescInput"
                     android:layout_width="wrap_content"
-                    android:text="description"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/previewTime"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="30dp"
                     android:layout_toEndOf="@+id/previewDesc"
+                    android:text="description"
                     android:textSize="18sp" />
 
                 <Button
@@ -207,12 +208,31 @@
                     android:layout_centerInParent="true"
                     android:layout_marginTop="30dp"
                     android:backgroundTint="@color/verde5"
+                    android:layout_marginBottom="70dp"
                     android:text="ADD MATCH"
                     android:textSize="22sp" />
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomNavigationView"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottom_background"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:elevation="2dp"
+        app:menu="@menu/bottom_menu"
+        app:itemIconSize="30dp"
+        app:itemIconTint="@drawable/item_selector"
+        app:itemRippleColor="@android:color/transparent"
+        app:labelVisibilityMode="unlabeled"
+        />
 
 
 </RelativeLayout>

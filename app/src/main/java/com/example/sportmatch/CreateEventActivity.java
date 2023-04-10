@@ -1,5 +1,6 @@
 package com.example.sportmatch;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 import com.google.android.material.textfield.TextInputEditText;
@@ -51,6 +53,8 @@ public class CreateEventActivity extends AppCompatActivity {
     ArrayAdapter<String> adapterTime;
     String[] players = {"2 Players", "4 Players", "6 Players", "8 Players"};
     ArrayAdapter<String> adapterPlayers;
+
+
     private FirebaseAuth mAuth;
 
     @Override
@@ -244,6 +248,39 @@ public class CreateEventActivity extends AppCompatActivity {
             }
         });
 
+        ////inceput meniu
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.bottom_create_event);
+
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.bottom_create_event:
+                    return true;
+                case R.id.bottom_admin_events:
+                    startActivity(new Intent(getApplicationContext(), AdminEventsActivity.class));
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
+                    return true;
+                case R.id.bottom_view_profile:
+                    startActivity(new Intent(getApplicationContext(), ViewProfileActivity.class));
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
+                    return true;
+                case R.id.bottom_events_participates:
+                    startActivity(new Intent(getApplicationContext(), OnlyParticipatesEvents.class));
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
+                    return true;
+                case R.id.bottom_home:///bottom_home corespunde clasei BottomNavActivity
+                    startActivity(new Intent(getApplicationContext(), BottomNavActivity.class));
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
+                    return true;
+            }
+            return false;
+        });
+
+        ////final meniu
 
     }
 }

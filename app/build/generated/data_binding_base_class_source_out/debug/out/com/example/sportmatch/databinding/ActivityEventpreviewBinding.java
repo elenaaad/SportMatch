@@ -7,12 +7,14 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.sportmatch.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,6 +22,9 @@ import java.lang.String;
 public final class ActivityEventpreviewBinding implements ViewBinding {
   @NonNull
   private final RelativeLayout rootView;
+
+  @NonNull
+  public final BottomNavigationView bottomNavigationView;
 
   @NonNull
   public final Button previewBtnAddEv;
@@ -70,19 +75,23 @@ public final class ActivityEventpreviewBinding implements ViewBinding {
   public final TextView previewTitle;
 
   @NonNull
+  public final ScrollView scroll;
+
+  @NonNull
   public final ImageView sportImage;
 
   private ActivityEventpreviewBinding(@NonNull RelativeLayout rootView,
-      @NonNull Button previewBtnAddEv, @NonNull Button previewBtnEdit,
-      @NonNull Button previewBtnMap, @NonNull TextView previewDate,
+      @NonNull BottomNavigationView bottomNavigationView, @NonNull Button previewBtnAddEv,
+      @NonNull Button previewBtnEdit, @NonNull Button previewBtnMap, @NonNull TextView previewDate,
       @NonNull TextView previewDateInput, @NonNull TextView previewDesc,
       @NonNull TextView previewDescInput, @NonNull TextView previewLoc,
       @NonNull TextView previewLocInput, @NonNull TextView previewPlayers,
       @NonNull TextView previewPlayersInput, @NonNull TextView previewSport,
       @NonNull TextView previewSportInput, @NonNull TextView previewTime,
       @NonNull TextView previewTimeInput, @NonNull TextView previewTitle,
-      @NonNull ImageView sportImage) {
+      @NonNull ScrollView scroll, @NonNull ImageView sportImage) {
     this.rootView = rootView;
+    this.bottomNavigationView = bottomNavigationView;
     this.previewBtnAddEv = previewBtnAddEv;
     this.previewBtnEdit = previewBtnEdit;
     this.previewBtnMap = previewBtnMap;
@@ -99,6 +108,7 @@ public final class ActivityEventpreviewBinding implements ViewBinding {
     this.previewTime = previewTime;
     this.previewTimeInput = previewTimeInput;
     this.previewTitle = previewTitle;
+    this.scroll = scroll;
     this.sportImage = sportImage;
   }
 
@@ -129,6 +139,12 @@ public final class ActivityEventpreviewBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.bottomNavigationView;
+      BottomNavigationView bottomNavigationView = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavigationView == null) {
+        break missingId;
+      }
+
       id = R.id.previewBtnAddEv;
       Button previewBtnAddEv = ViewBindings.findChildViewById(rootView, id);
       if (previewBtnAddEv == null) {
@@ -225,16 +241,23 @@ public final class ActivityEventpreviewBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.scroll;
+      ScrollView scroll = ViewBindings.findChildViewById(rootView, id);
+      if (scroll == null) {
+        break missingId;
+      }
+
       id = R.id.sportImage;
       ImageView sportImage = ViewBindings.findChildViewById(rootView, id);
       if (sportImage == null) {
         break missingId;
       }
 
-      return new ActivityEventpreviewBinding((RelativeLayout) rootView, previewBtnAddEv,
-          previewBtnEdit, previewBtnMap, previewDate, previewDateInput, previewDesc,
-          previewDescInput, previewLoc, previewLocInput, previewPlayers, previewPlayersInput,
-          previewSport, previewSportInput, previewTime, previewTimeInput, previewTitle, sportImage);
+      return new ActivityEventpreviewBinding((RelativeLayout) rootView, bottomNavigationView,
+          previewBtnAddEv, previewBtnEdit, previewBtnMap, previewDate, previewDateInput,
+          previewDesc, previewDescInput, previewLoc, previewLocInput, previewPlayers,
+          previewPlayersInput, previewSport, previewSportInput, previewTime, previewTimeInput,
+          previewTitle, scroll, sportImage);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

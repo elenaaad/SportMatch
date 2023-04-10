@@ -3053,7 +3053,6 @@ id browser_actions_menu_view
 id buttonCEvent
 id buttonMenu
 id buttonPanel
-id button_createEvent
 id button_editprofile
 id button_login
 id button_register

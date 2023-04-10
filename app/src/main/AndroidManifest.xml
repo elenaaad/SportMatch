@@ -18,9 +18,6 @@
             android:name=".OnlyParticipatesEvents"
             android:exported="false" />
         <activity
-            android:name=".CreateNewEventActivity"
-            android:exported="false" />
-        <activity
             android:name=".AdminEventsActivity"
             android:exported="false" />
         <activity

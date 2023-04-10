@@ -23,22 +23,22 @@ public class OnlyParticipatesEvents extends AppCompatActivity {
                 return true;
                 case R.id.bottom_admin_events:
                     startActivity(new Intent(getApplicationContext(), AdminEventsActivity.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
                 case R.id.bottom_create_event:
-                    startActivity(new Intent(getApplicationContext(), CreateNewEventActivity.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    startActivity(new Intent(getApplicationContext(), CreateEventActivity.class));
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
                 case R.id.bottom_view_profile:
                     startActivity(new Intent(getApplicationContext(), ViewProfileActivity.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
                 case R.id.bottom_home:///bottom_home corespunde clasei BottomNavActivity
                     startActivity(new Intent(getApplicationContext(), BottomNavActivity.class));
-                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
             }

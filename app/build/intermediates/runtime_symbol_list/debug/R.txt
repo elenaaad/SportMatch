@@ -3052,7 +3052,6 @@ int id browser_actions_menu_view 0x7f08007c
 int id buttonCEvent 0x7f08007d
 int id buttonMenu 0x7f08007e
 int id buttonPanel 0x7f08007f
-int id button_createEvent 0x7f080080
 int id button_editprofile 0x7f080081
 int id button_login 0x7f080082
 int id button_register 0x7f080083
