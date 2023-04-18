@@ -2,9 +2,11 @@ package com.example.sportmatch;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -83,6 +85,7 @@ public class EventPreview extends AppCompatActivity {
         previewDescInput.setText(valueDesc);
 
 
+
         switch (valueSport) {
             case "Volleyball":
                 sportImage.setImageResource(R.drawable.volleyball);
@@ -143,6 +146,22 @@ public class EventPreview extends AppCompatActivity {
         });
 
         ////final meniu
+
+
+        ///inceput add match in event feed
+        previewBtnAddEv =findViewById(R.id.previewBtnAddEv);
+        previewBtnAddEv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Toast.makeText(getApplicationContext(),"Your event has been published!",Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
+        ///final add match in event feed
+
 
 
     }
