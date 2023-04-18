@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     //TODO: Debora: log out
     //TODO: Raluca: Feed cu RecycleView
     //TODO: Bianca: Backend CreateNewEvent(si tabele din baza de date)
+    //TODO; Bianca: Edit Event Details
     //TODO: Cata: Ia previewEvent si adauga chat si view member list
 
     @Override

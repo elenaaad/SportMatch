@@ -2,12 +2,17 @@ package com.example.sportmatch;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
@@ -30,13 +35,16 @@ public class EventPreview extends AppCompatActivity {
     TextView previewDesc;
     TextView previewDescInput;
     Button previewBtnAddEv;
-    private FirebaseAuth mAuth;
+
+    private FirebaseDatabase database;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eventpreview);
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
+        database = FirebaseDatabase.getInstance();
+
 
         previewBtnEdit = findViewById(R.id.previewBtnEdit);
         sportImage = findViewById(R.id.sportImage);
@@ -59,8 +67,8 @@ public class EventPreview extends AppCompatActivity {
         //TODO: editButton sa duca la pag de edit event
 
 
-        mAuth = FirebaseAuth.getInstance();
 
+        String valTitle = getIntent().getStringExtra("valueTitle");
         String valueTitle = getIntent().getStringExtra("valueTitle").toUpperCase();
         previewTitle.setText(valueTitle);
 
@@ -109,6 +117,38 @@ public class EventPreview extends AppCompatActivity {
                 sportImage.setImageResource(R.drawable.bowling);
                 break;
         }
+
+
+        previewBtnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(EventPreview.this, EditEventDetails.class);
+            }
+
+        });
+
+        previewBtnAddEv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Creează o cheie unică pentru noul eveniment
+                String eventId = database.getReference("Events").push().getKey();
+
+                // Creează un obiect Event cu datele evenimentului
+                Event event = new Event(valTitle, valueSport, valuePlayers, valueLoc, valueDate, valueTime, valueDate);
+
+                // Adaugă evenimentul la tabelul "events" folosind cheia unică generată
+                database.getReference("Events").child(eventId).setValue(event).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(getApplicationContext(), "Event added successfully", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Failed to add event", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+            }
+        });
 
         ////inceput meniu
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);

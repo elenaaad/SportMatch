@@ -47,6 +47,9 @@
             android:name=".EventPreview"
             android:exported="false" />
         <activity
+            android:name=".EditEventDetails"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

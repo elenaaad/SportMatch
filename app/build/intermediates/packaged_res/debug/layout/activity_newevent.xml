@@ -35,8 +35,8 @@
                     android:layout_marginTop="50dp"
                     android:text="CREATE EVENT"
                     android:textColor="@color/verde4"
-                    android:textStyle="bold"
-                    android:textSize="30sp" />
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/newEventName"
@@ -46,7 +46,7 @@
                     android:layout_below="@id/title"
                     android:layout_marginTop="40dp"
                     android:hint="Event Name"
-                    app:helperText="Not mandatory"
+                    app:helperText="Mandatory"
                     app:helperTextEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -116,16 +116,24 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <TextView
+                    android:id="@+id/textDateTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/newEventLoc"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/Discuss" />
+
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/newEventDate"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="134dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/newEventLoc"
-                    android:layout_marginTop="10dp"
+                    android:layout_below="@id/textDateTime"
+                    android:layout_marginTop="5dp"
                     android:hint="dd/mm/yyyy"
-                    app:errorEnabled="true"
                     app:helperText="Select Date"
                     app:helperTextEnabled="true">
 
@@ -139,32 +147,33 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/newEventTime"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="125dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/newEventLoc"
+                    android:layout_below="@id/textDateTime"
                     android:layout_marginStart="25dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:layout_toEndOf="@id/newEventDate"
                     android:hint="hh:mm"
-                    app:errorEnabled="true"
                     app:helperText="Select Time"
                     app:helperTextEnabled="true">
 
-                    <AutoCompleteTextView
-                        android:id="@+id/autocomplete_time"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/newEventTimeEdt"
                         android:layout_width="match_parent"
                         android:layout_height="60dp"
-                        android:inputType="none" />
+                        android:inputType="time" />
+
 
                 </com.google.android.material.textfield.TextInputLayout>
+
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/newEventDesc"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/newEventTime"
+                    android:layout_below="@id/newEventDate"
                     android:layout_marginTop="10dp"
                     android:hint="Description"
                     app:helperText="Not mandatory"
