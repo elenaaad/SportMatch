@@ -3025,7 +3025,6 @@ id autoCompleteToStart
 id autocomplete_loc
 id autocomplete_players
 id autocomplete_sport
-id autocomplete_time
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3290,6 +3289,7 @@ id newEventNameEdt
 id newEventPlayers
 id newEventSport
 id newEventTime
+id newEventTimeEdt
 id noScroll
 id noState
 id none
@@ -3451,6 +3451,7 @@ id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
 id text
 id text2
+id textDateTime
 id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
@@ -3616,7 +3617,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_admin_events
 layout activity_bottom_nav
-layout activity_create_new_event
+layout activity_editevent
 layout activity_editprofile
 layout activity_eventpreview
 layout activity_login
@@ -3718,6 +3719,7 @@ mipmap ic_launcher_round
 navigation nav_graph
 plurals mtrl_badge_content_description
 raw firebase_common_keep
+string Discuss
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -3780,6 +3782,7 @@ string copy_toast_msg
 string default_web_client_id
 string errorCEdate
 string errorCEloc
+string errorCEname
 string errorCEsport
 string errorCEtime
 string error_a11y_label
