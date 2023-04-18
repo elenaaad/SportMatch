@@ -4,9 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<<< HEAD:app/build/intermediates/incremental/debug/packageDebugResources/stripped.dir/layout/activity_bottom_nav.xml
     android:background="#8BC34A"
     tools:context=".BottomNavActivity">
 
+========
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".AdminEventsActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Events where you are admin"
+        android:textSize="36sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_centerInParent="true"/>
+>>>>>>>> main:app/build/intermediates/incremental/debug/mergeDebugResources/stripped.dir/layout/activity_admin_events.xml
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

@@ -32,12 +32,14 @@
     <color name="verdeFundal">#C2D596</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="fab_margin">16dp</dimen>
+    <string name="Discuss">*Date and time not mandatory!* *Can be discussed in chat!*</string>
     <string name="app_name">SportMatch</string>
     <string name="default_web_client_id" translatable="false">927342689684-19qh54r3pmvmq51tgcg8p09c8hnm51m0.apps.googleusercontent.com</string>
-    <string name="errorCEdate">Please choose date</string>
-    <string name="errorCEloc">Please choose location</string>
-    <string name="errorCEsport">Please choose sport</string>
-    <string name="errorCEtime">Please choose time</string>
+    <string name="errorCEdate">Please choose date!</string>
+    <string name="errorCEloc">Please choose location!</string>
+    <string name="errorCEname">Please add a name for the event!</string>
+    <string name="errorCEsport">Please choose sport!</string>
+    <string name="errorCEtime">Please choose time!</string>
     <string name="first_fragment_label">First Fragment</string>
     <string name="gcm_defaultSenderId" translatable="false">927342689684</string>
     <string name="google_api_key" translatable="false">AIzaSyAFn_eV_ruMBJpQ7jK6S1Q7LX9Z5LhRQDc</string>

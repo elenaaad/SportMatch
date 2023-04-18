@@ -34,9 +34,6 @@ public final class ActivityNeweventBinding implements ViewBinding {
   public final AutoCompleteTextView autocompleteSport;
 
   @NonNull
-  public final AutoCompleteTextView autocompleteTime;
-
-  @NonNull
   public final BottomNavigationView bottomNavigationView;
 
   @NonNull
@@ -73,25 +70,30 @@ public final class ActivityNeweventBinding implements ViewBinding {
   public final TextInputLayout newEventTime;
 
   @NonNull
+  public final TextInputEditText newEventTimeEdt;
+
+  @NonNull
+  public final TextView textDateTime;
+
+  @NonNull
   public final TextView title;
 
   private ActivityNeweventBinding(@NonNull RelativeLayout rootView,
       @NonNull AutoCompleteTextView autocompleteLoc,
       @NonNull AutoCompleteTextView autocompletePlayers,
       @NonNull AutoCompleteTextView autocompleteSport,
-      @NonNull AutoCompleteTextView autocompleteTime,
       @NonNull BottomNavigationView bottomNavigationView, @NonNull Button buttonCEvent,
       @NonNull TextInputLayout newEventDate, @NonNull TextInputEditText newEventDateEdt,
       @NonNull TextInputLayout newEventDesc, @NonNull TextInputEditText newEventDescEdt,
       @NonNull TextInputLayout newEventLoc, @NonNull TextInputLayout newEventName,
       @NonNull TextInputEditText newEventNameEdt, @NonNull TextInputLayout newEventPlayers,
       @NonNull TextInputLayout newEventSport, @NonNull TextInputLayout newEventTime,
+      @NonNull TextInputEditText newEventTimeEdt, @NonNull TextView textDateTime,
       @NonNull TextView title) {
     this.rootView = rootView;
     this.autocompleteLoc = autocompleteLoc;
     this.autocompletePlayers = autocompletePlayers;
     this.autocompleteSport = autocompleteSport;
-    this.autocompleteTime = autocompleteTime;
     this.bottomNavigationView = bottomNavigationView;
     this.buttonCEvent = buttonCEvent;
     this.newEventDate = newEventDate;
@@ -104,6 +106,8 @@ public final class ActivityNeweventBinding implements ViewBinding {
     this.newEventPlayers = newEventPlayers;
     this.newEventSport = newEventSport;
     this.newEventTime = newEventTime;
+    this.newEventTimeEdt = newEventTimeEdt;
+    this.textDateTime = textDateTime;
     this.title = title;
   }
 
@@ -149,12 +153,6 @@ public final class ActivityNeweventBinding implements ViewBinding {
       id = R.id.autocomplete_sport;
       AutoCompleteTextView autocompleteSport = ViewBindings.findChildViewById(rootView, id);
       if (autocompleteSport == null) {
-        break missingId;
-      }
-
-      id = R.id.autocomplete_time;
-      AutoCompleteTextView autocompleteTime = ViewBindings.findChildViewById(rootView, id);
-      if (autocompleteTime == null) {
         break missingId;
       }
 
@@ -230,6 +228,18 @@ public final class ActivityNeweventBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.newEventTimeEdt;
+      TextInputEditText newEventTimeEdt = ViewBindings.findChildViewById(rootView, id);
+      if (newEventTimeEdt == null) {
+        break missingId;
+      }
+
+      id = R.id.textDateTime;
+      TextView textDateTime = ViewBindings.findChildViewById(rootView, id);
+      if (textDateTime == null) {
+        break missingId;
+      }
+
       id = R.id.title;
       TextView title = ViewBindings.findChildViewById(rootView, id);
       if (title == null) {
@@ -237,9 +247,10 @@ public final class ActivityNeweventBinding implements ViewBinding {
       }
 
       return new ActivityNeweventBinding((RelativeLayout) rootView, autocompleteLoc,
-          autocompletePlayers, autocompleteSport, autocompleteTime, bottomNavigationView,
-          buttonCEvent, newEventDate, newEventDateEdt, newEventDesc, newEventDescEdt, newEventLoc,
-          newEventName, newEventNameEdt, newEventPlayers, newEventSport, newEventTime, title);
+          autocompletePlayers, autocompleteSport, bottomNavigationView, buttonCEvent, newEventDate,
+          newEventDateEdt, newEventDesc, newEventDescEdt, newEventLoc, newEventName,
+          newEventNameEdt, newEventPlayers, newEventSport, newEventTime, newEventTimeEdt,
+          textDateTime, title);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
