@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class AllCategory {
     String title;
 
-    ArrayList<CategoryItemClass> categoryItemClassList;
+    ArrayList<Event> eventList;
 
-    public AllCategory(String title, ArrayList<CategoryItemClass> categoryItemClassList) {
+    public AllCategory(String title, ArrayList<Event> eventList) {
         this.title = title;
-        this.categoryItemClassList = categoryItemClassList;
+        this.eventList = eventList;
     }
 
     public String getTitle() {
@@ -20,12 +20,12 @@ public class AllCategory {
         this.title = title;
     }
 
-    public ArrayList<CategoryItemClass> getCategoryItemClassList() {
-        return categoryItemClassList;
+    public ArrayList<Event> getEventList() {
+        return eventList ;
     }
 
-    public void setCategoryItemClassList(ArrayList<CategoryItemClass> categoryItemClassList) {
-        this.categoryItemClassList = categoryItemClassList;
+    public void setEventList(ArrayList<Event> eventList) {
+        this.eventList = eventList;
     }
 
 

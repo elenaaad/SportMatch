@@ -33,7 +33,7 @@ public class ParentAdapter extends RecyclerView.Adapter<ParentAdapter.MainViewHo
     public void onBindViewHolder(@NonNull MainViewHolder holder, int position) {
 
         holder.title.setText(allCategoryList.get(position).getTitle());
-        setChildRecycler(holder.recyclerView,allCategoryList.get(position).getCategoryItemClassList());
+        setChildRecycler(holder.recyclerView,allCategoryList.get(position).getEventList());
     }
 
     @Override
@@ -52,9 +52,9 @@ public class ParentAdapter extends RecyclerView.Adapter<ParentAdapter.MainViewHo
         }
     }
 
-    private void setChildRecycler(RecyclerView recyclerView, ArrayList<CategoryItemClass> categoryItemClassList)
+    private void setChildRecycler(RecyclerView recyclerView, ArrayList<Event> eventList)
     {
-        ChildAdapter childAdapter = new ChildAdapter(categoryItemClassList,context);
+        ChildAdapter childAdapter = new ChildAdapter(eventList,context);
         recyclerView.setLayoutManager(new LinearLayoutManager(context,RecyclerView.HORIZONTAL,false));
         recyclerView.setAdapter(childAdapter);
     }

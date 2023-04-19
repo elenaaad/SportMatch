@@ -65,7 +65,6 @@ id age_profile
 id autocomplete_loc
 id autocomplete_players
 id autocomplete_sport
-id autocomplete_time
 id bio_profile
 id bio_profile_edit
 id bottomNavigationView
@@ -93,7 +92,6 @@ id full_name_editprofile
 id full_name_profile
 id fullname_field
 id imageView
-id imageView2
 id item_image
 id item_recycler
 id main_recycler
@@ -111,6 +109,7 @@ id newEventNameEdt
 id newEventPlayers
 id newEventSport
 id newEventTime
+id newEventTimeEdt
 id payment_desc
 id payment_label
 id previewBtnAddEv
@@ -138,14 +137,15 @@ id register_username
 id scroll
 id signupButton
 id sportImage
+id textDateTime
 id textView
 id textView1
 id textView2
-id textView3
 id title
 id toolbar
 layout activity_admin_events
 layout activity_bottom_nav
+layout activity_editevent
 layout activity_editprofile
 layout activity_eventpreview
 layout activity_login
@@ -156,7 +156,6 @@ layout activity_only_participates_events
 layout activity_profile
 layout activity_register
 layout activity_view_profile
-layout card_event
 layout category_row_items
 layout category_row_items_copie
 layout content_menu
@@ -170,10 +169,12 @@ mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation nav_graph
+string Discuss
 string app_name
 string default_web_client_id
 string errorCEdate
 string errorCEloc
+string errorCEname
 string errorCEsport
 string errorCEtime
 string first_fragment_label

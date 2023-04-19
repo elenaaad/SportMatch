@@ -3039,7 +3039,6 @@ id autoCompleteToStart
 id autocomplete_loc
 id autocomplete_players
 id autocomplete_sport
-id autocomplete_time
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3184,6 +3183,7 @@ id fullname_field
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -3204,7 +3204,6 @@ id ignore
 id ignoreRequest
 id image
 id imageView
-id imageView2
 id immediateStop
 id included
 id indeterminate
@@ -3317,6 +3316,7 @@ id newEventNameEdt
 id newEventPlayers
 id newEventSport
 id newEventTime
+id newEventTimeEdt
 id noScroll
 id noState
 id none
@@ -3478,6 +3478,7 @@ id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
 id text
 id text2
+id textDateTime
 id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle
@@ -3486,7 +3487,6 @@ id textTop
 id textView
 id textView1
 id textView2
-id textView3
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3647,6 +3647,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_admin_events
 layout activity_bottom_nav
+layout activity_editevent
 layout activity_editprofile
 layout activity_eventpreview
 layout activity_login
@@ -3659,7 +3660,6 @@ layout activity_register
 layout activity_view_profile
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
-layout card_event
 layout category_row_items
 layout category_row_items_copie
 layout content_menu
@@ -3752,6 +3752,7 @@ mipmap ic_launcher_round
 navigation nav_graph
 plurals mtrl_badge_content_description
 raw firebase_common_keep
+string Discuss
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -3814,6 +3815,7 @@ string copy_toast_msg
 string default_web_client_id
 string errorCEdate
 string errorCEloc
+string errorCEname
 string errorCEsport
 string errorCEtime
 string error_a11y_label
