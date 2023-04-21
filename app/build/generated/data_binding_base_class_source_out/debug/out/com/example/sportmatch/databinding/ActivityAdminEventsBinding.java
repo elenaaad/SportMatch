@@ -5,8 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.sportmatch.R;
@@ -22,10 +24,19 @@ public final class ActivityAdminEventsBinding implements ViewBinding {
   @NonNull
   public final BottomNavigationView bottomNavigationView;
 
+  @NonNull
+  public final RecyclerView mainRecycler1;
+
+  @NonNull
+  public final TextView textView1;
+
   private ActivityAdminEventsBinding(@NonNull RelativeLayout rootView,
-      @NonNull BottomNavigationView bottomNavigationView) {
+      @NonNull BottomNavigationView bottomNavigationView, @NonNull RecyclerView mainRecycler1,
+      @NonNull TextView textView1) {
     this.rootView = rootView;
     this.bottomNavigationView = bottomNavigationView;
+    this.mainRecycler1 = mainRecycler1;
+    this.textView1 = textView1;
   }
 
   @Override
@@ -61,7 +72,20 @@ public final class ActivityAdminEventsBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityAdminEventsBinding((RelativeLayout) rootView, bottomNavigationView);
+      id = R.id.main_recycler1;
+      RecyclerView mainRecycler1 = ViewBindings.findChildViewById(rootView, id);
+      if (mainRecycler1 == null) {
+        break missingId;
+      }
+
+      id = R.id.textView1;
+      TextView textView1 = ViewBindings.findChildViewById(rootView, id);
+      if (textView1 == null) {
+        break missingId;
+      }
+
+      return new ActivityAdminEventsBinding((RelativeLayout) rootView, bottomNavigationView,
+          mainRecycler1, textView1);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

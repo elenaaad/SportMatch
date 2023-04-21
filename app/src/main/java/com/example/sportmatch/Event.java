@@ -5,13 +5,14 @@ import java.util.Date;
 
 public class Event {
 
-    public String eventName;
-    public String sport;
-    public String nrPlayers;
-    public String location;
-    public String date;
-    public String time;
-    public String description;
+    private String eventName;
+    private String sport;
+    private String nrPlayers;
+    private String location;
+    private String date;
+    private String time;
+    private String description;
+    
 
     public Event (){
 

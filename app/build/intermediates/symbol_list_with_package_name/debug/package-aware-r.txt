@@ -84,6 +84,10 @@ animator nav_default_enter_anim
 animator nav_default_exit_anim
 animator nav_default_pop_enter_anim
 animator nav_default_pop_exit_anim
+array com_google_android_gms_fonts_certs
+array com_google_android_gms_fonts_certs_dev
+array com_google_android_gms_fonts_certs_prod
+array preloaded_fonts
 attr SharedValue
 attr SharedValueId
 attr action
@@ -2787,9 +2791,11 @@ drawable baseline_home_24
 drawable baseline_manage_accounts_24
 drawable baseline_person_outline_24
 drawable baseline_sports_kabaddi_24
+drawable baseline_sports_martial_arts_24
 drawable basketball
 drawable bottom_background
 drawable bowling
+drawable bowlingposter
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -2829,6 +2835,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable gradientdrawable
 drawable handball
+drawable handballposter
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
@@ -2916,7 +2923,13 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable p1
+drawable p11
+drawable p2
+drawable p3
+drawable p4
 drawable ping_pong
+drawable pingpong
 drawable roz
 drawable sports
 drawable tennis
@@ -2925,6 +2938,7 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable usericon
 drawable volleyball
+font akronim
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3059,7 +3073,9 @@ id button_savechanges
 id cache_measures
 id callMeasure
 id cancel_button
+id cardEvent
 id carryVelocity
+id category_title
 id center
 id centerCrop
 id centerInside
@@ -3136,6 +3152,11 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id eventDate
+id eventIcon
+id eventParticipants
+id eventTime
+id eventTitle
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3162,6 +3183,7 @@ id fullname_field
 id fullscreen_header
 id ghost_view
 id ghost_view_holder
+id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
@@ -3189,6 +3211,8 @@ id info
 id invisible
 id inward
 id italic
+id item_image
+id item_recycler
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
@@ -3206,6 +3230,9 @@ id list_item
 id locale
 id ltr
 id m3_side_sheet
+id main_recycler
+id main_recycler1
+id main_recycler2
 id marquee
 id masked
 id match_constraint
@@ -3457,6 +3484,9 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
+id textView1
+id textView2
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3630,6 +3660,8 @@ layout activity_register
 layout activity_view_profile
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
+layout category_row_items
+layout category_row_items_copie
 layout content_menu
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -3656,6 +3688,7 @@ layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
 layout m3_auto_complete_simple_item
 layout m3_side_sheet_dialog
+layout main_recycler_row_item
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider

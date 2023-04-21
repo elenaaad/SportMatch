@@ -10,12 +10,15 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.ArrayList;
 
 public class EventPreview extends AppCompatActivity {
     Button previewBtnEdit;
@@ -35,6 +38,8 @@ public class EventPreview extends AppCompatActivity {
     TextView previewDesc;
     TextView previewDescInput;
     Button previewBtnAddEv;
+
+    ArrayList<AllCategory> allCategoryList;
 
     private FirebaseDatabase database;
 
@@ -95,6 +100,7 @@ public class EventPreview extends AppCompatActivity {
         previewDescInput.setText(valueDesc);
 
 
+
         switch (valueSport) {
             case "Volleyball":
                 sportImage.setImageResource(R.drawable.volleyball);
@@ -146,13 +152,19 @@ public class EventPreview extends AppCompatActivity {
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(getApplicationContext(), "Event added successfully", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), BottomNavActivity.class));
+                            finish();
                         } else {
                             Toast.makeText(getApplicationContext(), "Failed to add event", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), CreateEventActivity.class));
+                            finish();
                         }
                     }
                 });
             }
         });
+
+
 
         ////inceput meniu
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
@@ -187,6 +199,10 @@ public class EventPreview extends AppCompatActivity {
         });
 
         ////final meniu
+
+
+//
+
 
 
     }
