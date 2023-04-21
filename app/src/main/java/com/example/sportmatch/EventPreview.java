@@ -65,6 +65,10 @@ public class EventPreview extends AppCompatActivity {
         previewBtnAddEv = findViewById(R.id.previewBtnAddEv);
 
         //TODO: editButton sa duca la pag de edit event
+        //TODO: legatura cu tabelele de locatie, sport, jucatori etc
+        //TODO: pagina de edit
+        //TODO: legatura btn see map cu harta
+        //TODO: pag detalii event
 
 
 
