@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.sportmatch.app-mergeDebugResources-44:/values-kk/values-kk.xml",
+            "outputFile": "com.example.sportmatch.app-mergeDebugResources-45:/values-kk/values-kk.xml",
             "map": [
                 {
                     "source": "C:\\Users\\elena\\.gradle\\caches\\transforms-3\\43a64de5a16f642f933aa2c844c81289\\transformed\\core-1.9.0\\res\\values-kk\\values-kk.xml",
@@ -57,6 +57,23 @@
                     }
                 },
                 {
+                    "source": "C:\\Users\\elena\\.gradle\\caches\\transforms-3\\4a7f83fd254fa05cc8acd7d644c57a96\\transformed\\play-services-base-18.1.0\\res\\values-kk\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,292,441,563,665,801,923,1042,1147,1308,1410,1563,1688,1837,1990,2049,2104",
+                        "endColumns": "98,148,121,101,135,121,118,104,160,101,152,124,148,152,58,54,73",
+                        "endOffsets": "291,440,562,664,800,922,1041,1146,1307,1409,1562,1687,1836,1989,2048,2103,2177"
+                    },
+                    "to": {
+                        "startLines": "41,42,43,44,45,46,47,48,50,51,52,53,54,55,56,57,58",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "3715,3818,3971,4097,4203,4343,4469,4592,4865,5030,5136,5293,5422,5575,5732,5795,5854",
+                        "endColumns": "102,152,125,105,139,125,122,108,164,105,156,128,152,156,62,58,77",
+                        "endOffsets": "3813,3966,4092,4198,4338,4464,4587,4696,5025,5131,5288,5417,5570,5727,5790,5849,5927"
+                    }
+                },
+                {
                     "source": "C:\\Users\\elena\\.gradle\\caches\\transforms-3\\ec1d0473320eafbc6e1a7cdc007dfb1a\\transformed\\play-services-basement-18.1.0\\res\\values-kk\\values.xml",
                     "from": {
                         "startLines": "4",
@@ -88,23 +105,6 @@
                         "startOffsets": "10459,10572",
                         "endColumns": "112,117",
                         "endOffsets": "10567,10685"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\elena\\.gradle\\caches\\transforms-3\\2fb13fbd4f2364aafa4d08df45006df2\\transformed\\play-services-base-18.0.1\\res\\values-kk\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "193,292,441,563,665,801,923,1042,1147,1308,1410,1563,1688,1837,1990,2049,2104",
-                        "endColumns": "98,148,121,101,135,121,118,104,160,101,152,124,148,152,58,54,73",
-                        "endOffsets": "291,440,562,664,800,922,1041,1146,1307,1409,1562,1687,1836,1989,2048,2103,2177"
-                    },
-                    "to": {
-                        "startLines": "41,42,43,44,45,46,47,48,50,51,52,53,54,55,56,57,58",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "3715,3818,3971,4097,4203,4343,4469,4592,4865,5030,5136,5293,5422,5575,5732,5795,5854",
-                        "endColumns": "102,152,125,105,139,125,122,108,164,105,156,128,152,156,62,58,77",
-                        "endOffsets": "3813,3966,4092,4198,4338,4464,4587,4696,5025,5131,5288,5417,5570,5727,5790,5849,5927"
                     }
                 },
                 {

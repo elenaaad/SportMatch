@@ -10,8 +10,11 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
 <!--    error messages-->
-    <string name = "errorCEsport">Please choose sport</string>
-    <string name = "errorCEloc">Please choose location</string>
-    <string name = "errorCEdate">Please choose date</string>
-    <string name = "errorCEtime">Please choose time</string>
+    <string name = "errorCEname">Please add a name for the event!</string>
+    <string name = "errorCEsport">Please choose sport!</string>
+    <string name = "errorCEloc">Please choose location!</string>
+    <string name = "errorCEdate">Please choose date!</string>
+    <string name = "errorCEtime">Please choose time!</string>
+    <string name="Discuss">*Date and time not mandatory! Can be discussed in chat!*</string>
+
 </resources>

@@ -5,12 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,17 +20,6 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.android.material.timepicker.MaterialTimePicker;
 import com.google.android.material.timepicker.TimeFormat;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.ktx.Firebase;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -50,7 +37,7 @@ public class CreateEventActivity extends AppCompatActivity {
     TextInputLayout newEventDate;
     TextInputEditText newEventDateEdt;
     TextInputLayout newEventTime;
-    AutoCompleteTextView autocomplete_time;
+    TextInputEditText newEventTimeEdt;
     TextInputLayout newEventDesc;
     TextInputEditText newEventDescEdt;
     Button buttonCEvent;
@@ -64,19 +51,17 @@ public class CreateEventActivity extends AppCompatActivity {
     ArrayAdapter<String> adapterPlayers;
 
 
-    private FirebaseAuth mAuth;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newevent);
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
 
-        //TODO: stringuri
+
         //TODO: Legatura cu baza de date si tabelele
-        //TODO: Legatura cu meniul si cu feedul
+        //TODO: Legatura cu Admin
+        //TODO: sa nu se mai vada bottom navigation cand tastez
+        //TODO: Edit event details
         //TODO: MAP
-        //TODO: Interval de timp?
 
         title = findViewById(R.id.title);
         newEventName = findViewById(R.id.newEventName);
@@ -90,11 +75,10 @@ public class CreateEventActivity extends AppCompatActivity {
         newEventDate = findViewById(R.id.newEventDate);
         newEventDateEdt = findViewById(R.id.newEventDateEdt);
         newEventTime = findViewById(R.id.newEventTime);
-        autocomplete_time = findViewById(R.id.autocomplete_time);
+        newEventTimeEdt = findViewById(R.id.newEventTimeEdt);
         newEventDesc = findViewById(R.id.newEventDesc);
         newEventDescEdt = findViewById(R.id.newEventDescEdt);
         buttonCEvent = findViewById(R.id.buttonCEvent);
-        mAuth = FirebaseAuth.getInstance();
 
         adapterSports = new ArrayAdapter<String>(this, R.layout.list_sport, sports);
         autocomplete_sport.setAdapter(adapterSports);
@@ -127,8 +111,8 @@ public class CreateEventActivity extends AppCompatActivity {
             }
         });
 
-        adapterTime = new ArrayAdapter<String>(this, R.layout.list_time,time_openings);
-        autocomplete_time.setAdapter(adapterTime);
+//        adapterTime = new ArrayAdapter<String>(this, R.layout.list_time,time_openings);
+//        autocomplete_time.setAdapter(adapterTime);
 
 //        autocomplete_time.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //            @Override
@@ -139,45 +123,46 @@ public class CreateEventActivity extends AppCompatActivity {
 //            }
 //        });
 
-        //TIMEPICKER (ceas pretty:((((()
-//        MaterialTimePicker timePicker = new MaterialTimePicker.Builder()
-//                .setTimeFormat(TimeFormat.CLOCK_12H)
-//                .setHour(calendar.get(Calendar.HOUR_OF_DAY))
-//                .setMinute(calendar.get(Calendar.MINUTE))
-//                .setTitleText("Select Time")
-//                .build();
-//
-//        newEventTimeEdt.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                timePicker.show(getSupportFragmentManager(), "Material_Time_Picker" );
-//
-//                timePicker.addOnPositiveButtonClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                        int Hour = timePicker.getHour();
-//                        int Minute = timePicker.getMinute();
-//                        String H = "";
-//                        String M = "";
-//                        if(Hour/10==0){
-//                            H = "0" + Hour;
-//                        }
-//                        else{
-//                            H = String.valueOf(Hour);
-//                        }
-//                        if(Minute/10==0){
-//                            M = "0" + Minute;
-//                        }
-//                        else{
-//                            M = String.valueOf(Minute);
-//                        }
-//                        newEventTimeEdt.setText(H+":"+M);
-//                    }
-//                });
-//
-//
-//            }
-//        });
+        //TIMEPICKER
+        MaterialTimePicker timePicker = new MaterialTimePicker.Builder()
+                .setTimeFormat(TimeFormat.CLOCK_12H)
+                .setHour(calendar.get(Calendar.HOUR_OF_DAY))
+                .setMinute(calendar.get(Calendar.MINUTE))
+                .setTitleText("Select Time")
+                .build();
+
+        newEventTimeEdt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                timePicker.show(getSupportFragmentManager(), "Material_Time_Picker" );
+
+                timePicker.addOnPositiveButtonClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        int Hour = timePicker.getHour();
+                        int Minute = timePicker.getMinute();
+                        String H = "";
+                        String M = "";
+                        if(Hour/10==0){
+                            H = "0" + Hour;
+                        }
+                        else{
+                            H = String.valueOf(Hour);
+                        }
+                        if(Minute/10==0){
+                            M = "0" + Minute;
+                        }
+                        else{
+                            M = String.valueOf(Minute);
+                        }
+                        newEventTimeEdt.setText(H+":"+M);
+                    }
+                });
+
+
+            }
+        });
+
 
         buttonCEvent.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -185,6 +170,12 @@ public class CreateEventActivity extends AppCompatActivity {
                 int error = 0;
 
                 String inputTitle = newEventNameEdt.getText().toString().trim();
+                if (TextUtils.isEmpty(inputTitle)) {
+                    newEventName.setError(getString(R.string.errorCEname));
+                    error = 1;
+                } else {
+                    newEventName.setError(null);
+                }
 
                 String selectedSport = autocomplete_sport.getText().toString().trim();
                 if (TextUtils.isEmpty(selectedSport)) {
@@ -211,38 +202,34 @@ public class CreateEventActivity extends AppCompatActivity {
                 }
 
                 String selectedDate = newEventDateEdt.getText().toString().trim();
-                if (TextUtils.isEmpty(selectedDate)) {
-                    newEventDate.setError(getString(R.string.errorCEdate));
-                    error = 1;
-                } else {
-                    newEventDate.setError(null);
-                }
-
-                String selectedTime = autocomplete_time.getText().toString().trim();
-                if (TextUtils.isEmpty(selectedTime)) {
-                    newEventTime.setError(getString(R.string.errorCEtime));
-                    error = 1;
-                } else {
-                    newEventTime.setError(null);
-                }
-
+                String selectedTime = newEventTimeEdt.getText().toString().trim();
                 String inputDesc = newEventDescEdt.getText().toString().trim();
 
                 if(error == 0){
+
                     Intent intent = new Intent(CreateEventActivity.this, EventPreview .class);
 
-                    if(TextUtils.isEmpty(inputTitle)){
-                        intent.putExtra("valueTitle",selectedSport);
-                    }
-                    else{
-                        intent.putExtra("valueTitle",inputTitle);
-                    }
-
+                    intent.putExtra("valueTitle",inputTitle);
                     intent.putExtra("valueSport",selectedSport);
                     intent.putExtra("valuePlayers",selectedPlayers);
                     intent.putExtra("valueLoc",selectedLoc);
                     intent.putExtra("valueDate",selectedDate);
                     intent.putExtra("valueTime",selectedTime);
+                    intent.putExtra("valueDesc",inputDesc);
+
+                    if(TextUtils.isEmpty(selectedDate)){
+                        intent.putExtra("valueDate","To be discussed");
+                    }
+                    else{
+                        intent.putExtra("valueDate",selectedDate);
+                    }
+
+                    if(TextUtils.isEmpty(selectedTime)){
+                        intent.putExtra("valueTime","To be discussed");
+                    }
+                    else{
+                        intent.putExtra("valueTime",selectedTime);
+                    }
 
                     if(TextUtils.isEmpty(inputDesc)){
                         intent.putExtra("valueDesc","None");
@@ -290,6 +277,8 @@ public class CreateEventActivity extends AppCompatActivity {
         });
 
         ////final meniu
+
+
 
     }
 }

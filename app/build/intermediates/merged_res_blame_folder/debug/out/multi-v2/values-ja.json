@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.sportmatch.app-mergeDebugResources-44:/values-ja/values-ja.xml",
+            "outputFile": "com.example.sportmatch.app-mergeDebugResources-45:/values-ja/values-ja.xml",
             "map": [
                 {
                     "source": "C:\\Users\\elena\\.gradle\\caches\\transforms-3\\488519bf88b141369e1f2b3fffc88e8e\\transformed\\material-1.8.0\\res\\values-ja\\values-ja.xml",
@@ -91,7 +91,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\elena\\.gradle\\caches\\transforms-3\\2fb13fbd4f2364aafa4d08df45006df2\\transformed\\play-services-base-18.0.1\\res\\values-ja\\values.xml",
+                    "source": "C:\\Users\\elena\\.gradle\\caches\\transforms-3\\4a7f83fd254fa05cc8acd7d644c57a96\\transformed\\play-services-base-18.1.0\\res\\values-ja\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
