@@ -1,13 +1,13 @@
 package com.example.sportmatch;
 
+import android.content.Intent;
+import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.content.Intent;
-import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.database.DataSnapshot;
@@ -149,16 +149,16 @@ public class BottomNavActivity extends AppCompatActivity {
 //                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                     finish();
                     return true;
+
             }
             return false;
         });
         ///final meniu
 
-
-
-
-
     }
+
+
+
     ///recyclerview
     private void setParentRecycler(ArrayList<AllCategory> allCategoryList)
     {
@@ -167,5 +167,6 @@ public class BottomNavActivity extends AppCompatActivity {
         parentAdapter = new ParentAdapter(allCategoryList,this);
         recyclerView.setAdapter(parentAdapter);
     }
+
     ///end recyclerview
 }

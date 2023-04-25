@@ -66,6 +66,9 @@
             android:name="com.example.sportmatch.CreateEventActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.sportmatch.EventDetailsActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.sportmatch.EventPreview"
             android:exported="false" />
         <activity

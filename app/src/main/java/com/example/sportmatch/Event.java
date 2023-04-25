@@ -1,8 +1,5 @@
 package com.example.sportmatch;
 
-import java.sql.Time;
-import java.util.Date;
-
 public class Event {
 
     private String eventName;
@@ -12,6 +9,7 @@ public class Event {
     private String date;
     private String time;
     private String description;
+    //private User user;
     
 
     public Event (){
@@ -25,7 +23,6 @@ public class Event {
         this.location = location;
         this.date = date;
         this.time = time;
-        this.description = description;
     }
 
     public String getDate() {
@@ -84,4 +81,12 @@ public class Event {
     public void setDescription(String description) {
         this.description = description;
     }
+
+//    public User getUser() {
+//        return user;
+//    }
+//
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
 }
