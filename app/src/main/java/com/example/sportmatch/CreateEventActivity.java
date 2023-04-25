@@ -5,19 +5,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.datepicker.MaterialDatePicker;
 import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
@@ -25,11 +20,6 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.android.material.timepicker.MaterialTimePicker;
 import com.google.android.material.timepicker.TimeFormat;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -68,7 +58,8 @@ public class CreateEventActivity extends AppCompatActivity {
 
 
         //TODO: Legatura cu baza de date si tabelele
-        //TODO: Legatura cu feedul
+        //TODO: Legatura cu Admin
+        //TODO: sa nu se mai vada bottom navigation cand tastez
         //TODO: Edit event details
         //TODO: MAP
 
@@ -224,6 +215,7 @@ public class CreateEventActivity extends AppCompatActivity {
                     intent.putExtra("valueLoc",selectedLoc);
                     intent.putExtra("valueDate",selectedDate);
                     intent.putExtra("valueTime",selectedTime);
+                    intent.putExtra("valueDesc",inputDesc);
 
                     if(TextUtils.isEmpty(selectedDate)){
                         intent.putExtra("valueDate","To be discussed");
@@ -285,6 +277,8 @@ public class CreateEventActivity extends AppCompatActivity {
         });
 
         ////final meniu
+
+
 
     }
 }

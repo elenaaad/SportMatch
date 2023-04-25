@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -75,10 +74,10 @@ public final class ActivityEventpreviewBinding implements ViewBinding {
   public final TextView previewTitle;
 
   @NonNull
-  public final ScrollView scroll;
+  public final ImageView sportImage;
 
   @NonNull
-  public final ImageView sportImage;
+  public final TextView title;
 
   private ActivityEventpreviewBinding(@NonNull RelativeLayout rootView,
       @NonNull BottomNavigationView bottomNavigationView, @NonNull Button previewBtnAddEv,
@@ -89,7 +88,7 @@ public final class ActivityEventpreviewBinding implements ViewBinding {
       @NonNull TextView previewPlayersInput, @NonNull TextView previewSport,
       @NonNull TextView previewSportInput, @NonNull TextView previewTime,
       @NonNull TextView previewTimeInput, @NonNull TextView previewTitle,
-      @NonNull ScrollView scroll, @NonNull ImageView sportImage) {
+      @NonNull ImageView sportImage, @NonNull TextView title) {
     this.rootView = rootView;
     this.bottomNavigationView = bottomNavigationView;
     this.previewBtnAddEv = previewBtnAddEv;
@@ -108,8 +107,8 @@ public final class ActivityEventpreviewBinding implements ViewBinding {
     this.previewTime = previewTime;
     this.previewTimeInput = previewTimeInput;
     this.previewTitle = previewTitle;
-    this.scroll = scroll;
     this.sportImage = sportImage;
+    this.title = title;
   }
 
   @Override
@@ -241,15 +240,15 @@ public final class ActivityEventpreviewBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.scroll;
-      ScrollView scroll = ViewBindings.findChildViewById(rootView, id);
-      if (scroll == null) {
-        break missingId;
-      }
-
       id = R.id.sportImage;
       ImageView sportImage = ViewBindings.findChildViewById(rootView, id);
       if (sportImage == null) {
+        break missingId;
+      }
+
+      id = R.id.title;
+      TextView title = ViewBindings.findChildViewById(rootView, id);
+      if (title == null) {
         break missingId;
       }
 
@@ -257,7 +256,7 @@ public final class ActivityEventpreviewBinding implements ViewBinding {
           previewBtnAddEv, previewBtnEdit, previewBtnMap, previewDate, previewDateInput,
           previewDesc, previewDescInput, previewLoc, previewLocInput, previewPlayers,
           previewPlayersInput, previewSport, previewSportInput, previewTime, previewTimeInput,
-          previewTitle, scroll, sportImage);
+          previewTitle, sportImage, title);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

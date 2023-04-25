@@ -10,12 +10,10 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
@@ -50,7 +48,6 @@ public class EventPreview extends AppCompatActivity {
 
         database = FirebaseDatabase.getInstance();
 
-
         previewBtnEdit = findViewById(R.id.previewBtnEdit);
         sportImage = findViewById(R.id.sportImage);
         previewTitle = findViewById(R.id.previewTitle);
@@ -70,6 +67,10 @@ public class EventPreview extends AppCompatActivity {
         previewBtnAddEv = findViewById(R.id.previewBtnAddEv);
 
         //TODO: editButton sa duca la pag de edit event
+        //TODO: legatura cu tabelele de locatie, sport, jucatori etc
+        //TODO: pagina de edit
+        //TODO: legatura btn see map cu harta
+        //TODO: pag detalii event
 
 
 
@@ -129,6 +130,16 @@ public class EventPreview extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(EventPreview.this, EditEventDetails.class);
+
+                intent.putExtra("valueName",valTitle);
+                intent.putExtra("valueSport",valueSport);
+                intent.putExtra("valuePlayers",valuePlayers);
+                intent.putExtra("valueLoc",valueLoc);
+                intent.putExtra("valueDate",valueDate);
+                intent.putExtra("valueTime",valueTime);
+                intent.putExtra("valueDesc",valueDesc);
+
+                startActivity(intent);
             }
 
         });
