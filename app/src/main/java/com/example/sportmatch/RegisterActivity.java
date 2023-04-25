@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -23,11 +25,24 @@ import com.google.firebase.ktx.Firebase;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText editTextUsername;
-    EditText editTextPassword;
-    EditText editTextPassword2;
-    EditText editTextBirthDate;
-    EditText editTextFullName;
+    TextInputLayout FullName;
+    TextInputEditText FullNameInserted;
+
+    TextInputLayout Username;
+    TextInputEditText UsernameInserted;
+
+    TextInputLayout Password;
+    TextInputEditText PasswordInserted;
+
+    TextInputLayout ConfirmPassword;
+    TextInputEditText PasswordConfirmed;
+
+    TextInputLayout BirthDate;
+    TextInputEditText BirthDateInserted;
+
+    TextInputLayout Gender;
+    TextInputEditText GenderInserted;
+
 
     private FirebaseAuth mAuth;
 
@@ -35,7 +50,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
+/*
         Button signupButton = findViewById(R.id.signupButton);
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,15 +59,14 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        editTextUsername =(EditText) findViewById(R.id.register_username);
-        editTextPassword =(EditText) findViewById(R.id.register_password);
-        editTextPassword2 =(EditText) findViewById(R.id.register_password2);
-        editTextBirthDate =(EditText) findViewById(R.id.register_birthdate);
-        editTextFullName =(EditText) findViewById(R.id.register_fullname);
+ */
+
+
         mAuth = FirebaseAuth.getInstance();
-    }
-    //check if the username is already in use - copiat de pe stackoverflow
-    //https://stackoverflow.com/questions/61523624/android-firebase-database-check-if-username-is-already-use
+
+        //check if the username is already in use - copiat de pe stackoverflow
+        //https://stackoverflow.com/questions/61523624/android-firebase-database-check-if-username-is-already-use
+    /*
     public void isValidUsername(UserExistsCallback callback) {
         String username = editTextUsername.getText().toString();
         FirebaseDatabase.getInstance().getReference().child("users").orderByChild("username").equalTo(username).addValueEventListener(new ValueEventListener() {
@@ -144,6 +158,9 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                     });
 
+
+
         }
+        */
     }
 }
