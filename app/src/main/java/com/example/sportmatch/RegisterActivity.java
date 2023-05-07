@@ -2,13 +2,11 @@ package com.example.sportmatch;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -50,7 +48,7 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-/*
+
         Button signupButton = findViewById(R.id.signupButton);
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,22 +57,33 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
- */
+        Username =  findViewById(R.id.Username);
+        UsernameInserted =  findViewById(R.id.UsernameInserted);
+        FullName =  findViewById(R.id.FullName);
+        FullNameInserted =  findViewById(R.id.FullNameInserted);
+        Password =  findViewById(R.id.Password);
+        PasswordInserted =  findViewById(R.id.PasswordInserted);
+        ConfirmPassword =  findViewById(R.id.ConfirmPassword);
+        PasswordConfirmed =  findViewById(R.id.PasswordConfirmed);
+        BirthDate =  findViewById(R.id.BirthDate);
+        BirthDateInserted =  findViewById(R.id.BirthDateInserted);
+        Gender =  findViewById(R.id.Gender);
+        GenderInserted =  findViewById(R.id.GenderInserted);
 
 
         mAuth = FirebaseAuth.getInstance();
-
+    }
         //check if the username is already in use - copiat de pe stackoverflow
         //https://stackoverflow.com/questions/61523624/android-firebase-database-check-if-username-is-already-use
-    /*
+
     public void isValidUsername(UserExistsCallback callback) {
-        String username = editTextUsername.getText().toString();
-        FirebaseDatabase.getInstance().getReference().child("users").orderByChild("username").equalTo(username).addValueEventListener(new ValueEventListener() {
+        String Username = UsernameInserted.getText().toString();
+        FirebaseDatabase.getInstance().getReference().child("users").orderByChild("username").equalTo(Username).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.exists()) {
                     callback.onCallback(false);
-                    editTextUsername.setError("This username already exists");
+                    UsernameInserted.setError("This username already exists");
                 } else {
                     callback.onCallback(true);
                     Log.d("createUsername", "true");
@@ -87,37 +96,39 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
     }
+
     public void signupButtonClicked(View v){
-        String txtUserName = editTextUsername.getText().toString().trim();
-        String txtPassword = editTextPassword.getText().toString().trim();
-        String txtPassword2 = editTextPassword2.getText().toString().trim();
-        String txtBirthDate = editTextBirthDate.getText().toString().trim();
-        String txtFullName = editTextFullName.getText().toString().trim();
+        String txtFullName = FullNameInserted.getText().toString().trim();
+        String txtUserName = UsernameInserted.getText().toString().trim();
+        String txtPassword = PasswordInserted.getText().toString().trim();
+        String txtPasswordConfirmed = PasswordConfirmed.getText().toString().trim();
+        String txtBirthDate = BirthDateInserted.getText().toString().trim();
+
 
         if(txtUserName.isEmpty() ){
-            editTextUsername.setError("Please enter all the fields");
-            editTextUsername.requestFocus();
+            UsernameInserted.setError("Please enter all the fields");
+            UsernameInserted.requestFocus();
         }
         else if(txtPassword.isEmpty()){
-            editTextPassword.setError("Please enter all the fields");
-            editTextUsername.requestFocus();
+            PasswordInserted.setError("Please enter all the fields");
+            UsernameInserted.requestFocus();
         }
-        else if(txtPassword2.isEmpty()){
-            editTextPassword2.setError("Please enter all the fields");
-            editTextUsername.requestFocus();
+        else if(txtPasswordConfirmed.isEmpty()){
+            PasswordConfirmed.setError("Please enter all the fields");
+            UsernameInserted.requestFocus();
         }
         else if(txtBirthDate.isEmpty()){
-            editTextBirthDate.setError("Please enter all the fields");
-            editTextUsername.requestFocus();
+            BirthDateInserted.setError("Please enter all the fields");
+            UsernameInserted.requestFocus();
         }
         else if(txtFullName.isEmpty()) {
-            editTextFullName.setError("Please enter all the fields");
-            editTextUsername.requestFocus();
+            FullNameInserted.setError("Please enter all the fields");
+            UsernameInserted.requestFocus();
         }
-        //else if(txtPassword.equals(txtPassword2)){
-        //    editTextPassword.setError("Passwords do not match");
-        //    editTextPassword2.setError("Passwords do not match");
-        //}
+        else if(txtPassword.equals(txtPasswordConfirmed)){
+            PasswordInserted.setError("Passwords do not match");
+            PasswordConfirmed.setError("Passwords do not match");
+        }
         else{
             //check if the username is already in use
             isValidUsername(new UserExistsCallback() {
@@ -157,10 +168,6 @@ public class RegisterActivity extends AppCompatActivity {
                             }
                         }
                     });
-
-
-
         }
-        */
     }
 }
