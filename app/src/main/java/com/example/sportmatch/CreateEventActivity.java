@@ -20,6 +20,8 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.android.material.timepicker.MaterialTimePicker;
 import com.google.android.material.timepicker.TimeFormat;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -62,6 +64,9 @@ public class CreateEventActivity extends AppCompatActivity {
         //TODO: sa nu se mai vada bottom navigation cand tastez
         //TODO: Edit event details
         //TODO: MAP
+        String userId;
+
+        userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         title = findViewById(R.id.title);
         newEventName = findViewById(R.id.newEventName);
@@ -238,7 +243,7 @@ public class CreateEventActivity extends AppCompatActivity {
                         intent.putExtra("valueDesc",inputDesc);
                     }
 
-
+                    intent.putExtra("creatorId", userId);
                     startActivity(intent);
                 }
             }
