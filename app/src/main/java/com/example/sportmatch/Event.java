@@ -13,6 +13,27 @@ public class Event {
     private String date;
     private String time;
     private String description;
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public String getCreator() {
+        return creator;
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
+    }
+
+    public void setChatId(String chatId) {
+        this.chatId = chatId;
+    }
+
     private String creator;
     private List<String> participants; // list of user IDs who have registered for this event
     private String chatId;
