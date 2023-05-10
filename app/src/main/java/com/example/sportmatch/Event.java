@@ -129,14 +129,6 @@ public class Event {
         this.participants = participants;
     }
 
-    public String getCreator() {
-        return creator;
-    }
-
-    public void setCreator(String creator) {
-        this.creator = creator;
-    }
-
 
 //    public User getUser() {
 //        return user;

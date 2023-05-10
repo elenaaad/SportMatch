@@ -1889,6 +1889,7 @@
     <string name="errorCEloc">Please choose location!</string>
     <string name="errorCEname">Please add a name for the event!</string>
     <string name="errorCEsport">Please choose sport!</string>
+    <string name="errorCEsportFirst">Please choose sport first!</string>
     <string name="errorCEtime">Please choose time!</string>
     <string description="Screen reader announcement for when a checkbox is on error. [CHAR LIMIT=NONE]" name="error_a11y_label">
     Error: invalid
