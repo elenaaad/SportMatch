@@ -5,18 +5,24 @@ public class SportLocation
     private String locationName;
     private static int id=0;
     private int locationId;
-    private int number;
-    private float ratingScore;
     private String streetName;
+    private int number;
+    private int sector;
+    private Sport sport;
 
-    public SportLocation(String locationName, int number, float ratingScore, String streetName)
+    public SportLocation(){
+
+    }
+
+    public SportLocation(String locationName, String streetName, int number, int sector, Sport sport)
     {
         this.locationName = locationName;
         id++;
         this.locationId =id;
-        this.number = number;
-        this.ratingScore = ratingScore;
         this.streetName = streetName;
+        this.number = number;
+        this.sector = sector;
+        this.sport = sport;
     }
 
     public String getLocationName() {
@@ -27,12 +33,28 @@ public class SportLocation
         this.locationName = locationName;
     }
 
+    public static int getId() {
+        return id;
+    }
+
+    public static void setId(int id) {
+        SportLocation.id = id;
+    }
+
     public int getLocationId() {
         return locationId;
     }
 
     public void setLocationId(int locationId) {
         this.locationId = locationId;
+    }
+
+    public String getStreetName() {
+        return streetName;
+    }
+
+    public void setStreetName(String streetName) {
+        this.streetName = streetName;
     }
 
     public int getNumber() {
@@ -43,19 +65,21 @@ public class SportLocation
         this.number = number;
     }
 
-    public float getRatingScore() {
-        return ratingScore;
+    public int getSector() {
+        return sector;
     }
 
-    public void setRatingScore(float ratingScore) {
-        this.ratingScore = ratingScore;
+    public void setSector(int sector) {
+        this.sector = sector;
     }
 
-    public String getStreetName() {
-        return streetName;
+    public Sport getSport() {
+        return sport;
     }
 
-    public void setStreetName(String streetName) {
-        this.streetName = streetName;
+    public void setSport(Sport sport) {
+        this.sport = sport;
     }
+
+
 }

@@ -1,8 +1,6 @@
 package com.example.sportmatch;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class Event {
     private String key;
