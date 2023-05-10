@@ -3071,6 +3071,7 @@ id buttonPanel
 id buttonToChat
 id button_editprofile
 id button_login
+id button_logout
 id button_register
 id button_savechanges
 id cache_measures
@@ -3351,6 +3352,7 @@ id newEventPlayers
 id newEventSport
 id newEventTime
 id newEventTimeEdt
+id newpass
 id noScroll
 id noState
 id none
@@ -3360,6 +3362,7 @@ id notification_background
 id notification_main_column
 id notification_main_column_container
 id off
+id oldpass
 id on
 id onInterceptTouchReturnSwipe
 id outline

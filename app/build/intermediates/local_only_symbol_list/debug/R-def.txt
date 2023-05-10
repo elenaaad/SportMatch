@@ -80,6 +80,7 @@ id buttonMenu
 id buttonToChat
 id button_editprofile
 id button_login
+id button_logout
 id button_register
 id button_savechanges
 id cardEvent
@@ -144,6 +145,8 @@ id newEventPlayers
 id newEventSport
 id newEventTime
 id newEventTimeEdt
+id newpass
+id oldpass
 id payment_desc
 id payment_label
 id previewBtnAddEv

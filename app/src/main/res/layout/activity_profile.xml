@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ProfileActivity"
     android:orientation="vertical"
     android:background="@color/verdeFundal">
@@ -13,6 +14,17 @@
         android:layout_height="300dp"
         android:background="@drawable/gradientdrawable"
         android:padding="20dp" >
+
+<!--        <Button-->
+<!--            android:id="@+id/button_editprofile3"-->
+<!--            android:layout_width="77dp"-->
+<!--            android:layout_height="36dp"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:background="@drawable/gradientdrawable"-->
+<!--            android:text="edit" />-->
 
         <ImageView
             android:id="@+id/profile_image"
@@ -34,16 +46,29 @@
             android:textColor="#ffff"
             android:textSize="40sp" />
 
+
         <Button
-            android:id="@+id/button_editprofile"
-            android:layout_width="77dp"
+            android:id="@+id/button_logout"
+            android:layout_width="94dp"
             android:layout_height="36dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:background="@drawable/gradientdrawable"
+            android:text="logout" />
+
+        <Button
+            android:id="@+id/button_editprofile"
+            android:layout_width="94dp"
+            android:layout_height="36dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/gradientdrawable"
             android:text="edit" />
+
         <!-- <TextView
             android:id="@+id/username_field"
             android:layout_width="wrap_content"
@@ -57,7 +82,7 @@
             android:textSize="20dp" /> -->
 
 
-        
+
     </RelativeLayout>
 
     <LinearLayout
@@ -196,3 +221,4 @@
 
     </LinearLayout>
 </LinearLayout>
+
