@@ -216,6 +216,7 @@ string errorCEdate
 string errorCEloc
 string errorCEname
 string errorCEsport
+string errorCEsportFirst
 string errorCEtime
 string first_fragment_label
 string gcm_defaultSenderId

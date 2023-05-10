@@ -130,6 +130,7 @@ com.example.sportmatch:dimen/design_bottom_navigation_label_padding = 0x7f070069
 com.example.sportmatch:string/character_counter_pattern = 0x7f140027
 com.example.sportmatch:style/Widget.Material3.PopupMenu.Overflow = 0x7f1503a9
 com.example.sportmatch:dimen/m3_sys_motion_easing_standard_decelerate_control_y2 = 0x7f0701be
+com.example.sportmatch:string/errorCEsportFirst = 0x7f1400c7
 com.example.sportmatch:macro/m3_comp_extended_fab_tertiary_container_color = 0x7f0e0015
 com.example.sportmatch:styleable/RecycleListView = 0x7f160082
 com.example.sportmatch:macro/m3_comp_slider_inactive_track_color = 0x7f0e008c

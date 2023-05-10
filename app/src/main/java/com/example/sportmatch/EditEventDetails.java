@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -19,9 +21,17 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.android.material.timepicker.MaterialTimePicker;
 import com.google.android.material.timepicker.TimeFormat;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
+import java.util.Objects;
 
 public class EditEventDetails extends AppCompatActivity {
 
@@ -41,14 +51,6 @@ public class EditEventDetails extends AppCompatActivity {
     TextInputLayout editEventDesc;
     TextInputEditText editEventDescEdt;
     Button buttonEEvent;
-    String[] sports = {"Volleyball", "Football", "Handball", "Tennis", "Badminton", "Ping-Pong", "Basketball", "Bowling"};
-    ArrayAdapter<String> adapterSports;
-    String[] locations = {"SportField1", "SportField2", "SportField3", "SportField4", "SportField5"};
-    ArrayAdapter<String> adapterLoc;
-//    String[] time_openings = {"8:00", "8:30", "9:00", "9:30", "10:00", "10:30", "11:00", "11:30", "12:00", "12:30"};
-//    ArrayAdapter<String> adapterTime;
-    String[] players = {"2 Players", "4 Players", "6 Players", "8 Players"};
-    ArrayAdapter<String> adapterPlayers;
 
 
     @Override
@@ -74,6 +76,14 @@ public class EditEventDetails extends AppCompatActivity {
         buttonEEvent = findViewById(R.id.buttonEEvent);
 
 
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference sportsRef = database.getReference("Sports");
+        DatabaseReference locRef = database.getReference("SportLocations");
+        List<Sport> allSports = new ArrayList<>();
+        List<String> sports = new ArrayList<>();
+        List<SportLocation> allLocations = new ArrayList<>();
+        List<String> locations = new ArrayList<>();
+        List<Integer> players = new ArrayList<>();
 
 
         String valTitle = getIntent().getStringExtra("valueName");
@@ -81,17 +91,17 @@ public class EditEventDetails extends AppCompatActivity {
 
         String valueSport = getIntent().getStringExtra("valueSport");
         autocomplete_sport.setText(valueSport);
-        adapterSports = new ArrayAdapter<String>(this, R.layout.list_sport, sports);
+        ArrayAdapter<String> adapterSports = new ArrayAdapter<String>(this, R.layout.list_sport, sports);
         autocomplete_sport.setAdapter(adapterSports);
 
         String valuePlayers = getIntent().getStringExtra("valuePlayers");
         autocomplete_players.setText(valuePlayers);
-        adapterPlayers = new ArrayAdapter<String>(this, R.layout.list_player, players);
+        ArrayAdapter<Integer> adapterPlayers = new ArrayAdapter<Integer>(this, R.layout.list_player, players);
         autocomplete_players.setAdapter(adapterPlayers);
 
         String valueLoc = getIntent().getStringExtra("valueLoc");
         autocomplete_loc.setText(valueLoc);
-        adapterLoc = new ArrayAdapter<String>(this, R.layout.list_sportfields, locations);
+        ArrayAdapter<String> adapterLoc = new ArrayAdapter<String>(this, R.layout.list_sportfields, locations);
         autocomplete_loc.setAdapter(adapterLoc);
 
         String valueDate = getIntent().getStringExtra("valueDate");
@@ -102,6 +112,137 @@ public class EditEventDetails extends AppCompatActivity {
 
         String valueDesc = getIntent().getStringExtra("valueDesc");
         editEventDescEdt.setText(valueDesc);
+
+        sportsRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot sportSnapshot : snapshot.getChildren()) {
+                    Sport sport = sportSnapshot.getValue(Sport.class);
+                    allSports.add(sport);
+                    sports.add(sport.getSportName());
+                }
+
+                adapterSports.notifyDataSetChanged();
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        locRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot locSnapshot : snapshot.getChildren()) {
+                    SportLocation sportLocation = locSnapshot.getValue(SportLocation.class);
+                    allLocations.add(sportLocation);
+                }
+                //actualizez lista locatii
+                locations.clear();
+                for(SportLocation sploc: allLocations){
+                    if(sploc.getSport().getSportName().equals(valueSport)){
+                        locations.add(sploc.getLocationName());
+                    }
+                }
+                adapterLoc.notifyDataSetChanged();
+
+                //actualizez lista jucatori
+                players.clear();
+                Sport sp = new Sport();
+                for(Sport sport: allSports){
+                    if(Objects.equals(sport.getSportName(), valueSport)){
+                        sp = sport;
+                        break;
+                    }
+                }
+                int mxP = sp.getMaxParticipants();
+                int index = sp.getMinParticipants();
+                if(Objects.equals(valueSport, "Bowling")){
+                    while(index<=mxP){
+                        players.add(index);
+                        index += 1;
+                    }
+                }
+                else{
+                    while(index<=mxP){
+                        players.add(index);
+                        index += 2;
+                    }
+                }
+                adapterPlayers.notifyDataSetChanged();
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
+        autocomplete_sport.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Obține sportul selectat
+                String SelectedSport = (String) parent.getItemAtPosition(position);
+
+                //actualizez lista locatii
+                locations.clear();
+                for(SportLocation sploc: allLocations){
+                    if(sploc.getSport().getSportName().equals(SelectedSport)){
+                        locations.add(sploc.getLocationName());
+                    }
+                }
+                adapterLoc.notifyDataSetChanged();
+
+                //actualizez lista jucatori
+                players.clear();
+                Sport sp = null;
+                for(Sport sport: allSports){
+                    if(Objects.equals(sport.getSportName(), SelectedSport)){
+                        sp = sport;
+                        break;
+                    }
+                }
+                int mxP = sp.getMaxParticipants();
+                int index = sp.getMinParticipants();
+                if(Objects.equals(SelectedSport, "Bowling")){
+                    while(index<=mxP){
+                        players.add(index);
+                        index += 1;
+                    }
+                }
+                else{
+                    while(index<=mxP){
+                        players.add(index);
+                        index += 2;
+                    }
+                }
+                adapterPlayers.notifyDataSetChanged();
+
+
+            }
+        });
+
+
+        autocomplete_loc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (TextUtils.isEmpty(autocomplete_sport.getText().toString().trim())){
+                    editEventLoc.setError(getString(R.string.errorCEsportFirst));
+                }
+            }
+        });
+
+        autocomplete_players.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(TextUtils.isEmpty(autocomplete_sport.getText().toString().trim())){
+                    editEventPlayers.setError(getString(R.string.errorCEsportFirst));
+                }
+            }
+        });
+
+
 
         Calendar calendar = Calendar.getInstance();
         MaterialDatePicker<Long> datePicker = MaterialDatePicker.Builder.datePicker()

@@ -3858,6 +3858,7 @@ string errorCEdate
 string errorCEloc
 string errorCEname
 string errorCEsport
+string errorCEsportFirst
 string errorCEtime
 string error_a11y_label
 string error_icon_content_description

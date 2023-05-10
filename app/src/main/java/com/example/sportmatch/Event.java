@@ -1,8 +1,6 @@
 package com.example.sportmatch;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class Event {
     private String key;
@@ -108,6 +106,14 @@ public class Event {
 
     public void setParticipants(List<String> participants) {
         this.participants = participants;
+    }
+
+    public String getCreator() {
+        return creator;
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
     }
 
 

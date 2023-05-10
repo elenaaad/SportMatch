@@ -3857,6 +3857,7 @@ int string errorCEdate 0x7f14003d
 int string errorCEloc 0x7f14003e
 int string errorCEname 0x7f14003f
 int string errorCEsport 0x7f140040
+int string errorCEsportFirst 0x7f1400c7
 int string errorCEtime 0x7f140041
 int string error_a11y_label 0x7f140042
 int string error_icon_content_description 0x7f140043
