@@ -26,7 +26,7 @@ public class BottomNavActivity extends AppCompatActivity {
     ValueEventListener eventListener;
 
 
-    ParentAdapter parentAdapter;
+    ParentAdapterBottom parentAdapter;
     ArrayList<AllCategory> allCategoryList;
     ArrayList<Event> volleyballList;
     ArrayList<Event> footballList;
@@ -164,7 +164,7 @@ public class BottomNavActivity extends AppCompatActivity {
     {
         recyclerView = findViewById(R.id.main_recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        parentAdapter = new ParentAdapter(allCategoryList,this);
+        parentAdapter = new ParentAdapterBottom(allCategoryList,this);
         recyclerView.setAdapter(parentAdapter);
     }
 
