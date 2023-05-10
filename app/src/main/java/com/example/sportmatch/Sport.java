@@ -8,6 +8,10 @@ public class Sport
     private int maxParticipants;
     private int minParticipants;
 
+    public Sport(){
+
+    }
+
     public Sport(String sportName, int maxParticipants, int minParticipants) {
         id++;
         this.sportId=id;
