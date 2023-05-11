@@ -32,6 +32,9 @@ public final class ActivityProfileBinding implements ViewBinding {
   public final Button buttonEditprofile;
 
   @NonNull
+  public final Button buttonLogout;
+
+  @NonNull
   public final TextInputLayout emailProfile;
 
   @NonNull
@@ -51,14 +54,15 @@ public final class ActivityProfileBinding implements ViewBinding {
 
   private ActivityProfileBinding(@NonNull LinearLayout rootView,
       @NonNull TextInputLayout ageProfile, @NonNull TextInputLayout bioProfile,
-      @NonNull Button buttonEditprofile, @NonNull TextInputLayout emailProfile,
-      @NonNull TextInputLayout fullNameProfile, @NonNull TextView fullnameField,
-      @NonNull TextView paymentDesc, @NonNull TextView paymentLabel,
-      @NonNull ImageView profileImage) {
+      @NonNull Button buttonEditprofile, @NonNull Button buttonLogout,
+      @NonNull TextInputLayout emailProfile, @NonNull TextInputLayout fullNameProfile,
+      @NonNull TextView fullnameField, @NonNull TextView paymentDesc,
+      @NonNull TextView paymentLabel, @NonNull ImageView profileImage) {
     this.rootView = rootView;
     this.ageProfile = ageProfile;
     this.bioProfile = bioProfile;
     this.buttonEditprofile = buttonEditprofile;
+    this.buttonLogout = buttonLogout;
     this.emailProfile = emailProfile;
     this.fullNameProfile = fullNameProfile;
     this.fullnameField = fullnameField;
@@ -112,6 +116,12 @@ public final class ActivityProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.button_logout;
+      Button buttonLogout = ViewBindings.findChildViewById(rootView, id);
+      if (buttonLogout == null) {
+        break missingId;
+      }
+
       id = R.id.email_profile;
       TextInputLayout emailProfile = ViewBindings.findChildViewById(rootView, id);
       if (emailProfile == null) {
@@ -149,8 +159,8 @@ public final class ActivityProfileBinding implements ViewBinding {
       }
 
       return new ActivityProfileBinding((LinearLayout) rootView, ageProfile, bioProfile,
-          buttonEditprofile, emailProfile, fullNameProfile, fullnameField, paymentDesc,
-          paymentLabel, profileImage);
+          buttonEditprofile, buttonLogout, emailProfile, fullNameProfile, fullnameField,
+          paymentDesc, paymentLabel, profileImage);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
