@@ -52,6 +52,7 @@
     <string name="previous">Previous</string>
     <string name="project_id" translatable="false">sportsmatch-97ff3</string>
     <string name="second_fragment_label">Second Fragment</string>
+    <string name="title_activity_choose_avatar">ChooseAvatarActivity</string>
     <string name="title_activity_menu">MenuActivity</string>
     <style name="SlideActivityAnimation" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>

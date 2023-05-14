@@ -100,12 +100,12 @@
         "source": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-49:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-47:\\drawable_p2.jpg.flat",
-        "source": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-49:\\drawable\\p2.jpg"
+        "merged": "com.example.sportmatch.app-merged_res-47:/layout_fragment_second.xml.flat",
+        "source": "com.example.sportmatch.app-main-49:/layout/fragment_second.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-47:/layout_activity_register.xml.flat",
-        "source": "com.example.sportmatch.app-main-49:/layout/activity_register.xml"
+        "merged": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-47:\\drawable_p2.jpg.flat",
+        "source": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-49:\\drawable\\p2.jpg"
     },
     {
         "merged": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-47:\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
@@ -134,6 +134,10 @@
     {
         "merged": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-47:\\layout_activity_bottom_nav.xml.flat",
         "source": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-49:\\layout\\activity_bottom_nav.xml"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-47:/layout_activity_main.xml.flat",
+        "source": "com.example.sportmatch.app-main-49:/layout/activity_main.xml"
     },
     {
         "merged": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-47:\\menu_bottom_menu.xml.flat",
@@ -180,6 +184,10 @@
         "source": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-49:\\drawable\\baseline_manage_accounts_24.xml"
     },
     {
+        "merged": "com.example.sportmatch.app-merged_res-47:/layout_content_choose_avatar.xml.flat",
+        "source": "com.example.sportmatch.app-main-49:/layout/content_choose_avatar.xml"
+    },
+    {
         "merged": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-47:\\mipmap-mdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-49:\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
@@ -222,6 +230,10 @@
     {
         "merged": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-47:\\drawable_baseline_add_24.xml.flat",
         "source": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-49:\\drawable\\baseline_add_24.xml"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-47:/layout_fragment_first.xml.flat",
+        "source": "com.example.sportmatch.app-main-49:/layout/fragment_first.xml"
     },
     {
         "merged": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-47:\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
@@ -272,8 +284,16 @@
         "source": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-49:\\drawable\\baseline_person_outline_24.xml"
     },
     {
+        "merged": "com.example.sportmatch.app-merged_res-47:/layout_activity_choose_avatar.xml.flat",
+        "source": "com.example.sportmatch.app-main-49:/layout/activity_choose_avatar.xml"
+    },
+    {
         "merged": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-47:\\drawable_handball.png.flat",
         "source": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-49:\\drawable\\handball.png"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-47:/navigation_nav_graph2.xml.flat",
+        "source": "com.example.sportmatch.app-main-49:/navigation/nav_graph2.xml"
     },
     {
         "merged": "C:\\Users\\elena\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-47:\\layout_activity_register.xml.flat",
