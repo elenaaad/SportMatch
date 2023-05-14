@@ -15,7 +15,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
@@ -69,11 +68,8 @@ public class EventPreview extends AppCompatActivity {
         previewDescInput = findViewById(R.id.previewDescInput);
         previewBtnAddEv = findViewById(R.id.previewBtnAddEv);
 
-        //TODO: editButton sa duca la pag de edit event
         //TODO: legatura cu tabelele de locatie, sport, jucatori etc
-        //TODO: pagina de edit
         //TODO: legatura btn see map cu harta
-        //TODO: pag detalii event
 
 
 
