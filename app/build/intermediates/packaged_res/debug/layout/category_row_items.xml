@@ -55,7 +55,7 @@
             android:text="NUME EVENT"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="24sp" />
+            android:textSize="18sp" />
 
 
         <ImageView
@@ -85,7 +85,7 @@
             android:layout_height="130dp"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="75dp"
-            android:background="#364d5b"
+            android:background="#FFFFFF"
             app:srcCompat="@drawable/ic_launcher_background" />
 
     </androidx.cardview.widget.CardView>
