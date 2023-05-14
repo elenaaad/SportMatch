@@ -3037,6 +3037,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id auto_complete_txt
 id autocomplete_loc
 id autocomplete_players
 id autocomplete_sport
@@ -3429,6 +3430,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchBar
 id search_badge
 id search_bar
 id search_bar_text_view
@@ -3719,6 +3721,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout item_message
+layout list_item
 layout list_player
 layout list_sport
 layout list_sportfields

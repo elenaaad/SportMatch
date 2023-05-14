@@ -186,14 +186,14 @@ public class EditEventDetails extends AppCompatActivity {
                 intent.putExtra("valueDesc",inputDesc);
 
                 if(TextUtils.isEmpty(selectedDate)){
-                    intent.putExtra("valueDate","To be discussed");
+                    intent.putExtra("valueDate","TBA");
                 }
                 else{
                     intent.putExtra("valueDate",selectedDate);
                 }
 
                 if(TextUtils.isEmpty(selectedTime)){
-                    intent.putExtra("valueTime","To be discussed");
+                    intent.putExtra("valueTime","TBA");
                 }
                 else{
                     intent.putExtra("valueTime",selectedTime);

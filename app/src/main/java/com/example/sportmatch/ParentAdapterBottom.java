@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,9 +17,9 @@ import java.util.List;
 
 public class ParentAdapterBottom extends RecyclerView.Adapter<ParentAdapterBottom.MainViewHolder> {
 
-    private List<AllCategory> allCategoryList;
+    private ArrayList<AllCategory> allCategoryList;
     private Context context;
-    public ParentAdapterBottom(List<AllCategory> allCategoryList, Context context) {
+    public ParentAdapterBottom(ArrayList<AllCategory> allCategoryList, Context context) {
         this.allCategoryList = allCategoryList;
         this.context = context;
     }
@@ -33,6 +35,8 @@ public class ParentAdapterBottom extends RecyclerView.Adapter<ParentAdapterBotto
 
         holder.title.setText(allCategoryList.get(position).getTitle());
         setChildRecycler(holder.recyclerView,allCategoryList.get(position).getEventList());
+        Animation animation= AnimationUtils.loadAnimation(holder.recyclerView.getContext(),R.anim.slide_in_right);
+        holder.recyclerView.startAnimation(animation);
     }
 
     @Override
@@ -59,4 +63,5 @@ public class ParentAdapterBottom extends RecyclerView.Adapter<ParentAdapterBotto
         recyclerView.setLayoutManager(new LinearLayoutManager(context,RecyclerView.HORIZONTAL,false));
         recyclerView.setAdapter(childAdapter);
     }
+
 }
