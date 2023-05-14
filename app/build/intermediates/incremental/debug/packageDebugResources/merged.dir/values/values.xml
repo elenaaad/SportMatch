@@ -39,6 +39,7 @@
     <string name="errorCEloc">Please choose location!</string>
     <string name="errorCEname">Please add a name for the event!</string>
     <string name="errorCEsport">Please choose sport!</string>
+    <string name="errorCEsportFirst">Please choose sport first!</string>
     <string name="errorCEtime">Please choose time!</string>
     <string name="first_fragment_label">First Fragment</string>
     <string name="gcm_defaultSenderId" translatable="false">927342689684</string>
@@ -52,7 +53,6 @@
     <string name="previous">Previous</string>
     <string name="project_id" translatable="false">sportsmatch-97ff3</string>
     <string name="second_fragment_label">Second Fragment</string>
-    <string name="title_activity_choose_avatar">ChooseAvatarActivity</string>
     <string name="title_activity_menu">MenuActivity</string>
     <style name="SlideActivityAnimation" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>

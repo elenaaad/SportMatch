@@ -17,7 +17,7 @@ public class ParentAdapter extends RecyclerView.Adapter<ParentAdapter.MainViewHo
 
     private List<AllCategory> allCategoryList;
     private Context context;
-
+    private ChildAdapter.OnChatClickListener onChatClickListener;
     public ParentAdapter(List<AllCategory> allCategoryList, Context context) {
         this.allCategoryList = allCategoryList;
         this.context = context;
@@ -41,6 +41,11 @@ public class ParentAdapter extends RecyclerView.Adapter<ParentAdapter.MainViewHo
         return allCategoryList.size();
     }
 
+    public void setOnChatClickListener(ChildAdapter.OnChatClickListener onChatClickListener) {
+        this.onChatClickListener = onChatClickListener;
+    }
+
+
     public static class MainViewHolder extends RecyclerView.ViewHolder {
         RecyclerView recyclerView;
         TextView title;
@@ -55,6 +60,7 @@ public class ParentAdapter extends RecyclerView.Adapter<ParentAdapter.MainViewHo
     private void setChildRecycler(RecyclerView recyclerView, ArrayList<Event> eventList)
     {
         ChildAdapter childAdapter = new ChildAdapter(eventList,context);
+        childAdapter.setOnChatClickListener(onChatClickListener);
         recyclerView.setLayoutManager(new LinearLayoutManager(context,RecyclerView.HORIZONTAL,false));
         recyclerView.setAdapter(childAdapter);
     }

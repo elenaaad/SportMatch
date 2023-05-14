@@ -14,9 +14,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class EventPreview extends AppCompatActivity {
     Button previewBtnEdit;
@@ -66,11 +68,8 @@ public class EventPreview extends AppCompatActivity {
         previewDescInput = findViewById(R.id.previewDescInput);
         previewBtnAddEv = findViewById(R.id.previewBtnAddEv);
 
-        //TODO: editButton sa duca la pag de edit event
         //TODO: legatura cu tabelele de locatie, sport, jucatori etc
-        //TODO: pagina de edit
         //TODO: legatura btn see map cu harta
-        //TODO: pag detalii event
 
 
 
@@ -151,7 +150,14 @@ public class EventPreview extends AppCompatActivity {
                 String eventId = database.getReference("Events").push().getKey();
 
                 // Creează un obiect Event cu datele evenimentului
-                Event event = new Event(valTitle, valueSport, valuePlayers, valueLoc, valueDate, valueTime, valueDate);
+                Random random = new Random();
+                String chatId = String.format("%04d", random.nextInt(10000));
+                ArrayList registeredPlayers = new ArrayList<>();
+                registeredPlayers.add(FirebaseAuth.getInstance().getCurrentUser().getUid());
+
+
+                Event event = new Event(valTitle, valueSport, valuePlayers, valueLoc, valueDate, valueTime, valueDate,FirebaseAuth.getInstance().getCurrentUser().getUid(), registeredPlayers, chatId);
+                event.setUid(eventId);
 
                 // Adaugă evenimentul la tabelul "events" folosind cheia unică generată
                 database.getReference("Events").child(eventId).setValue(event).addOnCompleteListener(new OnCompleteListener<Void>() {

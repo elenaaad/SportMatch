@@ -1,7 +1,9 @@
 package com.example.sportmatch;
 
-public class Event {
+import java.util.List;
 
+public class Event {
+    private String key;
     private String eventName;
     private String sport;
     private String nrPlayers;
@@ -9,22 +11,59 @@ public class Event {
     private String date;
     private String time;
     private String description;
-    //private User user;
-    
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
+    }
+
+    public String getCreator() {
+        return creator;
+    }
+
+    public void setCreator(String creator) {
+        this.creator = creator;
+    }
+
+    public void setChatId(String chatId) {
+        this.chatId = chatId;
+    }
+
+    private String creator;
+    private List<String> participants; // list of user IDs who have registered for this event
+    private String chatId;
 
     public Event (){
 
     }
-
-    public Event(String eventName, String sport, String nrPlayers, String location, String date, String time, String description) {
+    String getChatId() {
+        return chatId;
+    }
+    public Event(String eventName, String sport, String nrPlayers, String location, String date, String time, String description, String creator, List<String> participants, String chatId) {
+        this.key = null;
         this.eventName = eventName;
         this.sport = sport;
         this.nrPlayers = nrPlayers;
         this.location = location;
         this.date = date;
         this.time = time;
+        this.description = description;
+        this.creator = creator;
+        this.participants = participants;
+        this.chatId = chatId;
+       // Add the event creator to the registered players list
     }
 
+    public String getUid() {
+        return key;
+    }
+
+    public void setUid(String uid) {
+        this.key = uid;
+    }
     public String getDate() {
         return date;
     }
@@ -81,6 +120,15 @@ public class Event {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public List<String> getParticipants() {
+        return participants;
+    }
+
+    public void setParticipants(List<String> participants) {
+        this.participants = participants;
+    }
+
 
 //    public User getUser() {
 //        return user;

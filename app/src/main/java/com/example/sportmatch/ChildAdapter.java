@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,11 +14,20 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHolder> {
 
     ArrayList<Event> eventList;
     Context context;
+
+    private ChildAdapter.OnChatClickListener onChatClickListener;
+    public interface OnChatClickListener {
+        void onChatClick(String eventId);
+    }
+    public void setOnChatClickListener(ChildAdapter.OnChatClickListener onChatClickListener) {
+        this.onChatClickListener = onChatClickListener;
+    }
 
     public ChildAdapter(ArrayList<Event> eventList, Context context) {
         this.eventList= eventList;
@@ -27,7 +37,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHol
     @NonNull
     @Override
     public ChildViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ChildViewHolder( LayoutInflater.from(context).inflate(R.layout.category_row_items,parent,false));
+        return new ChildViewHolder( LayoutInflater.from(context).inflate(R.layout.registered_event_item,parent,false));
     }
 
     @Override
@@ -36,7 +46,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHol
 //        Glide.with(context).load(eventList.get(position).getDa)
         final Event data_position = eventList.get(position);
         holder.itemImage.setImageResource(R.drawable.p11);
-
+        Button eventChat = holder.itemView.findViewById(R.id.buttonToChat);
         String nbrPart=eventList.get(position).getNrPlayers();
         String numberOnly = nbrPart.replaceAll("[^0-9]", "");
         int result = Integer.parseInt(numberOnly);
@@ -65,6 +75,17 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHol
             }
         });
 
+        // Set the chat button listener
+        eventChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String eventId = data_position.getUid();
+                if (eventId != null && onChatClickListener != null) {
+                    onChatClickListener.onChatClick(eventId);
+                }
+            }
+        });
+
     }
 
     @Override
@@ -79,7 +100,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHol
         TextView time;
         TextView eventName;
         TextView nbrParticipants;
-
+        Button eventChat;
         CardView cardView;
 
         public ChildViewHolder(@NonNull View itemView) {
@@ -90,6 +111,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHol
             time=itemView.findViewById(R.id.eventTime);
             nbrParticipants=itemView.findViewById(R.id.eventParticipants);
             cardView = itemView.findViewById(R.id.cardEvent);
+            eventChat = itemView.findViewById(R.id.buttonToChat);
         }
     }
 }

@@ -23,22 +23,22 @@ public final class ActivityEditprofileBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
-  public final TextInputLayout ageProfile;
-
-  @NonNull
   public final TextInputLayout bioProfileEdit;
 
   @NonNull
   public final Button buttonSavechanges;
 
   @NonNull
-  public final TextInputLayout emailProfile;
-
-  @NonNull
   public final TextInputLayout fullNameEditprofile;
 
   @NonNull
   public final TextView fullnameField;
+
+  @NonNull
+  public final TextInputLayout newpass;
+
+  @NonNull
+  public final TextInputLayout oldpass;
 
   @NonNull
   public final TextView paymentDesc;
@@ -50,18 +50,18 @@ public final class ActivityEditprofileBinding implements ViewBinding {
   public final ImageView profileImage;
 
   private ActivityEditprofileBinding(@NonNull LinearLayout rootView,
-      @NonNull TextInputLayout ageProfile, @NonNull TextInputLayout bioProfileEdit,
-      @NonNull Button buttonSavechanges, @NonNull TextInputLayout emailProfile,
+      @NonNull TextInputLayout bioProfileEdit, @NonNull Button buttonSavechanges,
       @NonNull TextInputLayout fullNameEditprofile, @NonNull TextView fullnameField,
+      @NonNull TextInputLayout newpass, @NonNull TextInputLayout oldpass,
       @NonNull TextView paymentDesc, @NonNull TextView paymentLabel,
       @NonNull ImageView profileImage) {
     this.rootView = rootView;
-    this.ageProfile = ageProfile;
     this.bioProfileEdit = bioProfileEdit;
     this.buttonSavechanges = buttonSavechanges;
-    this.emailProfile = emailProfile;
     this.fullNameEditprofile = fullNameEditprofile;
     this.fullnameField = fullnameField;
+    this.newpass = newpass;
+    this.oldpass = oldpass;
     this.paymentDesc = paymentDesc;
     this.paymentLabel = paymentLabel;
     this.profileImage = profileImage;
@@ -94,12 +94,6 @@ public final class ActivityEditprofileBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.age_profile;
-      TextInputLayout ageProfile = ViewBindings.findChildViewById(rootView, id);
-      if (ageProfile == null) {
-        break missingId;
-      }
-
       id = R.id.bio_profile_edit;
       TextInputLayout bioProfileEdit = ViewBindings.findChildViewById(rootView, id);
       if (bioProfileEdit == null) {
@@ -112,12 +106,6 @@ public final class ActivityEditprofileBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.email_profile;
-      TextInputLayout emailProfile = ViewBindings.findChildViewById(rootView, id);
-      if (emailProfile == null) {
-        break missingId;
-      }
-
       id = R.id.full_name_editprofile;
       TextInputLayout fullNameEditprofile = ViewBindings.findChildViewById(rootView, id);
       if (fullNameEditprofile == null) {
@@ -127,6 +115,18 @@ public final class ActivityEditprofileBinding implements ViewBinding {
       id = R.id.fullname_field;
       TextView fullnameField = ViewBindings.findChildViewById(rootView, id);
       if (fullnameField == null) {
+        break missingId;
+      }
+
+      id = R.id.newpass;
+      TextInputLayout newpass = ViewBindings.findChildViewById(rootView, id);
+      if (newpass == null) {
+        break missingId;
+      }
+
+      id = R.id.oldpass;
+      TextInputLayout oldpass = ViewBindings.findChildViewById(rootView, id);
+      if (oldpass == null) {
         break missingId;
       }
 
@@ -148,8 +148,8 @@ public final class ActivityEditprofileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityEditprofileBinding((LinearLayout) rootView, ageProfile, bioProfileEdit,
-          buttonSavechanges, emailProfile, fullNameEditprofile, fullnameField, paymentDesc,
+      return new ActivityEditprofileBinding((LinearLayout) rootView, bioProfileEdit,
+          buttonSavechanges, fullNameEditprofile, fullnameField, newpass, oldpass, paymentDesc,
           paymentLabel, profileImage);
     }
     String missingId = rootView.getResources().getResourceName(id);

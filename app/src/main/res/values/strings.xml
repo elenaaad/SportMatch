@@ -12,10 +12,10 @@
     <!--    error messages-->
     <string name="errorCEname">Please add a name for the event!</string>
     <string name="errorCEsport">Please choose sport!</string>
+    <string name="errorCEsportFirst">Please choose sport first!</string>
     <string name="errorCEloc">Please choose location!</string>
     <string name="errorCEdate">Please choose date!</string>
     <string name="errorCEtime">Please choose time!</string>
     <string name="Discuss">*Date and time not mandatory! Can be discussed in chat!*</string>
-    <string name="title_activity_choose_avatar">ChooseAvatarActivity</string>
 
 </resources>

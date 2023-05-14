@@ -14,10 +14,8 @@
         android:theme="@style/Theme.SportMatch"
         tools:targetApi="31">
         <activity
-            android:name=".ChooseAvatarActivity"
-            android:exported="false"
-            android:label="@string/title_activity_choose_avatar"
-            android:theme="@style/Theme.SportMatch.NoActionBar" />
+            android:name=".ChatActivity"
+            android:exported="false" />
         <activity
             android:name=".ViewProfileActivity"
             android:exported="false" />

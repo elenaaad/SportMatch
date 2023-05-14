@@ -34,10 +34,8 @@
         android:testOnly="true"
         android:theme="@style/Theme.SportMatch" >
         <activity
-            android:name="com.example.sportmatch.ChooseAvatarActivity"
-            android:exported="false"
-            android:label="@string/title_activity_choose_avatar"
-            android:theme="@style/Theme.SportMatch.NoActionBar" />
+            android:name="com.example.sportmatch.ChatActivity"
+            android:exported="false" />
         <activity
             android:name="com.example.sportmatch.ViewProfileActivity"
             android:exported="false" />
