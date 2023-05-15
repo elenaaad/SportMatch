@@ -10,11 +10,14 @@ public class SportLocation
     private int sector;
     private Sport sport;
 
+    private double longitude;
+    private double latitude;
+
     public SportLocation(){
 
     }
 
-    public SportLocation(String locationName, String streetName, int number, int sector, Sport sport)
+    public SportLocation(String locationName, String streetName, int number, int sector, Sport sport,double latitude, double longitude)
     {
         this.locationName = locationName;
         id++;
@@ -23,6 +26,8 @@ public class SportLocation
         this.number = number;
         this.sector = sector;
         this.sport = sport;
+        this.latitude = latitude;
+        this.longitude = longitude;
     }
 
     public String getLocationName() {
@@ -81,5 +86,19 @@ public class SportLocation
         this.sport = sport;
     }
 
+    public double getLongitude() {
+        return longitude;
+    }
 
+    public void setLongitude(double longitude) {
+        this.longitude = longitude;
+    }
+
+    public double getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(double latitude) {
+        this.latitude = latitude;
+    }
 }
