@@ -58,13 +58,13 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/newEventSport"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="170dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/newEventName"
             android:layout_marginTop="10dp"
-            android:hint="Sport"
+            android:hint="Select Sport"
             app:errorEnabled="true"
-            app:helperText="Select one option"
+            app:helperText="One option"
             app:helperTextEnabled="true">
 
             <AutoCompleteTextView
@@ -80,12 +80,11 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="200dp"
-            android:layout_below="@id/newEventName"
+            android:layout_below="@id/newEventSport"
             android:layout_marginTop="10dp"
-            android:hint="Players"
+            android:hint="Select Players"
             app:errorEnabled="true"
-            app:helperText="Select number of players"
+            app:helperText="One option"
             app:helperTextEnabled="true">
 
             <AutoCompleteTextView
@@ -99,13 +98,13 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/newEventLoc"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="270dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/newEventPlayers"
             android:layout_marginTop="10dp"
-            android:hint="Location"
+            android:hint="Select Location"
             app:errorEnabled="true"
-            app:helperText="Press MapIcon to see location on map"
+            app:helperText="One option"
             app:helperTextEnabled="true">
 
             <AutoCompleteTextView
@@ -115,18 +114,6 @@
                 android:inputType="none" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
-
-        <ImageView
-            android:id="@+id/mapImage"
-            android:layout_width="61dp"
-            android:layout_height="72dp"
-            android:layout_above="@+id/textDateTime"
-            android:layout_below="@id/newEventPlayers"
-            android:layout_marginStart="280dp"
-            android:layout_marginTop="21dp"
-            android:layout_marginBottom="23dp"
-            android:src="@drawable/map_inactive" />
 
         <TextView
             android:id="@+id/textDateTime"
@@ -153,9 +140,7 @@
                 android:id="@+id/newEventDateEdt"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:inputType="date"
-                android:focusableInTouchMode="true"
-                android:focusable="false"/>
+                android:inputType="date" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -176,9 +161,7 @@
                 android:id="@+id/newEventTimeEdt"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:inputType="time"
-                android:focusableInTouchMode="true"
-                android:focusable="false"/>
+                android:inputType="time" />
 
 
         </com.google.android.material.textfield.TextInputLayout>

@@ -66,6 +66,7 @@ id action_SecondFragment_to_FirstFragment
 id activity_main_passwordEditText
 id activity_main_usernameEditText
 id age_profile
+id auto_complete_txt
 id autocomplete_loc
 id autocomplete_players
 id autocomplete_sport
@@ -179,6 +180,7 @@ id register_password
 id register_password2
 id register_username
 id relativeLayout
+id searchBar
 id sendButton
 id signupButton
 id sportImage
@@ -208,6 +210,7 @@ layout activity_view_profile
 layout category_row_items
 layout content_menu
 layout item_message
+layout list_item
 layout list_player
 layout list_sport
 layout list_sportfields
