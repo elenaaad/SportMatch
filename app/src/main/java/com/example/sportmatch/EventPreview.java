@@ -43,6 +43,7 @@ public class EventPreview extends AppCompatActivity {
 
     private FirebaseDatabase database;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -213,9 +214,19 @@ public class EventPreview extends AppCompatActivity {
 
         ////final meniu
 
+        //MAP
+        previewBtnMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-//
+                Intent intent2 = new Intent(EventPreview.this, MapsActivity.class);
+                intent2.putExtra("selectedLoc", valueLoc);
+                intent2.putExtra("selectedSport", valueSport);
+                intent2.putExtra("Activity", "EventPreview");
+                startActivity(intent2);
 
+            }
+        });
 
 
     }
