@@ -17,5 +17,6 @@
     <string name="errorCEdate">Please choose date!</string>
     <string name="errorCEtime">Please choose time!</string>
     <string name="Discuss">*Date and time not mandatory! Can be discussed in chat!*</string>
+    <string name="title_activity_maps">MapsActivity</string>
 
 </resources>

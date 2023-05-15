@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -35,6 +36,7 @@ import java.util.Objects;
 
 public class EditEventDetails extends AppCompatActivity {
 
+    public static final int REQUEST_CODE_MAPS_ACTIVITY = 1001;
     TextView title;
     TextInputLayout editEventName;
     TextInputEditText editEventNameEdt;
@@ -51,7 +53,8 @@ public class EditEventDetails extends AppCompatActivity {
     TextInputLayout editEventDesc;
     TextInputEditText editEventDescEdt;
     Button buttonEEvent;
-
+    ImageView mapImage;
+    List<String> locations;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +77,7 @@ public class EditEventDetails extends AppCompatActivity {
         editEventDesc = findViewById(R.id.editEventDesc);
         editEventDescEdt = findViewById(R.id.editEventDescEdt);
         buttonEEvent = findViewById(R.id.buttonEEvent);
+        mapImage = findViewById(R.id.mapImageEdt);
 
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -82,7 +86,7 @@ public class EditEventDetails extends AppCompatActivity {
         List<Sport> allSports = new ArrayList<>();
         List<String> sports = new ArrayList<>();
         List<SportLocation> allLocations = new ArrayList<>();
-        List<String> locations = new ArrayList<>();
+        locations = new ArrayList<>();
         List<Integer> players = new ArrayList<>();
 
 

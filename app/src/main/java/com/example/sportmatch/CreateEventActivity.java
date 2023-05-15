@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -36,6 +37,8 @@ import java.util.List;
 import java.util.Objects;
 
 public class CreateEventActivity extends AppCompatActivity {
+
+    public static final int REQUEST_CODE_MAPS_ACTIVITY = 1001;
     TextView title;
     TextInputLayout newEventName;
     TextInputEditText newEventNameEdt;
@@ -52,6 +55,9 @@ public class CreateEventActivity extends AppCompatActivity {
     TextInputLayout newEventDesc;
     TextInputEditText newEventDescEdt;
     Button buttonCEvent;
+    ImageView mapImage;
+
+    List<String> locations;
 
 
     @Override
@@ -61,8 +67,7 @@ public class CreateEventActivity extends AppCompatActivity {
 
         
         //TODO: sa nu se mai vada bottom navigation cand tastez
-        //TODO: MAP - rating daca dai hover pe o locatie de pe harta, daca dai click o pune in input; deschizi lista cu locatiile si in capatul locatiei e buton de see map
-        //TODO: sa se stearga inputul din players si location cand schimb sportul fara sa se stearga lista??
+        //TODO: MAP - rating daca dai click pe o locatie in harta
         //TODO: jump la eroare
 
         String userId;
@@ -85,7 +90,10 @@ public class CreateEventActivity extends AppCompatActivity {
         newEventDesc = findViewById(R.id.newEventDesc);
         newEventDescEdt = findViewById(R.id.newEventDescEdt);
         buttonCEvent = findViewById(R.id.buttonCEvent);
+        mapImage = findViewById(R.id.mapImage);
 
+
+        //Referinte catre tabelele de sporturi si locatii din baza de date
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference sportsRef = database.getReference("Sports");
@@ -93,7 +101,7 @@ public class CreateEventActivity extends AppCompatActivity {
         List<Sport> allSports = new ArrayList<>();
         List<String> sports = new ArrayList<>();
         List<SportLocation> allLocations = new ArrayList<>();
-        List<String> locations = new ArrayList<>();
+        locations = new ArrayList<>();
         List<Integer> players = new ArrayList<>();
 
         ArrayAdapter<String> adapterSports = new ArrayAdapter<String>(this, R.layout.list_sport, sports);
@@ -104,7 +112,6 @@ public class CreateEventActivity extends AppCompatActivity {
 
         ArrayAdapter<Integer> adapterPlayers = new ArrayAdapter<Integer>(this, R.layout.list_player, players);
         autocomplete_players.setAdapter(adapterPlayers);
-
 
         sportsRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -123,8 +130,6 @@ public class CreateEventActivity extends AppCompatActivity {
             }
         });
 
-
-
         locRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -139,6 +144,11 @@ public class CreateEventActivity extends AppCompatActivity {
             }
         });
 
+
+
+        //Setare liste autocomplete
+
+        //TODO: Schimba input locatie, players inapoi la hint daca schimb sportul selectat
         autocomplete_sport.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -179,6 +189,7 @@ public class CreateEventActivity extends AppCompatActivity {
                 }
                 adapterPlayers.notifyDataSetChanged();
 
+                mapImage.setImageResource(R.drawable.map_active);
 
             }
         });
@@ -191,21 +202,12 @@ public class CreateEventActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(autocomplete_sport.getText().toString().trim())){
                     newEventLoc.setError(getString(R.string.errorCEsportFirst));
                 }
+                else{
+                    newEventLoc.setError(null);
+                }
             }
         });
 
-//        autocomplete_loc.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                if (TextUtils.isEmpty(autocomplete_sport.getText().toString().trim()) && event.getAction() == MotionEvent.ACTION_UP) {
-//                    newEventLoc.setError(getString(R.string.errorCEsportFirst));
-//                    return true;
-//                }
-//                return false;
-//            }
-//
-//
-//        });
 
         autocomplete_players.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -213,12 +215,20 @@ public class CreateEventActivity extends AppCompatActivity {
                 if(TextUtils.isEmpty(autocomplete_sport.getText().toString().trim())){
                     newEventPlayers.setError(getString(R.string.errorCEsportFirst));
                 }
+                else{
+                    newEventPlayers.setError(null);
+                }
             }
         });
 
+
+        //DATEPICKER
+
         Calendar calendar = Calendar.getInstance();
         MaterialDatePicker<Long> datePicker = MaterialDatePicker.Builder.datePicker()
-                .setTitleText("Select Date").setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+                .setTitleText("Select Date")
+                .setSelection(MaterialDatePicker.todayInUtcMilliseconds())
+                .setInputMode(MaterialDatePicker.INPUT_MODE_CALENDAR)
                 .build();
 
         newEventDateEdt.setOnClickListener(new View.OnClickListener() {
@@ -235,6 +245,7 @@ public class CreateEventActivity extends AppCompatActivity {
                         newEventDateEdt.setText(dateString);
                     }
                 });
+
             }
         });
 
@@ -280,6 +291,7 @@ public class CreateEventActivity extends AppCompatActivity {
         });
 
 
+        //Button for Create Event
         buttonCEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -395,8 +407,43 @@ public class CreateEventActivity extends AppCompatActivity {
         ////final meniu
 
 
+        //MAP
+        mapImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!TextUtils.isEmpty(autocomplete_sport.getText().toString().trim())){
+                    String SelectedSport = autocomplete_sport.getText().toString().trim();
+                    String SelectedLoc;
+                    if(TextUtils.isEmpty(autocomplete_loc.getText().toString().trim())){
+                        SelectedLoc = locations.get(0).toString().trim();
+                    }
+                    else{
+                        SelectedLoc = autocomplete_loc.getText().toString().trim();
+                    }
+
+                    Intent intent2 = new Intent(CreateEventActivity.this, MapsActivity.class);
+                    intent2.putExtra("selectedLoc", SelectedLoc);
+                    intent2.putExtra("selectedSport", SelectedSport);
+                    intent2.putExtra("Activity", "CreateEvent");
+                    startActivityForResult(intent2, REQUEST_CODE_MAPS_ACTIVITY);
+                }
+            }
+        });
 
 
 
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE_MAPS_ACTIVITY && resultCode == RESULT_OK) {
+            String selectedLocation = data.getStringExtra("selectedLocation");
+            autocomplete_loc.setText(selectedLocation);
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_sportfields, locations);
+            autocomplete_loc.setAdapter(adapter);
+        }
+
+    }
+
 }
