@@ -4,6 +4,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -34,6 +36,9 @@ public class ParentAdapter extends RecyclerView.Adapter<ParentAdapter.MainViewHo
 
         holder.title.setText(allCategoryList.get(position).getTitle());
         setChildRecycler(holder.recyclerView,allCategoryList.get(position).getEventList());
+        Animation animation= AnimationUtils.loadAnimation(holder.recyclerView.getContext(),R.anim.slide_in_right);
+        holder.recyclerView.startAnimation(animation);
+
     }
 
     @Override
