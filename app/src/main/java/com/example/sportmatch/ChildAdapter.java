@@ -14,7 +14,6 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHolder> {
 
@@ -68,7 +67,6 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHol
                 intent.putExtra("valTime",data_position.getTime());
                 intent.putExtra("valDesc",data_position.getDescription());
 
-                //TODO:Legatura event user
 
                 v.getContext().startActivity(intent);
 

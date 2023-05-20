@@ -3157,7 +3157,6 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
-id detailsBtnEdit
 id detailsBtnMap
 id detailsBtnParticipate
 id detailsDate
@@ -3727,7 +3726,7 @@ layout activity_bottom_nav
 layout activity_chat
 layout activity_editevent
 layout activity_editprofile
-layout activity_event_details
+layout activity_event_details_feed
 layout activity_eventpreview
 layout activity_login
 layout activity_main

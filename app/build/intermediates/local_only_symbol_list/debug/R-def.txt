@@ -90,7 +90,6 @@ id button_savechanges
 id cardEvent
 id category_title
 id deleteButton
-id detailsBtnEdit
 id detailsBtnMap
 id detailsBtnParticipate
 id detailsDate
@@ -180,6 +179,7 @@ id register_password
 id register_password2
 id register_username
 id relativeLayout
+id scrollView
 id searchBar
 id sendButton
 id signupButton
@@ -196,7 +196,7 @@ layout activity_bottom_nav
 layout activity_chat
 layout activity_editevent
 layout activity_editprofile
-layout activity_event_details
+layout activity_event_details_feed
 layout activity_eventpreview
 layout activity_login
 layout activity_main

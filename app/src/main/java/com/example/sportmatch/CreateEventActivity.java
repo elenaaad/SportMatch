@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -56,6 +57,7 @@ public class CreateEventActivity extends AppCompatActivity {
     TextInputEditText newEventDescEdt;
     Button buttonCEvent;
     ImageView mapImage;
+    ScrollView scrollView;
 
     List<String> locations;
 
@@ -65,10 +67,8 @@ public class CreateEventActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newevent);
 
-        
-        //TODO: sa nu se mai vada bottom navigation cand tastez
-        //TODO: MAP - rating daca dai click pe o locatie in harta
-        //TODO: jump la eroare
+
+        //TODO: RATING locatii
 
         String userId;
 
@@ -91,6 +91,7 @@ public class CreateEventActivity extends AppCompatActivity {
         newEventDescEdt = findViewById(R.id.newEventDescEdt);
         buttonCEvent = findViewById(R.id.buttonCEvent);
         mapImage = findViewById(R.id.mapImage);
+        scrollView = findViewById(R.id.scrollView);
 
 
         //Referinte catre tabelele de sporturi si locatii din baza de date
@@ -152,6 +153,10 @@ public class CreateEventActivity extends AppCompatActivity {
         autocomplete_sport.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                newEventLoc.setError(null);
+                newEventPlayers.setError(null);
+
                 // Obține sportul selectat
                 String SelectedSport = (String) parent.getItemAtPosition(position);
 
@@ -251,6 +256,7 @@ public class CreateEventActivity extends AppCompatActivity {
 
 
         //TIMEPICKER
+
         MaterialTimePicker timePicker = new MaterialTimePicker.Builder()
                 .setTimeFormat(TimeFormat.CLOCK_12H)
                 .setHour(calendar.get(Calendar.HOUR_OF_DAY))
@@ -296,11 +302,13 @@ public class CreateEventActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 int error = 0;
+                TextInputLayout firstErrorField = null; // Variabila pentru a stoca referința către primul câmp cu eroare(chat gpt)
 
                 String inputTitle = newEventNameEdt.getText().toString().trim();
                 if (TextUtils.isEmpty(inputTitle)) {
                     newEventName.setError(getString(R.string.errorCEname));
                     error = 1;
+                    firstErrorField = newEventName; // Actualizează referința către primul câmp cu eroare
                 } else {
                     newEventName.setError(null);
                 }
@@ -309,6 +317,9 @@ public class CreateEventActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(selectedSport)) {
                     newEventSport.setError(getString(R.string.errorCEsport));
                     error = 1;
+                    if (firstErrorField == null) {
+                        firstErrorField = newEventSport; // Actualizează referința către primul câmp cu eroare
+                    }
                 } else {
                     newEventSport.setError(null);
                 }
@@ -317,6 +328,9 @@ public class CreateEventActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(selectedPlayers)) {
                     newEventPlayers.setError(getString(R.string.errorCEsport));
                     error = 1;
+                    if (firstErrorField == null) {
+                        firstErrorField = newEventPlayers; // Actualizează referința către primul câmp cu eroare
+                    }
                 } else {
                     newEventPlayers.setError(null);
                 }
@@ -325,6 +339,9 @@ public class CreateEventActivity extends AppCompatActivity {
                 if (TextUtils.isEmpty(selectedLoc)) {
                     newEventLoc.setError(getString(R.string.errorCEloc));
                     error = 1;
+                    if (firstErrorField == null) {
+                        firstErrorField = newEventLoc; // Actualizează referința către primul câmp cu eroare
+                    }
                 } else {
                     newEventLoc.setError(null);
                 }
@@ -346,14 +363,14 @@ public class CreateEventActivity extends AppCompatActivity {
                     intent.putExtra("valueDesc",inputDesc);
 
                     if(TextUtils.isEmpty(selectedDate)){
-                        intent.putExtra("valueDate","TBA");
+                        intent.putExtra("valueDate","To be discussed");
                     }
                     else{
                         intent.putExtra("valueDate",selectedDate);
                     }
 
                     if(TextUtils.isEmpty(selectedTime)){
-                        intent.putExtra("valueTime","TBA");
+                        intent.putExtra("valueTime","To be discussed");
                     }
                     else{
                         intent.putExtra("valueTime",selectedTime);
@@ -368,6 +385,20 @@ public class CreateEventActivity extends AppCompatActivity {
 
                     intent.putExtra("creatorId", userId);
                     startActivity(intent);
+                }
+                else if(firstErrorField != null){
+                    // Redirecționează utilizatorul la primul câmp cu eroare
+                    firstErrorField.requestFocus();
+
+                    final View finalFirstErrorField = firstErrorField;
+                    scrollView.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            int scrollToY = finalFirstErrorField.getTop() - 100; // Ajustează valoarea 100 pentru a obține poziția dorită
+                            scrollView.scrollTo(0, scrollToY);
+                        }
+                    });
+
                 }
             }
         });

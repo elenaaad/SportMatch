@@ -14,8 +14,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class EventDetailsActivity extends AppCompatActivity {
 
+    public static final int REQUEST_CODE_MAPS_ACTIVITY = 1001;
     TextView title;
-    Button detailsBtnEdit;
     ImageView sportImage;
     TextView detailsTitle;
     TextView detailsSport;
@@ -37,10 +37,9 @@ public class EventDetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event_details);
+        setContentView(R.layout.activity_event_details_feed);
 
         title = findViewById(R.id.title);
-        detailsBtnEdit = findViewById(R.id.detailsBtnEdit);
         sportImage = findViewById(R.id.sportImage);
         detailsTitle = findViewById(R.id.detailsTitle);
         detailsSport = findViewById(R.id.detailsSport);
@@ -58,9 +57,8 @@ public class EventDetailsActivity extends AppCompatActivity {
         detailsDescInput = findViewById(R.id.detailsDescInput);
         detailsBtnParticipate = findViewById(R.id.detailsBtnParticipate);
 
-        String valueTitle = getIntent().getStringExtra("valTitle");
-        String valTitle = getIntent().getStringExtra("valTitle").toUpperCase();
-        detailsTitle.setText(valueTitle);
+        String valTitle = getIntent().getStringExtra("valTitle");
+        detailsTitle.setText(valTitle);
 
         String valSport = getIntent().getStringExtra("valSport");
         detailsSportInput.setText(valSport);
@@ -107,22 +105,6 @@ public class EventDetailsActivity extends AppCompatActivity {
                 break;
         }
 
-        detailsBtnEdit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(EventDetailsActivity.this, EditEventDetails.class);
-
-                intent.putExtra("valueName",valueTitle);
-                intent.putExtra("valueSport",valSport);
-                intent.putExtra("valuePlayers",valPlayers);
-                intent.putExtra("valueLoc",valLoc);
-                intent.putExtra("valueDate",valDate);
-                intent.putExtra("valueTime",valTime);
-                intent.putExtra("valueDesc",valDesc);
-
-                startActivity(intent);
-            }
-        });
 
         detailsBtnParticipate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -167,6 +149,19 @@ public class EventDetailsActivity extends AppCompatActivity {
         });
         ///final meniu
 
+
+        //MAP
+        detailsBtnMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent2 = new Intent(EventDetailsActivity.this, MapsActivity.class);
+                intent2.putExtra("selectedLoc", valLoc);
+                intent2.putExtra("selectedSport", valSport);
+                intent2.putExtra("Activity", "EventDetailsFeed");
+                startActivityForResult(intent2, REQUEST_CODE_MAPS_ACTIVITY);
+            }
+        });
 
 
 

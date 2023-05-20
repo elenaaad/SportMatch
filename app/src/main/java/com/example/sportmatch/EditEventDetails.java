@@ -141,39 +141,6 @@ public class EditEventDetails extends AppCompatActivity {
                     SportLocation sportLocation = locSnapshot.getValue(SportLocation.class);
                     allLocations.add(sportLocation);
                 }
-                //actualizez lista locatii
-                locations.clear();
-                for(SportLocation sploc: allLocations){
-                    if(sploc.getSport().getSportName().equals(valueSport)){
-                        locations.add(sploc.getLocationName());
-                    }
-                }
-                adapterLoc.notifyDataSetChanged();
-
-                //actualizez lista jucatori
-                players.clear();
-                Sport sp = new Sport();
-                for(Sport sport: allSports){
-                    if(Objects.equals(sport.getSportName(), valueSport)){
-                        sp = sport;
-                        break;
-                    }
-                }
-                int mxP = sp.getMaxParticipants();
-                int index = sp.getMinParticipants();
-                if(Objects.equals(valueSport, "Bowling")){
-                    while(index<=mxP){
-                        players.add(index);
-                        index += 1;
-                    }
-                }
-                else{
-                    while(index<=mxP){
-                        players.add(index);
-                        index += 2;
-                    }
-                }
-                adapterPlayers.notifyDataSetChanged();
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
@@ -186,6 +153,10 @@ public class EditEventDetails extends AppCompatActivity {
         autocomplete_sport.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                editEventLoc.setError(null);
+                editEventPlayers.setError(null);
+
                 // Obține sportul selectat
                 String SelectedSport = (String) parent.getItemAtPosition(position);
 
@@ -234,6 +205,9 @@ public class EditEventDetails extends AppCompatActivity {
                 if (TextUtils.isEmpty(autocomplete_sport.getText().toString().trim())){
                     editEventLoc.setError(getString(R.string.errorCEsportFirst));
                 }
+                else{
+                    editEventLoc.setError(null);
+                }
             }
         });
 
@@ -243,10 +217,14 @@ public class EditEventDetails extends AppCompatActivity {
                 if(TextUtils.isEmpty(autocomplete_sport.getText().toString().trim())){
                     editEventPlayers.setError(getString(R.string.errorCEsportFirst));
                 }
+                else{
+                    editEventPlayers.setError(null);
+                }
             }
         });
 
 
+        //DATEPICKER
 
         Calendar calendar = Calendar.getInstance();
         MaterialDatePicker<Long> datePicker = MaterialDatePicker.Builder.datePicker()
@@ -269,6 +247,8 @@ public class EditEventDetails extends AppCompatActivity {
                 });
             }
         });
+
+        //TIMEPICKER
 
         MaterialTimePicker timePicker = new MaterialTimePicker.Builder()
                 .setTimeFormat(TimeFormat.CLOCK_12H)
@@ -392,6 +372,42 @@ public class EditEventDetails extends AppCompatActivity {
         ////final meniu
 
 
+        //MAP
+        mapImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!TextUtils.isEmpty(autocomplete_sport.getText().toString().trim())){
+                    String SelectedSport = autocomplete_sport.getText().toString().trim();
+                    String SelectedLoc;
+                    if(TextUtils.isEmpty(autocomplete_loc.getText().toString().trim())){
+                        SelectedLoc = locations.get(0).toString().trim();
+                    }
+                    else{
+                        SelectedLoc = autocomplete_loc.getText().toString().trim();
+                    }
+
+                    Intent intent2 = new Intent(EditEventDetails.this, MapsActivity.class);
+                    intent2.putExtra("selectedLoc", SelectedLoc);
+                    intent2.putExtra("selectedSport", SelectedSport);
+                    intent2.putExtra("Activity", "EditEventDetails");
+                    startActivityForResult(intent2, REQUEST_CODE_MAPS_ACTIVITY);
+                }
+            }
+        });
+
+
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == REQUEST_CODE_MAPS_ACTIVITY && resultCode == RESULT_OK) {
+            String selectedLocation = data.getStringExtra("selectedLocation");
+            autocomplete_loc.setText(selectedLocation);
+            ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.list_sportfields, locations);
+            autocomplete_loc.setAdapter(adapter);
+        }
 
     }
 }

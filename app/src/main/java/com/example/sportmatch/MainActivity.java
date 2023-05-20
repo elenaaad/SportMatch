@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
     //TODO: Debora: terminat profile details + edit
     //TODO: Debora: log out
     //TODO: Raluca: Admin
-    //TODO: Bianca: Tabele din baza de date
     //TODO: Cata: Ia previewEvent si adauga chat si view member list
 
     @Override

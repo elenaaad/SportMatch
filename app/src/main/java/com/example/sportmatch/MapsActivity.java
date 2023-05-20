@@ -28,6 +28,7 @@ import java.util.Objects;
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback{
     GoogleMap mMap;
     public static final int REQUEST_CODE_MAPS_ACTIVITY = 1001;
+    String activity;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,7 +49,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         String selectedSport = getIntent().getStringExtra("selectedSport");
         String selectedLoc = getIntent().getStringExtra("selectedLoc");
-        String activity = getIntent().getStringExtra("Activity");
+        activity = getIntent().getStringExtra("Activity");
 
         locRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -64,7 +65,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     }
                 }
 
-                if(Objects.equals(activity, "CreateEvent")){
+                if(Objects.equals(activity, "CreateEvent") || Objects.equals(activity, "EditEventDetails")){
                     //sursa: chat gpt
                     //adaug marcatori pe harta
                     for(SportLocation loc: locations){
@@ -80,7 +81,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(selectedLoc, 15));
                     }
                 }
-                else if(Objects.equals(activity, "EventPreview")){
+                else if(Objects.equals(activity, "EventPreview") || Objects.equals(activity, "EventDetailsFeed")){
                     LatLng selectedLoc = new LatLng(spLoc.getLatitude(), spLoc.getLongitude());
                     Marker marker = mMap.addMarker(new MarkerOptions().position(selectedLoc).title(spLoc.getLocationName()));
                     marker.setTag(spLoc);
@@ -104,24 +105,64 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
-    private void showLocationInfoPopup(SportLocation location) {
+    private void showLocationInfoPopup(SportLocation location) {//sursa: chatgpt
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(location.getLocationName());
 
-        StringBuilder descriptionBuilder = new StringBuilder();
-        descriptionBuilder.append(location.getStreetName())
-                .append(" ").append(location.getNumber())
-                .append(", Sector").append(location.getSector());
+        if(Objects.equals(activity, "CreateEvent") || Objects.equals(activity, "EditEventDetails")){
+            StringBuilder descriptionBuilder = new StringBuilder();
+            descriptionBuilder.append(location.getStreetName())
+                    .append(" ").append(location.getNumber())
+                    .append(", Sector").append(location.getSector());
 
-        builder.setMessage(descriptionBuilder.toString());
+            builder.setMessage(descriptionBuilder.toString());
 
-        builder.setPositiveButton("Select Location", (dialog, which) -> {
-            Intent resultIntent = new Intent(MapsActivity.this, CreateEventActivity.class);
-            resultIntent.putExtra("selectedLocation", location.getLocationName());
-            setResult(RESULT_OK, resultIntent);
-            dialog.dismiss();
-            finish();
-        });
+            builder.setPositiveButton("Select Location", (dialog, which) -> {
+                if(Objects.equals(activity, "CreateEvent")){
+                    Intent resultIntent = new Intent(MapsActivity.this, CreateEventActivity.class);
+                    resultIntent.putExtra("selectedLocation", location.getLocationName());
+                    setResult(RESULT_OK, resultIntent);
+                    dialog.dismiss();
+                    finish();
+                }
+                else if(Objects.equals(activity, "EditEventDetails")){
+                    Intent resultIntent = new Intent(MapsActivity.this, EditEventDetails.class);
+                    resultIntent.putExtra("selectedLocation", location.getLocationName());
+                    setResult(RESULT_OK, resultIntent);
+                    dialog.dismiss();
+                    finish();
+                }
+
+            });
+        }
+
+        else if(Objects.equals(activity, "EventPreview") || Objects.equals(activity, "EventDetailsFeed")){
+            StringBuilder descriptionBuilder = new StringBuilder();
+            descriptionBuilder.append(location.getStreetName())
+                    .append(" ").append(location.getNumber())
+                    .append(", Sector").append(location.getSector());
+
+            builder.setMessage(descriptionBuilder.toString());
+
+            builder.setPositiveButton("OK", (dialog, which) -> {
+                if(Objects.equals(activity, "EventPreview")){
+                    Intent resultIntent = new Intent(MapsActivity.this, EventPreview.class);
+                    setResult(RESULT_OK, resultIntent);
+                    dialog.dismiss();
+                    finish();
+                }
+                else if(Objects.equals(activity, "EventDetailsFeed")){
+                    Intent resultIntent = new Intent(MapsActivity.this, EventDetailsActivity.class);
+                    setResult(RESULT_OK, resultIntent);
+                    dialog.dismiss();
+                    finish();
+                }
+
+            });
+        }
+
+
+
 
         builder.show();
     }

@@ -8,6 +8,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -77,6 +78,9 @@ public final class ActivityNeweventBinding implements ViewBinding {
   public final TextInputEditText newEventTimeEdt;
 
   @NonNull
+  public final ScrollView scrollView;
+
+  @NonNull
   public final TextView textDateTime;
 
   @NonNull
@@ -93,7 +97,7 @@ public final class ActivityNeweventBinding implements ViewBinding {
       @NonNull TextInputLayout newEventName, @NonNull TextInputEditText newEventNameEdt,
       @NonNull TextInputLayout newEventPlayers, @NonNull TextInputLayout newEventSport,
       @NonNull TextInputLayout newEventTime, @NonNull TextInputEditText newEventTimeEdt,
-      @NonNull TextView textDateTime, @NonNull TextView title) {
+      @NonNull ScrollView scrollView, @NonNull TextView textDateTime, @NonNull TextView title) {
     this.rootView = rootView;
     this.autocompleteLoc = autocompleteLoc;
     this.autocompletePlayers = autocompletePlayers;
@@ -112,6 +116,7 @@ public final class ActivityNeweventBinding implements ViewBinding {
     this.newEventSport = newEventSport;
     this.newEventTime = newEventTime;
     this.newEventTimeEdt = newEventTimeEdt;
+    this.scrollView = scrollView;
     this.textDateTime = textDateTime;
     this.title = title;
   }
@@ -245,6 +250,12 @@ public final class ActivityNeweventBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.scrollView;
+      ScrollView scrollView = ViewBindings.findChildViewById(rootView, id);
+      if (scrollView == null) {
+        break missingId;
+      }
+
       id = R.id.textDateTime;
       TextView textDateTime = ViewBindings.findChildViewById(rootView, id);
       if (textDateTime == null) {
@@ -261,7 +272,7 @@ public final class ActivityNeweventBinding implements ViewBinding {
           autocompletePlayers, autocompleteSport, bottomNavigationView, buttonCEvent, mapImage,
           newEventDate, newEventDateEdt, newEventDesc, newEventDescEdt, newEventLoc, newEventName,
           newEventNameEdt, newEventPlayers, newEventSport, newEventTime, newEventTimeEdt,
-          textDateTime, title);
+          scrollView, textDateTime, title);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

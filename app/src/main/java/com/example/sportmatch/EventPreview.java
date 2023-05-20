@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class EventPreview extends AppCompatActivity {
+    public static final int REQUEST_CODE_MAPS_ACTIVITY = 1001;
     Button previewBtnEdit;
     ImageView sportImage;
     TextView previewTitle;
@@ -69,14 +70,9 @@ public class EventPreview extends AppCompatActivity {
         previewDescInput = findViewById(R.id.previewDescInput);
         previewBtnAddEv = findViewById(R.id.previewBtnAddEv);
 
-        //TODO: legatura cu tabelele de locatie, sport, jucatori etc
-        //TODO: legatura btn see map cu harta
-
-
 
         String valTitle = getIntent().getStringExtra("valueTitle");
-        String valueTitle = getIntent().getStringExtra("valueTitle").toUpperCase();
-        previewTitle.setText(valueTitle);
+        previewTitle.setText(valTitle);
 
         String valueSport = getIntent().getStringExtra("valueSport");
         previewSportInput.setText(valueSport);
@@ -223,11 +219,17 @@ public class EventPreview extends AppCompatActivity {
                 intent2.putExtra("selectedLoc", valueLoc);
                 intent2.putExtra("selectedSport", valueSport);
                 intent2.putExtra("Activity", "EventPreview");
-                startActivity(intent2);
+                startActivityForResult(intent2, REQUEST_CODE_MAPS_ACTIVITY);
 
             }
         });
 
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
     }
 
