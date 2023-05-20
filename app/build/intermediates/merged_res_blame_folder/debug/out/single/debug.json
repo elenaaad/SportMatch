@@ -80,6 +80,10 @@
         "source": "com.example.sportmatch.app-main-50:/drawable/pingpong.jpg"
     },
     {
+        "merged": "com.example.sportmatch.app-merged_res-48:/layout_list_item.xml.flat",
+        "source": "com.example.sportmatch.app-main-50:/layout/list_item.xml"
+    },
+    {
         "merged": "com.example.sportmatch.app-merged_res-48:/drawable_eventicon.png.flat",
         "source": "com.example.sportmatch.app-main-50:/drawable/eventicon.png"
     },
