@@ -74,6 +74,7 @@ public class BottomNavActivity extends AppCompatActivity {
         badmintonList=new ArrayList<>();
 
         databaseReference= FirebaseDatabase.getInstance().getReference("Events");
+
         eventListener=databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {

@@ -1,11 +1,10 @@
 package com.example.sportmatch;
 
 
-import static android.content.ContentValues.TAG;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -21,8 +20,6 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -38,8 +35,6 @@ public class  LoginActivity extends AppCompatActivity {
     private EditText passwordEditText;
     private Button loginButton;
     private FirebaseAuth mAuth;
-    private String userId;
-    private String passdb;
     //to do: add a button to go to register activity
     //to do: add a button to go to forgot password activity
     @Override
@@ -48,21 +43,11 @@ public class  LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         FirebaseDatabase database = FirebaseDatabase.getInstance();
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Users");
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if (currentUser != null) {
-             userId = currentUser.getUid();
-        } else {
-            Log.e(TAG, "User is null");
-            return;
-        }
-
         usernameEditText = findViewById(R.id.activity_main_usernameEditText);
         passwordEditText = findViewById(R.id.activity_main_passwordEditText);
         loginButton = findViewById(R.id.button_login);
         DatabaseReference usersRef = database.getReference("Users");
-        //mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,43 +65,16 @@ public class  LoginActivity extends AppCompatActivity {
                 }
                 else {
 
-
-
-
-                    //salvam in passdb parola userului din db
-                    reference.child(userId).child("password").addListenerForSingleValueEvent(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(DataSnapshot dataSnapshot) {
-
-                            //old pass din db
-                             passdb = dataSnapshot.getValue(String.class);
-                            Log.e(TAG, "Parola din db este: " + passdb);
-
-                        }
-                        @Override
-                        public void onCancelled(DatabaseError databaseError) {
-                            Log.e(TAG, "Probleme cu citirea parolei");
-                        }
-                    });
-
-
-                    Log.e(TAG, "parolapusadruser" + password);
-
-
-
-
-
-
                     mAuth.signInWithEmailAndPassword(username, password)
                             .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                                 @Override
                                 public void onComplete(@NonNull Task<AuthResult> task) {
-                                    //if (task.isSuccessful()
-                                    //comparam parola din db cu parola pusa de user
-                                    if ( password.equals(passdb)) {
+                                    if (task.isSuccessful()) {
+                                        //Request.createRequestTable();
                                         Toast.makeText(LoginActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
                                         //to chanche the activity to menuactivity
-                                        Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
+                                        //Intent intent = new Intent(LoginActivity.this, BottomNavActivity.class);
+                                        Intent intent = new Intent(LoginActivity.this, ViewProfileActivity.class);
                                         startActivity(intent);
                                         finish();
                                     } else {

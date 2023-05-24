@@ -2,6 +2,7 @@ package com.example.sportmatch;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,11 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHolder> {
 
@@ -55,19 +60,31 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHol
         holder.time.setText(eventList.get(position).getTime());
         holder.date.setText(eventList.get(position).getDate());
         holder.cardView.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), EventDetailsActivity.class);
-                intent.putExtra("valTitle",data_position.getEventName());
+                FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+                FirebaseUser currentUser = firebaseAuth.getCurrentUser();
+                String currentUserId = currentUser.getUid();
+                Intent intent;
+                if(data_position.getCreator() != null && data_position.getCreator().equals(currentUserId))
+                {
+                    intent = new Intent(v.getContext(), EventDetailsAdminActivity.class);
+                }
+                else  intent = new Intent(v.getContext(), EventDetailsActivity.class);
+
+
+                String str = data_position.getEventName();
+                intent.putExtra("valTitle",str );
                 intent.putExtra("valSport",data_position.getSport());
                 intent.putExtra("valPlayers",data_position.getNrPlayers());
                 intent.putExtra("valLoc",data_position.getLocation());
                 intent.putExtra("valDate",data_position.getDate());
                 intent.putExtra("valTime",data_position.getTime());
                 intent.putExtra("valDesc",data_position.getDescription());
-
-
+                intent.putExtra("eventul", data_position);
+                intent.putExtra("stringul", "stringul");
+                Log.e("eventul", data_position.toString());
+                //TODO:Legatura event user
                 v.getContext().startActivity(intent);
 
             }

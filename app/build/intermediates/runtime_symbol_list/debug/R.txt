@@ -1459,6 +1459,7 @@ int color error_color_material_dark 0x7f060067
 int color error_color_material_light 0x7f060068
 int color foreground_material_dark 0x7f060069
 int color foreground_material_light 0x7f06006a
+int color grey 0x7f06029a
 int color highlighted_text_material_dark 0x7f06006b
 int color highlighted_text_material_light 0x7f06006c
 int color m3_appbar_overlay_color 0x7f06006d
@@ -2966,6 +2967,7 @@ int drawable tooltip_frame_dark 0x7f080112
 int drawable tooltip_frame_light 0x7f080113
 int drawable usericon 0x7f080114
 int drawable volleyball 0x7f080115
+int drawable xicon 0x7f080116
 int font akronim 0x7f090000
 int id ALT 0x7f0a0000
 int id BOTTOM_END 0x7f0a0001
@@ -3092,6 +3094,9 @@ int id browser_actions_menu_item_icon 0x7f0a0079
 int id browser_actions_menu_item_text 0x7f0a007a
 int id browser_actions_menu_items 0x7f0a007b
 int id browser_actions_menu_view 0x7f0a007c
+int id btnConfirm 0x7f0a028e
+int id btnDelete 0x7f0a028f
+int id btn_close 0x7f0a0287
 int id buttonCEvent 0x7f0a007d
 int id buttonEEvent 0x7f0a007e
 int id buttonMenu 0x7f0a007f
@@ -3156,6 +3161,7 @@ int id design_menu_item_action_area 0x7f0a00b9
 int id design_menu_item_action_area_stub 0x7f0a00ba
 int id design_menu_item_text 0x7f0a00bb
 int id design_navigation_view 0x7f0a00bc
+int id detailsBtnEdit 0x7f0a0285
 int id detailsBtnMap 0x7f0a00bd
 int id detailsBtnParticipate 0x7f0a00be
 int id detailsDate 0x7f0a00bf
@@ -3290,6 +3296,10 @@ int id line3 0x7f0a013f
 int id linear 0x7f0a0140
 int id listMode 0x7f0a0141
 int id list_item 0x7f0a0142
+int id llbio_profile 0x7f0a0292
+int id llemail_profile 0x7f0a0293
+int id llfull_name_profile 0x7f0a0294
+int id llpayment 0x7f0a0295
 int id locale 0x7f0a0143
 int id ltr 0x7f0a0144
 int id m3_side_sheet 0x7f0a0145
@@ -3445,11 +3455,13 @@ int id register_password 0x7f0a01da
 int id register_password2 0x7f0a01db
 int id register_username 0x7f0a01dc
 int id relativeLayout 0x7f0a01dd
+int id relativeLayout1 0x7f0a0296
 int id reverseSawtooth 0x7f0a01de
 int id right 0x7f0a01df
 int id rightToLeft 0x7f0a01e0
 int id right_icon 0x7f0a01e1
 int id right_side 0x7f0a01e2
+int id root_vg 0x7f0a028b
 int id rounded 0x7f0a01e3
 int id row_index_key 0x7f0a01e4
 int id rtl 0x7f0a01e5
@@ -3489,6 +3501,7 @@ int id search_view_status_bar_spacer 0x7f0a0206
 int id search_view_toolbar 0x7f0a0207
 int id search_view_toolbar_container 0x7f0a0208
 int id search_voice_btn 0x7f0a0209
+int id see_requests_button 0x7f0a0286
 int id select_dialog_listview 0x7f0a020a
 int id selected 0x7f0a020b
 int id selection_type 0x7f0a020c
@@ -3588,6 +3601,8 @@ int id transition_scene_layoutid_cache 0x7f0a0269
 int id transition_transform 0x7f0a026a
 int id triangle 0x7f0a026b
 int id tvTitle 0x7f0a026c
+int id txtUsername 0x7f0a0291
+int id txttite 0x7f0a028d
 int id unchecked 0x7f0a026d
 int id uniform 0x7f0a026e
 int id unlabeled 0x7f0a026f
@@ -3725,6 +3740,7 @@ int layout activity_bottom_nav 0x7f0d001d
 int layout activity_chat 0x7f0d001e
 int layout activity_editevent 0x7f0d001f
 int layout activity_editprofile 0x7f0d0020
+int layout activity_event_details_admin 0x7f0d0085
 int layout activity_event_details_feed 0x7f0d0021
 int layout activity_eventpreview 0x7f0d0022
 int layout activity_login 0x7f0d0023
@@ -3735,6 +3751,8 @@ int layout activity_newevent 0x7f0d0027
 int layout activity_only_participates_events 0x7f0d0028
 int layout activity_profile 0x7f0d0029
 int layout activity_register 0x7f0d002a
+int layout activity_request_item 0x7f0d0087
+int layout activity_requests 0x7f0d0086
 int layout activity_view_profile 0x7f0d002b
 int layout browser_actions_context_menu_page 0x7f0d002c
 int layout browser_actions_context_menu_row 0x7f0d002d
@@ -4317,6 +4335,7 @@ int style Base_Widget_MaterialComponents_TextView 0x7f150118
 int style CardView 0x7f150119
 int style CardView_Dark 0x7f15011a
 int style CardView_Light 0x7f15011b
+int style DialogActivityTheme 0x7f15044a
 int style MaterialAlertDialog_Material3 0x7f15011c
 int style MaterialAlertDialog_Material3_Animation 0x7f15011d
 int style MaterialAlertDialog_Material3_Body_Text 0x7f15011e
