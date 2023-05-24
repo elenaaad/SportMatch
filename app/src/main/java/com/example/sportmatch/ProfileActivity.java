@@ -13,7 +13,9 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
@@ -125,7 +127,37 @@ public class ProfileActivity extends AppCompatActivity {
             }
         });
 
+        ////inceput meniu
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        bottomNavigationView.setSelectedItemId(R.id.bottom_view_profile);
 
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            switch (item.getItemId()) {
+                case R.id.bottom_view_profile:
+                    return true;
+                case R.id.bottom_admin_events:
+                    startActivity(new Intent(getApplicationContext(), AdminEventsActivity.class));
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
+                    return true;
+                case R.id.bottom_create_event:
+                    startActivity(new Intent(getApplicationContext(), CreateEventActivity.class));
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
+                    return true;
+                case R.id.bottom_events_participates:
+                    startActivity(new Intent(getApplicationContext(), OnlyParticipatesEvents.class));
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
+                    return true;
+                case R.id.bottom_home:///bottom_home corespunde clasei BottomNavActivity
+                    startActivity(new Intent(getApplicationContext(), BottomNavActivity.class));
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
+                    return true;
+            }
+            return false;
+        });
     }
 
 

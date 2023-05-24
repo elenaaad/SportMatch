@@ -1460,6 +1460,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color grey
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color m3_appbar_overlay_color
@@ -2967,6 +2968,7 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable usericon
 drawable volleyball
+drawable xicon
 font akronim
 id ALT
 id BOTTOM_END
@@ -3093,6 +3095,9 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnConfirm
+id btnDelete
+id btn_close
 id buttonCEvent
 id buttonEEvent
 id buttonMenu
@@ -3157,6 +3162,7 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id detailsBtnEdit
 id detailsBtnMap
 id detailsBtnParticipate
 id detailsDate
@@ -3291,6 +3297,10 @@ id line3
 id linear
 id listMode
 id list_item
+id llbio_profile
+id llemail_profile
+id llfull_name_profile
+id llpayment
 id locale
 id ltr
 id m3_side_sheet
@@ -3446,11 +3456,13 @@ id register_password
 id register_password2
 id register_username
 id relativeLayout
+id relativeLayout1
 id reverseSawtooth
 id right
 id rightToLeft
 id right_icon
 id right_side
+id root_vg
 id rounded
 id row_index_key
 id rtl
@@ -3490,6 +3502,7 @@ id search_view_status_bar_spacer
 id search_view_toolbar
 id search_view_toolbar_container
 id search_voice_btn
+id see_requests_button
 id select_dialog_listview
 id selected
 id selection_type
@@ -3589,6 +3602,8 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tvTitle
+id txtUsername
+id txttite
 id unchecked
 id uniform
 id unlabeled
@@ -3726,6 +3741,7 @@ layout activity_bottom_nav
 layout activity_chat
 layout activity_editevent
 layout activity_editprofile
+layout activity_event_details_admin
 layout activity_event_details_feed
 layout activity_eventpreview
 layout activity_login
@@ -3736,6 +3752,8 @@ layout activity_newevent
 layout activity_only_participates_events
 layout activity_profile
 layout activity_register
+layout activity_request_item
+layout activity_requests
 layout activity_view_profile
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -4318,6 +4336,7 @@ style Base_Widget_MaterialComponents_TextView
 style CardView
 style CardView_Dark
 style CardView_Light
+style DialogActivityTheme
 style MaterialAlertDialog_Material3
 style MaterialAlertDialog_Material3_Animation
 style MaterialAlertDialog_Material3_Body_Text
