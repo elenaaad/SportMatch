@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.sportmatch.R;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.textfield.TextInputLayout;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -27,6 +28,9 @@ public final class ActivityProfileBinding implements ViewBinding {
 
   @NonNull
   public final TextInputLayout bioProfile;
+
+  @NonNull
+  public final BottomNavigationView bottomNavigationView;
 
   @NonNull
   public final Button buttonEditprofile;
@@ -54,13 +58,15 @@ public final class ActivityProfileBinding implements ViewBinding {
 
   private ActivityProfileBinding(@NonNull LinearLayout rootView,
       @NonNull TextInputLayout ageProfile, @NonNull TextInputLayout bioProfile,
-      @NonNull Button buttonEditprofile, @NonNull Button buttonLogout,
-      @NonNull TextInputLayout emailProfile, @NonNull TextInputLayout fullNameProfile,
-      @NonNull TextView fullnameField, @NonNull TextView paymentDesc,
-      @NonNull TextView paymentLabel, @NonNull ImageView profileImage) {
+      @NonNull BottomNavigationView bottomNavigationView, @NonNull Button buttonEditprofile,
+      @NonNull Button buttonLogout, @NonNull TextInputLayout emailProfile,
+      @NonNull TextInputLayout fullNameProfile, @NonNull TextView fullnameField,
+      @NonNull TextView paymentDesc, @NonNull TextView paymentLabel,
+      @NonNull ImageView profileImage) {
     this.rootView = rootView;
     this.ageProfile = ageProfile;
     this.bioProfile = bioProfile;
+    this.bottomNavigationView = bottomNavigationView;
     this.buttonEditprofile = buttonEditprofile;
     this.buttonLogout = buttonLogout;
     this.emailProfile = emailProfile;
@@ -107,6 +113,12 @@ public final class ActivityProfileBinding implements ViewBinding {
       id = R.id.bio_profile;
       TextInputLayout bioProfile = ViewBindings.findChildViewById(rootView, id);
       if (bioProfile == null) {
+        break missingId;
+      }
+
+      id = R.id.bottomNavigationView;
+      BottomNavigationView bottomNavigationView = ViewBindings.findChildViewById(rootView, id);
+      if (bottomNavigationView == null) {
         break missingId;
       }
 
@@ -159,8 +171,8 @@ public final class ActivityProfileBinding implements ViewBinding {
       }
 
       return new ActivityProfileBinding((LinearLayout) rootView, ageProfile, bioProfile,
-          buttonEditprofile, buttonLogout, emailProfile, fullNameProfile, fullnameField,
-          paymentDesc, paymentLabel, profileImage);
+          bottomNavigationView, buttonEditprofile, buttonLogout, emailProfile, fullNameProfile,
+          fullnameField, paymentDesc, paymentLabel, profileImage);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

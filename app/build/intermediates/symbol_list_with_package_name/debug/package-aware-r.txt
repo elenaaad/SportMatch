@@ -140,6 +140,7 @@ attr alpha
 attr alphabeticModifiers
 attr altSrc
 attr alwaysExpand
+attr ambientEnabled
 attr animateCircleAngleTo
 attr animateMenuItems
 attr animateNavigationIcon
@@ -234,6 +235,13 @@ attr buttonStyle
 attr buttonStyleSmall
 attr buttonTint
 attr buttonTintMode
+attr cameraBearing
+attr cameraMaxZoomPreference
+attr cameraMinZoomPreference
+attr cameraTargetLat
+attr cameraTargetLng
+attr cameraTilt
+attr cameraZoom
 attr cardBackgroundColor
 attr cardCornerRadius
 attr cardElevation
@@ -687,6 +695,10 @@ attr labelStyle
 attr labelVisibilityMode
 attr lastBaselineToBottomHeight
 attr lastItemDecorated
+attr latLngBoundsNorthEastLatitude
+attr latLngBoundsNorthEastLongitude
+attr latLngBoundsSouthWestLatitude
+attr latLngBoundsSouthWestLongitude
 attr launchSingleTop
 attr layout
 attr layoutDescription
@@ -783,10 +795,13 @@ attr listPreferredItemPaddingEnd
 attr listPreferredItemPaddingLeft
 attr listPreferredItemPaddingRight
 attr listPreferredItemPaddingStart
+attr liteMode
 attr logo
 attr logoAdjustViewBounds
 attr logoDescription
 attr logoScaleType
+attr mapId
+attr mapType
 attr marginHorizontal
 attr marginLeftSystemWindowInsets
 attr marginRightSystemWindowInsets
@@ -1290,11 +1305,20 @@ attr triggerId
 attr triggerReceiver
 attr triggerSlack
 attr ttcIndex
+attr uiCompass
+attr uiMapToolbar
+attr uiRotateGestures
+attr uiScrollGestures
+attr uiScrollGesturesDuringRotateOrZoom
+attr uiTiltGestures
+attr uiZoomControls
+attr uiZoomGestures
 attr upDuration
 attr uri
 attr useCompatPadding
 attr useDrawerArrowDrawable
 attr useMaterialThemeColors
+attr useViewLifecycle
 attr values
 attr verticalOffset
 attr verticalOffsetWithText
@@ -1325,6 +1349,7 @@ attr windowNoTitle
 attr yearSelectedStyle
 attr yearStyle
 attr yearTodayStyle
+attr zOrderOnTop
 bool abc_action_bar_embed_tabs
 bool abc_config_actionMenuItemAllCaps
 bool mtrl_btn_textappearance_all_caps
@@ -1435,6 +1460,7 @@ color error_color_material_dark
 color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
+color grey
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color m3_appbar_overlay_color
@@ -2680,6 +2706,7 @@ dimen mtrl_tooltip_minHeight
 dimen mtrl_tooltip_minWidth
 dimen mtrl_tooltip_padding
 dimen mtrl_transition_shared_axis_slide_distance
+dimen navigation_bar_margin_bottom
 dimen notification_action_icon_size
 dimen notification_action_text_size
 dimen notification_big_circle_margin
@@ -2864,6 +2891,8 @@ drawable m3_tabs_background
 drawable m3_tabs_line_indicator
 drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
+drawable map_active
+drawable map_inactive
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -2939,6 +2968,7 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable usericon
 drawable volleyball
+drawable xicon
 font akronim
 id ALT
 id BOTTOM_END
@@ -3037,6 +3067,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id auto_complete_txt
 id autocomplete_loc
 id autocomplete_players
 id autocomplete_sport
@@ -3064,6 +3095,9 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btnConfirm
+id btnDelete
+id btn_close
 id buttonCEvent
 id buttonEEvent
 id buttonMenu
@@ -3230,6 +3264,7 @@ id home
 id homeAsUp
 id honorRequest
 id horizontal_only
+id hybrid
 id icon
 id icon_group
 id icon_only
@@ -3262,12 +3297,19 @@ id line3
 id linear
 id listMode
 id list_item
+id llbio_profile
+id llemail_profile
+id llfull_name_profile
+id llpayment
 id locale
 id ltr
 id m3_side_sheet
 id main_recycler
 id main_recycler1
 id main_recycler2
+id map
+id mapImage
+id mapImageEdt
 id marquee
 id masked
 id match_constraint
@@ -3414,14 +3456,17 @@ id register_password
 id register_password2
 id register_username
 id relativeLayout
+id relativeLayout1
 id reverseSawtooth
 id right
 id rightToLeft
 id right_icon
 id right_side
+id root_vg
 id rounded
 id row_index_key
 id rtl
+id satellite
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3432,6 +3477,7 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
+id searchBar
 id search_badge
 id search_bar
 id search_bar_text_view
@@ -3456,6 +3502,7 @@ id search_view_status_bar_spacer
 id search_view_toolbar
 id search_view_toolbar_container
 id search_voice_btn
+id see_requests_button
 id select_dialog_listview
 id selected
 id selection_type
@@ -3516,6 +3563,7 @@ id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
 id tag_window_insets_animation_callback
+id terrain
 id text
 id text2
 id textDateTime
@@ -3554,6 +3602,8 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tvTitle
+id txtUsername
+id txttite
 id unchecked
 id uniform
 id unlabeled
@@ -3691,15 +3741,19 @@ layout activity_bottom_nav
 layout activity_chat
 layout activity_editevent
 layout activity_editprofile
-layout activity_event_details
+layout activity_event_details_admin
+layout activity_event_details_feed
 layout activity_eventpreview
 layout activity_login
 layout activity_main
+layout activity_maps
 layout activity_menu
 layout activity_newevent
 layout activity_only_participates_events
 layout activity_profile
 layout activity_register
+layout activity_request_item
+layout activity_requests
 layout activity_view_profile
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -3722,6 +3776,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout item_message
+layout list_item
 layout list_player
 layout list_sport
 layout list_sportfields
@@ -3995,6 +4050,7 @@ string second_fragment_label
 string side_sheet_accessibility_pane_title
 string side_sheet_behavior
 string status_bar_notification_info_overflow
+string title_activity_maps
 string title_activity_menu
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
@@ -4280,6 +4336,7 @@ style Base_Widget_MaterialComponents_TextView
 style CardView
 style CardView_Dark
 style CardView_Light
+style DialogActivityTheme
 style MaterialAlertDialog_Material3
 style MaterialAlertDialog_Material3_Animation
 style MaterialAlertDialog_Material3_Body_Text
@@ -5176,6 +5233,7 @@ styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width 
 styleable LinearProgressIndicator indeterminateAnimationType indicatorDirectionLinear
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
 styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
+styleable MapAttrs ambientEnabled backgroundColor cameraBearing cameraMaxZoomPreference cameraMinZoomPreference cameraTargetLat cameraTargetLng cameraTilt cameraZoom latLngBoundsNorthEastLatitude latLngBoundsNorthEastLongitude latLngBoundsSouthWestLatitude latLngBoundsSouthWestLongitude liteMode mapId mapType uiCompass uiMapToolbar uiRotateGestures uiScrollGestures uiScrollGesturesDuringRotateOrZoom uiTiltGestures uiZoomControls uiZoomGestures useViewLifecycle zOrderOnTop
 styleable MaterialAlertDialog backgroundInsetBottom backgroundInsetEnd backgroundInsetStart backgroundInsetTop
 styleable MaterialAlertDialogTheme materialAlertDialogBodyTextStyle materialAlertDialogButtonSpacerVisibility materialAlertDialogTheme materialAlertDialogTitleIconStyle materialAlertDialogTitlePanelStyle materialAlertDialogTitleTextStyle
 styleable MaterialAutoCompleteTextView android_inputType android_popupElevation simpleItemLayout simpleItemSelectedColor simpleItemSelectedRippleColor simpleItems

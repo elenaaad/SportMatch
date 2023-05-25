@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +16,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SportMatch"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps" />
         <activity
             android:name=".ChatActivity"
             android:exported="false" />
@@ -52,11 +64,26 @@
             android:name=".EventDetailsActivity"
             android:exported="false" />
         <activity
+            android:name=".EventDetailsAdminActivity"
+        android:exported="false" />
+        <activity
             android:name=".EventPreview"
             android:exported="false" />
         <activity
+            android:name=".OtherProfileActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".RequestActivity"
+            android:theme="@style/DialogActivityTheme"
+            android:exported="false" />
+        <!--<activity
+            android:name=".RequestAdapter"
+            android:exported="false" />-->
+        <activity
             android:name=".EditEventDetails"
             android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">

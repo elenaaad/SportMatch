@@ -8,9 +8,12 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
-public class User {
+import java.io.Serializable;
+
+public class User implements Serializable {
     private String username;
     private String password;
     private String birthDate;
@@ -95,6 +98,14 @@ public class User {
         });
 
     }
+
+    public static void getUserById(String userId, ValueEventListener valueEventListener) {
+        DatabaseReference usersRef = FirebaseDatabase.getInstance().getReference("users");
+        usersRef.child(userId).addListenerForSingleValueEvent(valueEventListener);
+    }
+
+
+
 
 
 }

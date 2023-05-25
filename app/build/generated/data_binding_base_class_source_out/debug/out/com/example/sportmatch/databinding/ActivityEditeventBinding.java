@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -76,6 +77,9 @@ public final class ActivityEditeventBinding implements ViewBinding {
   public final TextView editTitle;
 
   @NonNull
+  public final ImageView mapImageEdt;
+
+  @NonNull
   public final TextView textDateTime;
 
   private ActivityEditeventBinding(@NonNull RelativeLayout rootView,
@@ -89,7 +93,7 @@ public final class ActivityEditeventBinding implements ViewBinding {
       @NonNull TextInputEditText editEventNameEdt, @NonNull TextInputLayout editEventPlayers,
       @NonNull TextInputLayout editEventSport, @NonNull TextInputLayout editEventTime,
       @NonNull TextInputEditText editEventTimeEdt, @NonNull TextView editTitle,
-      @NonNull TextView textDateTime) {
+      @NonNull ImageView mapImageEdt, @NonNull TextView textDateTime) {
     this.rootView = rootView;
     this.autocompleteLoc = autocompleteLoc;
     this.autocompletePlayers = autocompletePlayers;
@@ -108,6 +112,7 @@ public final class ActivityEditeventBinding implements ViewBinding {
     this.editEventTime = editEventTime;
     this.editEventTimeEdt = editEventTimeEdt;
     this.editTitle = editTitle;
+    this.mapImageEdt = mapImageEdt;
     this.textDateTime = textDateTime;
   }
 
@@ -240,6 +245,12 @@ public final class ActivityEditeventBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.mapImageEdt;
+      ImageView mapImageEdt = ViewBindings.findChildViewById(rootView, id);
+      if (mapImageEdt == null) {
+        break missingId;
+      }
+
       id = R.id.textDateTime;
       TextView textDateTime = ViewBindings.findChildViewById(rootView, id);
       if (textDateTime == null) {
@@ -250,7 +261,7 @@ public final class ActivityEditeventBinding implements ViewBinding {
           autocompletePlayers, autocompleteSport, bottomNavigationView, buttonEEvent, editEventDate,
           editEventDateEdt, editEventDesc, editEventDescEdt, editEventLoc, editEventName,
           editEventNameEdt, editEventPlayers, editEventSport, editEventTime, editEventTimeEdt,
-          editTitle, textDateTime);
+          editTitle, mapImageEdt, textDateTime);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

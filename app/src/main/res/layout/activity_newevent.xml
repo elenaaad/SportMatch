@@ -27,7 +27,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp">
+        android:layout_marginTop="60dp"
+        android:id="@+id/scrollView">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -62,9 +63,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/newEventName"
             android:layout_marginTop="10dp"
-            android:hint="Select Sport"
+            android:hint="Sport"
             app:errorEnabled="true"
-            app:helperText="One option"
+            app:helperText="Select one option"
             app:helperTextEnabled="true">
 
             <AutoCompleteTextView
@@ -82,9 +83,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/newEventSport"
             android:layout_marginTop="10dp"
-            android:hint="Select Players"
+            android:hint="Players"
             app:errorEnabled="true"
-            app:helperText="One option"
+            app:helperText="Select number of players"
             app:helperTextEnabled="true">
 
             <AutoCompleteTextView
@@ -98,13 +99,13 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/newEventLoc"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="match_parent"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/newEventPlayers"
             android:layout_marginTop="10dp"
-            android:hint="Select Location"
+            android:hint="Location"
             app:errorEnabled="true"
-            app:helperText="One option"
+            app:helperText="Press MapIcon to see location on map"
             app:helperTextEnabled="true">
 
             <AutoCompleteTextView
@@ -114,6 +115,18 @@
                 android:inputType="none" />
 
         </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ImageView
+            android:id="@+id/mapImage"
+            android:layout_width="61dp"
+            android:layout_height="72dp"
+            android:layout_above="@+id/textDateTime"
+            android:layout_below="@id/newEventPlayers"
+            android:layout_marginStart="250dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginBottom="31dp"
+            android:src="@drawable/map_inactive" />
 
         <TextView
             android:id="@+id/textDateTime"
@@ -140,7 +153,9 @@
                 android:id="@+id/newEventDateEdt"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:inputType="date" />
+                android:inputType="date"
+                android:focusableInTouchMode="true"
+                android:focusable="false"/>
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -161,7 +176,9 @@
                 android:id="@+id/newEventTimeEdt"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:inputType="time" />
+                android:inputType="time"
+                android:focusableInTouchMode="true"
+                android:focusable="false"/>
 
 
         </com.google.android.material.textfield.TextInputLayout>

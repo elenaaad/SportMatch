@@ -2,6 +2,11 @@ package com.example.sportmatch;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -38,6 +43,11 @@ public class BottomNavActivity extends AppCompatActivity {
     ArrayList<Event> bowlingList;
     ///end recyclerview
 
+    String[] item={"2 players","<= 4 players","<= 6 players","All"};
+    AutoCompleteTextView autoCompleteTextView;
+    ArrayAdapter<String>  adapterItems;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +74,7 @@ public class BottomNavActivity extends AppCompatActivity {
         badmintonList=new ArrayList<>();
 
         databaseReference= FirebaseDatabase.getInstance().getReference("Events");
+
         eventListener=databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -155,8 +166,50 @@ public class BottomNavActivity extends AppCompatActivity {
         });
         ///final meniu
 
-    }
 
+
+
+        ///beginning filter
+        autoCompleteTextView =findViewById(R.id.auto_complete_txt);
+        adapterItems= new ArrayAdapter<String>(this,R.layout.list_item,item);
+
+        autoCompleteTextView.setAdapter(adapterItems);
+        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long id) {
+                String item = adapterView.getItemAtPosition(i).toString();
+                Toast.makeText(BottomNavActivity.this,"Filter: " + item,Toast.LENGTH_SHORT).show();
+
+                ArrayList<AllCategory> filteredList = new ArrayList<>();
+                if (item.isEmpty() || item.equals("All")) {
+                    filteredList.addAll(allCategoryList);
+                } else {
+                    for (AllCategory category : allCategoryList) {
+                        ArrayList<Event> filteredEvents = new ArrayList<>();
+                        for (Event event : category.getEventList()) {
+                            if (item.equals("2 players") && event.getNrPlayers().contains("2")) {
+                                filteredEvents.add(event);
+                            }
+                            else if (item.equals("<= 4 players") && (event.getNrPlayers().contains("1") || event.getNrPlayers().contains("2") ||
+                                    event.getNrPlayers().contains("3")||event.getNrPlayers().contains("4"))) {
+                                filteredEvents.add(event);
+                            }
+                            else if (item.equals("<= 6 players") && (!event.getNrPlayers().contains("7")  && !event.getNrPlayers().contains("8"))) {
+                                filteredEvents.add(event);
+                            }
+                        }
+                        if (!filteredEvents.isEmpty()) {
+                            filteredList.add(new AllCategory(category.getTitle(), filteredEvents));
+                        }
+                    }
+                }
+                setParentRecycler(filteredList);
+            }
+        });
+
+        ///end filter
+
+    }
 
 
     ///recyclerview
@@ -169,4 +222,6 @@ public class BottomNavActivity extends AppCompatActivity {
     }
 
     ///end recyclerview
+
+
 }
