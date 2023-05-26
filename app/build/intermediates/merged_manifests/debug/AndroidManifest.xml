@@ -92,8 +92,23 @@
             android:name="com.example.sportmatch.EventDetailsActivity"
             android:exported="false" />
         <activity
+            android:name="com.example.sportmatch.EventDetailsAdminActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.sportmatch.EventPreview"
             android:exported="false" />
+        <activity
+            android:name="com.example.sportmatch.OtherProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sportmatch.RequestActivity"
+            android:exported="false"
+            android:theme="@style/DialogActivityTheme" />
+        <!--
+            <activity
+            android:name=".RequestAdapter"
+            android:exported="false" />
+        -->
         <activity
             android:name="com.example.sportmatch.EditEventDetails"
             android:exported="false" />

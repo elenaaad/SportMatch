@@ -1,8 +1,18 @@
 package com.example.sportmatch;
 
+import android.util.Log;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
-public class Event {
+public class Event  implements Serializable {
     private String key;
     private String eventName;
     private String sport;
@@ -11,6 +21,7 @@ public class Event {
     private String date;
     private String time;
     private String description;
+
 
     public String getKey() {
         return key;
@@ -34,6 +45,7 @@ public class Event {
 
     private String creator;
     private List<String> participants; // list of user IDs who have registered for this event
+    private List<String> requests; // list of user IDs who have requested to join this event
     private String chatId;
 
     public Event (){
@@ -53,9 +65,11 @@ public class Event {
         this.description = description;
         this.creator = creator;
         this.participants = participants;
+        this.requests = new ArrayList<>();
         this.chatId = chatId;
-       // Add the event creator to the registered players list
+        // Add the event creator to the registered players list
     }
+
 
     public String getUid() {
         return key;
@@ -125,16 +139,134 @@ public class Event {
         return participants;
     }
 
+
+    public void addParticipant( String userId) {
+
+        DatabaseReference eventRef = FirebaseDatabase.getInstance().getReference().child("Events").child(key);
+        eventRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    Event event = dataSnapshot.getValue(Event.class);
+                    if (event != null) {
+                        List<String> participants = event.getParticipants();
+                        if (participants != null && !participants.contains(userId)) {
+                            participants.add(userId);  // Add the new participant
+
+                            // Update the modified Event object in Firebase
+                            event.setParticipants(participants);
+                            eventRef.setValue(event);
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Handle the error
+                Log.d("Error", "Error while reading the database");
+            }
+        });
+    }
+
+
     public void setParticipants(List<String> participants) {
         this.participants = participants;
     }
 
+    public boolean myequals(Event obj) {
+        if (obj == null ||
+                !this.eventName.equals(obj.getEventName()) ||
+                !this.key.equals(obj.getKey()) ||
+                !this.sport.equals(obj.getSport()) ||
+                this.nrPlayers != obj.getNrPlayers() ||
+                !this.location.equals(obj.getLocation()) ||
+                !this.date.equals(obj.getDate()) ||
+                !this.time.equals(obj.getTime()) ||
+                !this.description.equals(obj.getDescription()) ||
+                !this.creator.equals(obj.getCreator()) ||
+                !this.participants.equals(obj.getParticipants()) ||
+                !this.chatId.equals(obj.getChatId())) {
+            return false;
+        }
+        return true;
+    }
 
-//    public User getUser() {
-//        return user;
-//    }
-//
-//    public void setUser(User user) {
-//        this.user = user;
-//    }
+    public List<String> getRequests() {
+        return requests;
+    }
+
+    public void addRequest(String userId) {
+        DatabaseReference eventRef = FirebaseDatabase.getInstance().getReference().child("Events").child(key);
+        eventRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    Event event = dataSnapshot.getValue(Event.class);
+                    if (event != null) {
+                        List<String> requests = event.getRequests();
+                        if (requests != null && !requests.contains(userId)) {
+                            requests.add(userId);  // Add the new participant
+
+                            // Update the modified Event object in Firebase
+                            event.setParticipants(requests);
+                            eventRef.setValue(event);
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Handle the error
+                Log.d("Error", "Error while reading the database");
+            }
+        });
+    }
+
+    public boolean areRequestsEmpty() {
+        if(requests == null)
+            return true;
+        return requests.isEmpty();
+    }
+
+    public void removeRequestFromEvent( String userId) {
+        Log.e("setRequests", "setRequests: " + requests);
+
+        final String eventId = this.getKey();
+        DatabaseReference eventRef = FirebaseDatabase.getInstance().getReference().child("Events").child(key);
+        eventRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                if (dataSnapshot.exists()) {
+                    Event event = dataSnapshot.getValue(Event.class);
+                    if (event != null) {
+                        List<String> requests = event.getRequests();
+                        if (requests != null) {
+                            requests.remove(userId);  // Remove the specific request
+
+                            // Update the modified Event object in Firebase
+                            event.setRequests(requests);
+                            eventRef.setValue(event);
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Handle the error
+                Log.d("Error", "Error while reading the database");
+            }
+        });
+        this.requests.remove(userId);
+        Log.e("setRequests", "setRequests: " + requests);
+
+    }
+
+
+    public void setRequests(List<String> requests) {
+        this.requests = requests;
+    }
+
 }

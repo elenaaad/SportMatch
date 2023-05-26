@@ -1,16 +1,34 @@
 package com.example.sportmatch;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class EventDetailsActivity extends AppCompatActivity {
 
@@ -32,12 +50,17 @@ public class EventDetailsActivity extends AppCompatActivity {
     TextView detailsDesc;
     TextView detailsDescInput;
     Button detailsBtnParticipate;
+    private FirebaseDatabase database;
+    Event mEvent;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_details_feed);
+        database = FirebaseDatabase.getInstance();
+
+
 
         title = findViewById(R.id.title);
         sportImage = findViewById(R.id.sportImage);
@@ -104,17 +127,103 @@ public class EventDetailsActivity extends AppCompatActivity {
                 sportImage.setImageResource(R.drawable.bowling);
                 break;
         }
+        Intent intent = getIntent();
+        mEvent = (Event) intent.getSerializableExtra("eventul");
+        if(mEvent == null) {
+            Log.d(TAG, "onCreate la details: event is null");
+        } else {
+            Log.d(TAG, "onCreate la details: event is not null");
+        }
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        FirebaseUser currentUser = auth.getCurrentUser();
 
+        String userId = null;
+        if (currentUser != null) {
+            userId = currentUser.getUid();
+        } else {
+            Log.e(TAG, "onCreate: No user is currently logged in");
+        }
+        // Check if the user is in the requests list or participants list
+        boolean isRequestSent = mEvent.getRequests().contains(userId);
+        boolean isParticipant = mEvent.getParticipants().contains(userId);
+
+// Show or hide the "Participate" button based on the conditions
+        if (isRequestSent || isParticipant) {
+            detailsBtnParticipate.setVisibility(View.GONE); // Hide the button
+        } else {
+            detailsBtnParticipate.setVisibility(View.VISIBLE); // Show the button
+        }
 
         detailsBtnParticipate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(EventDetailsActivity.this, "Your participation request was sent to admin!", Toast.LENGTH_SHORT).show();
-                //TODO: username admin in loc de admin
+
+                DatabaseReference requestsRef = database.getReference("Requests");
+                String requestId = requestsRef.push().getKey();
+                Request request = new Request(requestId, mEvent, FirebaseAuth.getInstance().getCurrentUser().getUid());
+                mEvent.setRequests(new ArrayList<>());
+                mEvent.addRequest(FirebaseAuth.getInstance().getCurrentUser().getUid());
+                String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+                DatabaseReference eventsRef = database.getReference("Events");
+                DatabaseReference eventRef = eventsRef.child(mEvent.getKey());
+                DatabaseReference requestsReff = eventRef.child("requests");
+
+                requestsReff.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        List<String> requestsList = new ArrayList<>();
+
+                        if (dataSnapshot.exists()) {
+                            // If "requests" field already exists, retrieve its current value
+                            requestsList.addAll((List<String>) dataSnapshot.getValue());
+                        }
+
+                        // Add the new request to the list
+                        requestsList.add(userId);
+                        // Update the "requests" field in the database
+                        requestsReff.setValue(requestsList);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                        // Handle the error
+                        Log.d("Error", "Error while updating requests field");
+                    }
+                });
+
+
+
+                if(requestId == null) {
+                    Log.d(TAG, "onClick: requestId is null");
+                } else
+                    requestsRef.child(requestId).setValue(request).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            // Request saved successfully
+
+                            Toast.makeText(getApplicationContext(), "Request sent", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(getApplicationContext(), BottomNavActivity.class));
+                            Log.e("Firebase", "Request sent successfully");
+                            finish();
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            // Handle failure
+                            Toast.makeText(getApplicationContext(), "Failed to send request: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            // You can also log the error for debugging purposes
+                            Log.e("Firebase", "Error sending request", e);
+                        }
+                    });
+
             }
         });
 
+
         ////inceput meniu
+
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setSelectedItemId(R.id.bottom_home);
