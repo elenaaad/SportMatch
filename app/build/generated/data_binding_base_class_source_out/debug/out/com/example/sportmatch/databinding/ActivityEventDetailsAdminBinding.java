@@ -26,6 +26,9 @@ public final class ActivityEventDetailsAdminBinding implements ViewBinding {
   public final BottomNavigationView bottomNavigationView;
 
   @NonNull
+  public final Button buttonToChat1;
+
+  @NonNull
   public final Button detailsBtnEdit;
 
   @NonNull
@@ -48,6 +51,9 @@ public final class ActivityEventDetailsAdminBinding implements ViewBinding {
 
   @NonNull
   public final TextView detailsLocInput;
+
+  @NonNull
+  public final Button detailsParticipantsButton;
 
   @NonNull
   public final TextView detailsPlayers;
@@ -80,17 +86,19 @@ public final class ActivityEventDetailsAdminBinding implements ViewBinding {
   public final TextView title;
 
   private ActivityEventDetailsAdminBinding(@NonNull RelativeLayout rootView,
-      @NonNull BottomNavigationView bottomNavigationView, @NonNull Button detailsBtnEdit,
-      @NonNull Button detailsBtnMap, @NonNull TextView detailsDate,
+      @NonNull BottomNavigationView bottomNavigationView, @NonNull Button buttonToChat1,
+      @NonNull Button detailsBtnEdit, @NonNull Button detailsBtnMap, @NonNull TextView detailsDate,
       @NonNull TextView detailsDateInput, @NonNull TextView detailsDesc,
       @NonNull TextView detailsDescInput, @NonNull TextView detailsLoc,
-      @NonNull TextView detailsLocInput, @NonNull TextView detailsPlayers,
-      @NonNull TextView detailsPlayersInput, @NonNull TextView detailsSport,
-      @NonNull TextView detailsSportInput, @NonNull TextView detailsTime,
-      @NonNull TextView detailsTimeInput, @NonNull TextView detailsTitle,
-      @NonNull Button seeRequestsButton, @NonNull ImageView sportImage, @NonNull TextView title) {
+      @NonNull TextView detailsLocInput, @NonNull Button detailsParticipantsButton,
+      @NonNull TextView detailsPlayers, @NonNull TextView detailsPlayersInput,
+      @NonNull TextView detailsSport, @NonNull TextView detailsSportInput,
+      @NonNull TextView detailsTime, @NonNull TextView detailsTimeInput,
+      @NonNull TextView detailsTitle, @NonNull Button seeRequestsButton,
+      @NonNull ImageView sportImage, @NonNull TextView title) {
     this.rootView = rootView;
     this.bottomNavigationView = bottomNavigationView;
+    this.buttonToChat1 = buttonToChat1;
     this.detailsBtnEdit = detailsBtnEdit;
     this.detailsBtnMap = detailsBtnMap;
     this.detailsDate = detailsDate;
@@ -99,6 +107,7 @@ public final class ActivityEventDetailsAdminBinding implements ViewBinding {
     this.detailsDescInput = detailsDescInput;
     this.detailsLoc = detailsLoc;
     this.detailsLocInput = detailsLocInput;
+    this.detailsParticipantsButton = detailsParticipantsButton;
     this.detailsPlayers = detailsPlayers;
     this.detailsPlayersInput = detailsPlayersInput;
     this.detailsSport = detailsSport;
@@ -141,6 +150,12 @@ public final class ActivityEventDetailsAdminBinding implements ViewBinding {
       id = R.id.bottomNavigationView;
       BottomNavigationView bottomNavigationView = ViewBindings.findChildViewById(rootView, id);
       if (bottomNavigationView == null) {
+        break missingId;
+      }
+
+      id = R.id.buttonToChat1;
+      Button buttonToChat1 = ViewBindings.findChildViewById(rootView, id);
+      if (buttonToChat1 == null) {
         break missingId;
       }
 
@@ -189,6 +204,12 @@ public final class ActivityEventDetailsAdminBinding implements ViewBinding {
       id = R.id.detailsLocInput;
       TextView detailsLocInput = ViewBindings.findChildViewById(rootView, id);
       if (detailsLocInput == null) {
+        break missingId;
+      }
+
+      id = R.id.detailsParticipantsButton;
+      Button detailsParticipantsButton = ViewBindings.findChildViewById(rootView, id);
+      if (detailsParticipantsButton == null) {
         break missingId;
       }
 
@@ -253,10 +274,10 @@ public final class ActivityEventDetailsAdminBinding implements ViewBinding {
       }
 
       return new ActivityEventDetailsAdminBinding((RelativeLayout) rootView, bottomNavigationView,
-          detailsBtnEdit, detailsBtnMap, detailsDate, detailsDateInput, detailsDesc,
-          detailsDescInput, detailsLoc, detailsLocInput, detailsPlayers, detailsPlayersInput,
-          detailsSport, detailsSportInput, detailsTime, detailsTimeInput, detailsTitle,
-          seeRequestsButton, sportImage, title);
+          buttonToChat1, detailsBtnEdit, detailsBtnMap, detailsDate, detailsDateInput, detailsDesc,
+          detailsDescInput, detailsLoc, detailsLocInput, detailsParticipantsButton, detailsPlayers,
+          detailsPlayersInput, detailsSport, detailsSportInput, detailsTime, detailsTimeInput,
+          detailsTitle, seeRequestsButton, sportImage, title);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -47,40 +47,40 @@ public class MainActivity extends AppCompatActivity {
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, RegisterActivity.class));
-            }
-        });
-
-
-        /////doar temporar spre meniu
-        Button menuBtn=(Button)findViewById(R.id.buttonMenu);
-        menuBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               /* DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Events");
-                ref.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        for (DataSnapshot eventSnapshot : dataSnapshot.getChildren()) {
-                            Event event = eventSnapshot.getValue(Event.class);
-                            if (event != null && event.getRequests() == null) {
-                                event.setRequests(new ArrayList<>()); // Initialize the requests list
-                                Log.d("Event", event.getEventName());
-                                eventSnapshot.getRef().setValue(event); // Update the event in the database
-                            }
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                        // Handle the error
-                        Log.d("Error", "Error while reading the database");
-                    }
-                });*/
-
                 startActivity(new Intent(MainActivity.this, BottomNavActivity.class));
             }
         });
+
+
+        ///doar temporar spre meniu
+//        Button menuBtn=(Button)findViewById(R.id.buttonMenu);
+//        menuBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//               /* DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Events");
+//                ref.addListenerForSingleValueEvent(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(DataSnapshot dataSnapshot) {
+//                        for (DataSnapshot eventSnapshot : dataSnapshot.getChildren()) {
+//                            Event event = eventSnapshot.getValue(Event.class);
+//                            if (event != null && event.getRequests() == null) {
+//                                event.setRequests(new ArrayList<>()); // Initialize the requests list
+//                                Log.d("Event", event.getEventName());
+//                                eventSnapshot.getRef().setValue(event); // Update the event in the database
+//                            }
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(DatabaseError databaseError) {
+//                        // Handle the error
+//                        Log.d("Error", "Error while reading the database");
+//                    }
+//                });*/
+//
+//                startActivity(new Intent(MainActivity.this, BottomNavActivity.class));
+//            }
+//        });
         /////final meniu
 
 

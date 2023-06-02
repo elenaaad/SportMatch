@@ -74,7 +74,7 @@ public class OnlyParticipatesEvents extends AppCompatActivity {
                 for(DataSnapshot itemSnapshot:snapshot.getChildren())
                 {
                     Event event = itemSnapshot.getValue(Event.class);
-                    if (event.getParticipants() != null && event.getParticipants().contains(userId))
+                    if (event.getParticipants() != null && event.getParticipants().contains(userId) && !userId.equals(event.getCreator()))
                     {
                         switch(event.getSport()) {
                             case "Volleyball":

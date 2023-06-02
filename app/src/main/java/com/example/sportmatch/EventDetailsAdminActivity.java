@@ -15,6 +15,9 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class EventDetailsAdminActivity extends AppCompatActivity {
 
@@ -36,6 +39,7 @@ public class EventDetailsAdminActivity extends AppCompatActivity {
     TextView detailsTime;
     TextView detailsTimeInput;
     TextView detailsDesc;
+    private FirebaseDatabase database;
     TextView detailsDescInput;
     Button detailsBtnParticipate;
 
@@ -44,6 +48,7 @@ public class EventDetailsAdminActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_details_admin);
+        database = FirebaseDatabase.getInstance();
 
         Intent intent = getIntent();
         mEvent = (Event) intent.getSerializableExtra("eventul");
@@ -123,6 +128,7 @@ public class EventDetailsAdminActivity extends AppCompatActivity {
                 break;
         }
 
+
         detailsBtnEdit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -185,11 +191,14 @@ public class EventDetailsAdminActivity extends AppCompatActivity {
         ////inceput meniu
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setSelectedItemId(R.id.bottom_home);
+        bottomNavigationView.setSelectedItemId(R.id.bottom_admin_events);
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.bottom_home:
+                    startActivity(new Intent(getApplicationContext(), BottomNavActivity.class));
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
                     return true;
                 case R.id.bottom_admin_events:
                     startActivity(new Intent(getApplicationContext(), AdminEventsActivity.class));

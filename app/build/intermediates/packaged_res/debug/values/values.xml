@@ -18,6 +18,7 @@
         <item>@font/akronim</item>
     </array>
     <color name="black">#FF000000</color>
+    <color name="grey">#888888</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -32,6 +33,7 @@
     <color name="verdeFundal">#C2D596</color>
     <color name="white">#FFFFFFFF</color>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="navigation_bar_margin_bottom">30dp</dimen>
     <string name="Discuss">*Date and time not mandatory! Can be discussed in chat!*</string>
     <string name="app_name">SportMatch</string>
     <string name="default_web_client_id" translatable="false">927342689684-19qh54r3pmvmq51tgcg8p09c8hnm51m0.apps.googleusercontent.com</string>
@@ -53,8 +55,14 @@
     <string name="previous">Previous</string>
     <string name="project_id" translatable="false">sportsmatch-97ff3</string>
     <string name="second_fragment_label">Second Fragment</string>
-    <string name="title_activity_choose_avatar">ChooseAvatarActivity</string>
+    <string name="title_activity_maps">MapsActivity</string>
     <string name="title_activity_menu">MenuActivity</string>
+    <style name="DialogActivityTheme" parent="Theme.AppCompat.Dialog">
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowCloseOnTouchOutside">true</item>
+</style>
     <style name="SlideActivityAnimation" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
         <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
