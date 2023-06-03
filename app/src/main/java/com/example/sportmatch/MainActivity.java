@@ -1,14 +1,23 @@
 package com.example.sportmatch;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView logoImageView;
+    ImageView backg;
+    LinearLayout splashtext, hometext, bottons;
+    Animation frombottom;
+
 
     //TODO: DUPA SIGN IN SAU SIGN UP DE LEGAT CU FEEDUL
 
@@ -24,28 +33,38 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        overridePendingTransition(R.anim.slide_up, R.anim.slide_up);
 
-        
+        //sursa: https://www.youtube.com/watch?v=k_OJt71wEbc&t=260s&ab_channel=DesignWithHassan
+        frombottom = AnimationUtils.loadAnimation(this, R.anim.frombottom);
 
-//        Button buttonLogin = (Button)findViewById(R.id.button_login);
-//
-//        buttonLogin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(MainActivity.this, LoginActivity.class));
-//            }
-//        });
-//
-//        Button buttonRegister = (Button)findViewById(R.id.button_register);
-//
-//        buttonRegister.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                startActivity(new Intent(MainActivity.this, BottomNavActivity.class));
-//            }
-//        });
+        backg = findViewById(R.id.backG);
+        splashtext = findViewById(R.id.splashtext);
+        hometext = findViewById(R.id.hometext);
+        bottons = findViewById(R.id.bottons);
+
+        backg.animate().translationY(-2000).setDuration(600).setStartDelay(0);
+        splashtext.animate().translationY(140).alpha(0).setDuration(300).setStartDelay(0);
+        hometext.startAnimation(frombottom);
+        bottons.startAnimation(frombottom);
+
+        Button buttonLogin = (Button)findViewById(R.id.button_login);
+
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            }
+        });
+
+        Button buttonRegister = (Button)findViewById(R.id.button_register);
+
+        buttonRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(MainActivity.this, BottomNavActivity.class));
+            }
+        });
 
 
         /////doar temporar spre meniu

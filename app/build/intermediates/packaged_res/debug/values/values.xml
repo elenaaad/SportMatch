@@ -54,6 +54,7 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="project_id" translatable="false">sportsmatch-97ff3</string>
+    <string name="register_text">Ready to embrace the thrill of friendly matches and meet fellow sports enthusiasts?                                                                Join our community today!</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="title_activity_menu">MenuActivity</string>
@@ -100,5 +101,10 @@
         
         <item name="android:statusBarColor">@color/verde3</item>
         
+    </style>
+    <style name="roundImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15dp</item>
+        <item name="color">@color/white</item>
     </style>
 </resources>

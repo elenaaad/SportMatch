@@ -1,5 +1,7 @@
 R_DEF: Internal format may change without notice
 local
+anim backganim
+anim frombottom
 anim slide_down
 anim slide_in_right
 anim slide_out_left
@@ -34,12 +36,14 @@ drawable baseline_person_outline_24
 drawable baseline_sports_kabaddi_24
 drawable baseline_sports_martial_arts_24
 drawable basketball
+drawable basketballplayer
 drawable bottom_background
 drawable bowling
 drawable bowlingposter
 drawable editprofile
 drawable eventicon
 drawable football
+drawable footballplayers
 drawable gradientdrawable
 drawable handball
 drawable handballposter
@@ -73,6 +77,7 @@ id FullName
 id FullNameInserted
 id Gender
 id GenderInserted
+id Or
 id Password
 id PasswordConfirmed
 id PasswordInserted
@@ -89,6 +94,7 @@ id auto_complete_txt
 id autocomplete_loc
 id autocomplete_players
 id autocomplete_sport
+id backG
 id bio_profile
 id bio_profile_edit
 id bottomNavigationView
@@ -97,6 +103,7 @@ id bottom_create_event
 id bottom_events_participates
 id bottom_home
 id bottom_view_profile
+id bottons
 id btnConfirm
 id btnDelete
 id btn_close
@@ -113,6 +120,7 @@ id button_second
 id cardEvent
 id category_title
 id deleteButton
+id desc
 id detailsBtnEdit
 id detailsBtnMap
 id detailsBtnParticipate
@@ -152,6 +160,7 @@ id fab
 id full_name_editprofile
 id full_name_profile
 id fullname_field
+id hometext
 id imageView
 id item_image
 id item_recycler
@@ -160,6 +169,7 @@ id llbio_profile
 id llemail_profile
 id llfull_name_profile
 id llpayment
+id logoMain
 id main_recycler
 id main_recycler1
 id main_recycler2
@@ -181,6 +191,7 @@ id newEventPlayers
 id newEventSport
 id newEventTime
 id newEventTimeEdt
+id newhere
 id newpass
 id oldpass
 id payment_desc
@@ -212,11 +223,13 @@ id see_requests_button
 id sendButton
 id signupButton
 id splash_view
+id splashtext
 id sportImage
 id textDateTime
 id textView
 id textView1
 id textView2
+id textlogin
 id textview_first
 id textview_second
 id title
@@ -287,6 +300,7 @@ string hello_second_fragment
 string next
 string previous
 string project_id
+string register_text
 string second_fragment_label
 string title_activity_maps
 string title_activity_menu
@@ -297,5 +311,6 @@ style Theme.SportMatch1
 style Theme.SportMatch.AppBarOverlay
 style Theme.SportMatch.NoActionBar
 style Theme.SportMatch.PopupOverlay
+style roundImageView
 xml backup_rules
 xml data_extraction_rules

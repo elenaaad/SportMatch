@@ -11,6 +11,7 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+anim backganim
 anim btn_checkbox_to_checked_box_inner_merged_animation
 anim btn_checkbox_to_checked_box_outer_merged_animation
 anim btn_checkbox_to_checked_icon_null_animation
@@ -28,6 +29,7 @@ anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
 anim fragment_fast_out_extra_slow_in
+anim frombottom
 anim linear_indeterminate_line1_head_interpolator
 anim linear_indeterminate_line1_tail_interpolator
 anim linear_indeterminate_line2_head_interpolator
@@ -2841,6 +2843,7 @@ drawable baseline_person_outline_24
 drawable baseline_sports_kabaddi_24
 drawable baseline_sports_martial_arts_24
 drawable basketball
+drawable basketballplayer
 drawable bottom_background
 drawable bowling
 drawable bowlingposter
@@ -2879,6 +2882,7 @@ drawable design_snackbar_background
 drawable editprofile
 drawable eventicon
 drawable football
+drawable footballplayers
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable gradientdrawable
@@ -3007,6 +3011,7 @@ id Gender
 id GenderInserted
 id META
 id NO_DEBUG
+id Or
 id Password
 id PasswordConfirmed
 id PasswordInserted
@@ -3107,6 +3112,7 @@ id autocomplete_loc
 id autocomplete_players
 id autocomplete_sport
 id automatic
+id backG
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3122,6 +3128,7 @@ id bottom_create_event
 id bottom_events_participates
 id bottom_home
 id bottom_view_profile
+id bottons
 id bounce
 id bounceBoth
 id bounceEnd
@@ -3194,6 +3201,7 @@ id default_activity_button
 id deleteButton
 id deltaRelative
 id dependency_ordering
+id desc
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -3300,6 +3308,7 @@ id header_title
 id hideable
 id home
 id homeAsUp
+id hometext
 id honorRequest
 id horizontal_only
 id hybrid
@@ -3340,6 +3349,7 @@ id llemail_profile
 id llfull_name_profile
 id llpayment
 id locale
+id logoMain
 id lottie_layer_name
 id ltr
 id m3_side_sheet
@@ -3435,6 +3445,7 @@ id newEventPlayers
 id newEventSport
 id newEventTime
 id newEventTimeEdt
+id newhere
 id newpass
 id noScroll
 id noState
@@ -3567,6 +3578,7 @@ id south
 id spacer
 id special_effects_controller_view_tag
 id splash_view
+id splashtext
 id spline
 id split_action_bar
 id sportImage
@@ -3624,6 +3636,7 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id textlogin
 id textview_first
 id textview_second
 id time
@@ -4093,6 +4106,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string previous
 string project_id
+string register_text
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
@@ -5203,6 +5217,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style roundImageView
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
