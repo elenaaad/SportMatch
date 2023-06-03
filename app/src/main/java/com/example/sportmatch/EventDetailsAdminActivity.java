@@ -128,6 +128,23 @@ public class EventDetailsAdminActivity extends AppCompatActivity {
                 break;
         }
 
+        Button popupButtonp = findViewById(R.id.detailsParticipantsButton);
+        /*if(mEvent.areRequestsEmpty()) {
+            popupButton.setText("No requests pending");
+            popupButton.setEnabled(false);
+            popupButton.setClickable(false);
+            popupButton.setBackgroundColor(getResources().getColor(R.color.grey));
+        }*/
+        popupButtonp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(EventDetailsAdminActivity.this, ParticipantActivity.class);
+                intent.putExtra("eventul actual", mEvent);
+                startActivity(intent);
+
+            }
+        });
 
         detailsBtnEdit.setOnClickListener(new View.OnClickListener() {
             @Override

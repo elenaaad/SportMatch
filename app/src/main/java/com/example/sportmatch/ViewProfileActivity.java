@@ -99,7 +99,6 @@ public class ViewProfileActivity extends AppCompatActivity {
                 TextView view = findViewById(R.id.payment_label);
                 view.setText(String.valueOf(eventCount));
                 String message = "Number of events: " + eventCount;
-                Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -127,8 +126,11 @@ public class ViewProfileActivity extends AppCompatActivity {
                 builder.setPositiveButton("Logout", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        Log.e("Logout", "Logout");
                         FirebaseAuth.getInstance().signOut();
-                        startActivity(new Intent(ViewProfileActivity.this, LoginActivity.class));
+                        Log.e("Logout", "Logout");
+
+                        startActivity(new Intent(ViewProfileActivity.this, MainActivity.class));
                     }
                 });
                 builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {

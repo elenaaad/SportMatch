@@ -3861,6 +3861,7 @@ layout activity_maps
 layout activity_menu
 layout activity_newevent
 layout activity_only_participates_events
+layout activity_part_item
 layout activity_profile
 layout activity_register
 layout activity_request_item
