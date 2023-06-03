@@ -21,7 +21,14 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class BottomNavActivity extends AppCompatActivity {
 
@@ -43,7 +50,8 @@ public class BottomNavActivity extends AppCompatActivity {
     ArrayList<Event> bowlingList;
     ///end recyclerview
 
-    String[] item={"2 players","<= 4 players","<= 6 players","All"};
+    String[] item={"2 players","less than 4","less than 6","All"};
+    String[] cronologically={"Most recent","Least recent"};
     AutoCompleteTextView autoCompleteTextView;
     ArrayAdapter<String>  adapterItems;
 
@@ -190,11 +198,11 @@ public class BottomNavActivity extends AppCompatActivity {
                             if (item.equals("2 players") && event.getNrPlayers().contains("2")) {
                                 filteredEvents.add(event);
                             }
-                            else if (item.equals("<= 4 players") && (event.getNrPlayers().contains("1") || event.getNrPlayers().contains("2") ||
+                            else if (item.equals("less than 4") && (event.getNrPlayers().contains("1") || event.getNrPlayers().contains("2") ||
                                     event.getNrPlayers().contains("3")||event.getNrPlayers().contains("4"))) {
                                 filteredEvents.add(event);
                             }
-                            else if (item.equals("<= 6 players") && (!event.getNrPlayers().contains("7")  && !event.getNrPlayers().contains("8"))) {
+                            else if (item.equals("less than 6") && (!event.getNrPlayers().contains("7")  && !event.getNrPlayers().contains("8"))) {
                                 filteredEvents.add(event);
                             }
                         }
@@ -204,6 +212,68 @@ public class BottomNavActivity extends AppCompatActivity {
                     }
                 }
                 setParentRecycler(filteredList);
+            }
+        });
+
+        ///end filter
+
+        ///begin filter by date
+        autoCompleteTextView =findViewById(R.id.auto_complete_txt2);
+        adapterItems= new ArrayAdapter<String>(this,R.layout.date_item,cronologically);
+
+        autoCompleteTextView.setAdapter(adapterItems);
+        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long id) {
+                String item = adapterView.getItemAtPosition(i).toString();
+                Toast.makeText(BottomNavActivity.this, item,Toast.LENGTH_SHORT).show();
+
+                ArrayList<AllCategory> orderedList = new ArrayList<>();
+                for (AllCategory category : allCategoryList)
+                {
+                    List<Event> orderedEvents = new ArrayList<>();
+
+                    if (item.equals("Most recent"))
+                    {
+                        orderedEvents=category.getEventList().stream().filter(e->!e.getDate().equals("To be discussed")).collect(Collectors.toList());
+                        Collections.sort(orderedEvents, new Comparator<Event>() {
+                            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+
+                            @Override
+                            public int compare(Event event1, Event event2) {
+                                try {
+                                    return dateFormat.parse(event1.getDate()).compareTo(dateFormat.parse(event2.getDate()));
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                    return 0;
+                                }
+                            }
+                        });
+                        orderedEvents.addAll(category.getEventList().stream().filter(e->e.getDate().equals("To be discussed")).collect(Collectors.toList()));
+
+
+                    } else {
+                        orderedEvents=category.getEventList().stream().filter(e->!e.getDate().equals("To be discussed")).collect(Collectors.toList());
+                        Collections.sort(orderedEvents, new Comparator<Event>() {
+                            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                            @Override
+                            public int compare(Event event1, Event event2) {
+                                try {
+                                    return dateFormat.parse(event2.getDate()).compareTo(dateFormat.parse(event1.getDate()));
+                                } catch (ParseException e) {
+                                    e.printStackTrace();
+                                    return 0;
+                                }
+                            }
+                        });
+                        orderedEvents.addAll(category.getEventList().stream().filter(e->e.getDate().equals("To be discussed")).collect(Collectors.toList()));
+                    }
+                    ArrayList<Event> ev=new ArrayList<>();
+                    ev.addAll(orderedEvents);
+
+                    orderedList.add(new AllCategory(category.getTitle(), ev));
+                }
+                setParentRecycler(orderedList);
             }
         });
 

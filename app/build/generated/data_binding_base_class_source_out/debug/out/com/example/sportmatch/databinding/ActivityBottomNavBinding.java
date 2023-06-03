@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AutoCompleteTextView;
 import android.widget.RelativeLayout;
-import android.widget.SearchView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -27,26 +26,26 @@ public final class ActivityBottomNavBinding implements ViewBinding {
   public final AutoCompleteTextView autoCompleteTxt;
 
   @NonNull
+  public final AutoCompleteTextView autoCompleteTxt2;
+
+  @NonNull
   public final BottomNavigationView bottomNavigationView;
 
   @NonNull
   public final RecyclerView mainRecycler;
 
   @NonNull
-  public final SearchView searchBar;
-
-  @NonNull
   public final TextView textView;
 
   private ActivityBottomNavBinding(@NonNull RelativeLayout rootView,
-      @NonNull AutoCompleteTextView autoCompleteTxt,
+      @NonNull AutoCompleteTextView autoCompleteTxt, @NonNull AutoCompleteTextView autoCompleteTxt2,
       @NonNull BottomNavigationView bottomNavigationView, @NonNull RecyclerView mainRecycler,
-      @NonNull SearchView searchBar, @NonNull TextView textView) {
+      @NonNull TextView textView) {
     this.rootView = rootView;
     this.autoCompleteTxt = autoCompleteTxt;
+    this.autoCompleteTxt2 = autoCompleteTxt2;
     this.bottomNavigationView = bottomNavigationView;
     this.mainRecycler = mainRecycler;
-    this.searchBar = searchBar;
     this.textView = textView;
   }
 
@@ -83,6 +82,12 @@ public final class ActivityBottomNavBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.auto_complete_txt2;
+      AutoCompleteTextView autoCompleteTxt2 = ViewBindings.findChildViewById(rootView, id);
+      if (autoCompleteTxt2 == null) {
+        break missingId;
+      }
+
       id = R.id.bottomNavigationView;
       BottomNavigationView bottomNavigationView = ViewBindings.findChildViewById(rootView, id);
       if (bottomNavigationView == null) {
@@ -95,12 +100,6 @@ public final class ActivityBottomNavBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.searchBar;
-      SearchView searchBar = ViewBindings.findChildViewById(rootView, id);
-      if (searchBar == null) {
-        break missingId;
-      }
-
       id = R.id.textView;
       TextView textView = ViewBindings.findChildViewById(rootView, id);
       if (textView == null) {
@@ -108,7 +107,7 @@ public final class ActivityBottomNavBinding implements ViewBinding {
       }
 
       return new ActivityBottomNavBinding((RelativeLayout) rootView, autoCompleteTxt,
-          bottomNavigationView, mainRecycler, searchBar, textView);
+          autoCompleteTxt2, bottomNavigationView, mainRecycler, textView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
