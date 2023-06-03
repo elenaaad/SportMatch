@@ -560,10 +560,6 @@
         "source": "C:\\Users\\Asus\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-51:\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-49:/layout_activity_requests.xml.flat",
-        "source": "com.example.sportmatch.app-main-51:/layout/activity_requests.xml"
-    },
-    {
         "merged": "C:\\Users\\Asus\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-49:\\drawable_map_inactive.png.flat",
         "source": "C:\\Users\\Asus\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-51:\\drawable\\map_inactive.png"
     },
@@ -574,5 +570,9 @@
     {
         "merged": "C:\\Users\\Asus\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-49:\\layout_activity_editprofile.xml.flat",
         "source": "C:\\Users\\Asus\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-51:\\layout\\activity_editprofile.xml"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-49:/layout_activity_view_profile.xml.flat",
+        "source": "com.example.sportmatch.app-main-51:/layout/activity_view_profile.xml"
     }
 ]
