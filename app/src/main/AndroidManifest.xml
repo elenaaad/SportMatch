@@ -93,6 +93,9 @@
             android:exported="false" />
         -->
         <activity
+            android:name=".EventdetailsParticipantActivity"
+            android:exported="false" />
+        <activity
             android:name=".EditEventDetails"
             android:exported="false" />
         <activity

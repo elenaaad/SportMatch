@@ -1,13 +1,14 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-102:12
-INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-102:12
-INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-102:12
-INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-102:12
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
 MERGED from [androidx.databinding:viewbinding:7.4.2] C:\Users\Raluca\.gradle\caches\transforms-3\9ab523b113898a0706fa388ab5ca5516\transformed\viewbinding-7.4.2\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-ui:2.5.3] C:\Users\Raluca\.gradle\caches\transforms-3\670fcbd9f10f2b5a7b424d723d6a721f\transformed\navigation-ui-2.5.3\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\Raluca\.gradle\caches\transforms-3\182faf041fdcb262ef4ea683b4175339\transformed\material-1.8.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Raluca\.gradle\caches\transforms-3\d8979af8a73764c39a8cadc6fefa7acf\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
+MERGED from [com.airbnb.android:lottie:4.2.2] C:\Users\Raluca\.gradle\caches\transforms-3\3e32d705925c472d2fef1628d0468021\transformed\lottie-4.2.2\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Raluca\.gradle\caches\transforms-3\5ec40b5490f4dd1ddc594532155ec3d6\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\Raluca\.gradle\caches\transforms-3\3429c272863fc1e5b465d2e8a2b7badb\transformed\appcompat-1.6.1\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database-ktx:20.2.0] C:\Users\Raluca\.gradle\caches\transforms-3\96f18a4cbec0f1eec01e51e4f2117d93\transformed\firebase-database-ktx-20.2.0\AndroidManifest.xml:2:1-20:12
@@ -80,22 +81,22 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Raluca\.gradle\c
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Raluca\.gradle\caches\transforms-3\705af1d4a665eccd48cef655c900d24f\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Raluca\.gradle\caches\transforms-3\2397f23810b8035de4f82d065aff48cd\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Raluca\.gradle\caches\transforms-3\aadbfca95168fc936950a55ba0e054bd\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-102:12
-INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-102:12
-INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-102:12
+INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
 	package
 		INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-102:12
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
 		INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-102:12
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
 		INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-102:12
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
 		INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:2:11-69
@@ -124,11 +125,13 @@ MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\Raluca\.gradl
 	android:name
 		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:8:22-64
 application
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:10:5-100:19
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:10:5-109:19
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\Raluca\.gradle\caches\transforms-3\182faf041fdcb262ef4ea683b4175339\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\Raluca\.gradle\caches\transforms-3\182faf041fdcb262ef4ea683b4175339\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Raluca\.gradle\caches\transforms-3\d8979af8a73764c39a8cadc6fefa7acf\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Raluca\.gradle\caches\transforms-3\d8979af8a73764c39a8cadc6fefa7acf\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:4.2.2] C:\Users\Raluca\.gradle\caches\transforms-3\3e32d705925c472d2fef1628d0468021\transformed\lottie-4.2.2\AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:lottie:4.2.2] C:\Users\Raluca\.gradle\caches\transforms-3\3e32d705925c472d2fef1628d0468021\transformed\lottie-4.2.2\AndroidManifest.xml:9:5-20
 MERGED from [com.google.firebase:firebase-database-ktx:20.2.0] C:\Users\Raluca\.gradle\caches\transforms-3\96f18a4cbec0f1eec01e51e4f2117d93\transformed\firebase-database-ktx-20.2.0\AndroidManifest.xml:10:5-18:19
 MERGED from [com.google.firebase:firebase-database-ktx:20.2.0] C:\Users\Raluca\.gradle\caches\transforms-3\96f18a4cbec0f1eec01e51e4f2117d93\transformed\firebase-database-ktx-20.2.0\AndroidManifest.xml:10:5-18:19
 MERGED from [com.google.firebase:firebase-database:20.2.0] C:\Users\Raluca\.gradle\caches\transforms-3\044272472e8eea04ec17792347252681\transformed\firebase-database-20.2.0\AndroidManifest.xml:27:5-35:19
@@ -195,150 +198,164 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Ra
 		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:17:9-48
 	android:dataExtractionRules
 		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:12:9-65
+activity#com.example.sportmatch.StartActivity
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:19:9-28:20
+	android:exported
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:21:13-36
+	android:theme
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:22:13-53
+	android:name
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:20:13-42
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:23:13-27:29
+action#android.intent.action.MAIN
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:24:17-69
+	android:name
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:24:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:26:17-77
+	android:name
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:26:27-74
 meta-data#com.google.android.geo.API_KEY
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:20:9-22:71
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:30:9-32:71
 	android:value
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:22:13-68
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:32:13-68
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:21:13-58
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:31:13-58
 activity#com.example.sportmatch.MapsActivity
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:24:9-27:59
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:34:9-37:59
 	android:label
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:27:13-56
-	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:26:13-37
-	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:25:13-41
-activity#com.example.sportmatch.ChatActivity
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:28:9-30:40
-	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:30:13-37
-	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:29:13-41
-activity#com.example.sportmatch.ViewProfileActivity
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:31:9-33:40
-	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:33:13-37
-	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:32:13-48
-activity#com.example.sportmatch.OnlyParticipatesEvents
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:34:9-36:40
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:37:13-56
 	android:exported
 		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:35:13-51
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:35:13-41
+activity#com.example.sportmatch.ChatActivity
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:38:9-40:40
+	android:exported
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:40:13-37
+	android:name
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:39:13-41
+activity#com.example.sportmatch.ViewProfileActivity
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:41:9-43:40
+	android:exported
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:43:13-37
+	android:name
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:42:13-48
+activity#com.example.sportmatch.OnlyParticipatesEvents
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:44:9-46:40
+	android:exported
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:46:13-37
+	android:name
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:45:13-51
 activity#com.example.sportmatch.AdminEventsActivity
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:37:9-39:40
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:47:9-49:40
 	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:39:13-37
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:49:13-37
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:38:13-48
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:48:13-48
 activity#com.example.sportmatch.BottomNavActivity
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:40:9-42:40
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:50:9-52:40
 	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:42:13-37
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:52:13-37
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:41:13-46
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:51:13-46
 activity#com.example.sportmatch.EditProfileActivity
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:43:9-45:40
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:53:9-55:40
 	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:45:13-37
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:55:13-37
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:44:13-48
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:54:13-48
 activity#com.example.sportmatch.ProfileActivity
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:46:9-48:40
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:56:9-58:40
 	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:48:13-37
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:58:13-37
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:47:13-44
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:57:13-44
 activity#com.example.sportmatch.MenuActivity
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:49:9-53:67
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:59:9-63:67
 	android:label
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:52:13-56
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:62:13-56
 	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:51:13-37
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:61:13-37
 	android:theme
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:53:13-64
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:63:13-64
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:50:13-41
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:60:13-41
 activity#com.example.sportmatch.RegisterActivity
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:54:9-56:40
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:64:9-66:40
 	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:56:13-37
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:66:13-37
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:55:13-45
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:65:13-45
 activity#com.example.sportmatch.LoginActivity
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:57:9-59:40
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:67:9-69:40
 	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:59:13-37
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:69:13-37
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:58:13-42
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:68:13-42
 activity#com.example.sportmatch.CreateEventActivity
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:60:9-62:40
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:70:9-72:40
 	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:62:13-37
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:72:13-37
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:61:13-48
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:71:13-48
 activity#com.example.sportmatch.EventDetailsActivity
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:63:9-65:40
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:73:9-75:40
 	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:65:13-37
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:75:13-37
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:64:13-49
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:74:13-49
 activity#com.example.sportmatch.EventDetailsAdminActivity
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:66:9-68:36
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:76:9-78:40
 	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:68:9-33
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:78:13-37
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:67:13-54
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:77:13-54
 activity#com.example.sportmatch.EventPreview
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:69:9-71:40
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:79:9-81:40
 	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:71:13-37
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:81:13-37
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:70:13-41
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:80:13-41
 activity#com.example.sportmatch.OtherProfileActivity
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:72:9-74:40
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:82:9-84:40
 	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:74:13-37
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:84:13-37
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:73:13-49
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:83:13-49
 activity#com.example.sportmatch.RequestActivity
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:76:9-79:40
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:85:9-88:58
 	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:79:13-37
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:87:13-37
 	android:theme
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:78:13-55
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:88:13-55
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:77:13-44
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:86:13-44
+activity#com.example.sportmatch.EventdetailsParticipantActivity
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:95:9-97:40
+	android:exported
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:97:13-37
+	android:name
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:96:13-60
 activity#com.example.sportmatch.EditEventDetails
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:83:9-85:40
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:98:9-100:40
 	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:85:13-37
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:100:13-37
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:84:13-45
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:99:13-45
 activity#com.example.sportmatch.MainActivity
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:87:9-95:20
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:101:9-104:20
 	android:exported
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:89:13-36
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:103:13-37
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:88:13-41
-intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:90:13-94:29
-action#android.intent.action.MAIN
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:91:17-69
-	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:91:25-66
-category#android.intent.category.LAUNCHER
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:93:17-77
-	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:93:27-74
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:102:13-41
 meta-data#preloaded_fonts
-ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:97:9-99:57
+ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:106:9-108:57
 	android:resource
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:99:13-54
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:108:13-54
 	android:name
-		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:98:13-43
+		ADDED from C:\SportMatchpre\app\src\main\AndroidManifest.xml:107:13-43
 uses-sdk
 INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\SportMatchpre\app\src\main\AndroidManifest.xml
@@ -351,6 +368,8 @@ MERGED from [com.google.android.material:material:1.8.0] C:\Users\Raluca\.gradle
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\Raluca\.gradle\caches\transforms-3\182faf041fdcb262ef4ea683b4175339\transformed\material-1.8.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Raluca\.gradle\caches\transforms-3\d8979af8a73764c39a8cadc6fefa7acf\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Raluca\.gradle\caches\transforms-3\d8979af8a73764c39a8cadc6fefa7acf\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:4.2.2] C:\Users\Raluca\.gradle\caches\transforms-3\3e32d705925c472d2fef1628d0468021\transformed\lottie-4.2.2\AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:lottie:4.2.2] C:\Users\Raluca\.gradle\caches\transforms-3\3e32d705925c472d2fef1628d0468021\transformed\lottie-4.2.2\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Raluca\.gradle\caches\transforms-3\5ec40b5490f4dd1ddc594532155ec3d6\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] C:\Users\Raluca\.gradle\caches\transforms-3\5ec40b5490f4dd1ddc594532155ec3d6\transformed\appcompat-resources-1.6.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.appcompat:appcompat:1.6.1] C:\Users\Raluca\.gradle\caches\transforms-3\3429c272863fc1e5b465d2e8a2b7badb\transformed\appcompat-1.6.1\AndroidManifest.xml:20:5-44
