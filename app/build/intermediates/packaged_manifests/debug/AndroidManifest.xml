@@ -45,6 +45,17 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.SportMatch" >
+        <activity
+            android:name="com.example.sportmatch.StartActivity"
+            android:exported="true"
+            android:theme="@style/Theme.SportMatch1" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDLCBmP9VNRDUHLpWWptp6AZhUSIThi_nY" />
@@ -104,8 +115,9 @@
             android:name="com.example.sportmatch.RequestActivity"
             android:exported="false"
             android:theme="@style/DialogActivityTheme" />
+
         <!--
-            <activity
+<activity
             android:name=".RequestAdapter"
             android:exported="false" />
         -->
@@ -114,12 +126,7 @@
             android:exported="false" />
         <activity
             android:name="com.example.sportmatch.MainActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false" >
         </activity>
 
         <meta-data
