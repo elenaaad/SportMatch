@@ -120,18 +120,14 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHol
                 String currentUserId = currentUser.getUid();
                 Intent intent;
 
-                if (data_position.getCreator() != null) {
-                    Log.e("eventulll1", data_position.getCreator());
-                }
-                Log.e("eventullll1", currentUserId);
-
                 if(data_position.getCreator() != null && data_position.getCreator().equals(currentUserId))
                 {
                     intent = new Intent(v.getContext(), EventDetailsAdminActivity.class);
                 }
-                else {
-                    intent = new Intent(v.getContext(), EventdetailsParticipantActivity.class);
+                else if(data_position.getParticipants()!=null && data_position.getParticipants().contains(currentUserId)) {
+                    intent =new Intent(v.getContext(), EventdetailsParticipantActivity.class);
                 }
+                else intent = new Intent(v.getContext(), EventDetailsActivity.class);
 
 
 
