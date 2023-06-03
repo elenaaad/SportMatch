@@ -1,7 +1,9 @@
 package com.example.sportmatch;
 
 
+import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -12,7 +14,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,6 +37,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -57,15 +66,14 @@ public class CreateEventActivity extends AppCompatActivity {
     TextInputEditText newEventDescEdt;
     Button buttonCEvent;
     ImageView mapImage;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
     ScrollView scrollView;
-
     List<String> locations;
-
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_newevent);
+
 
 
         //TODO: RATING locatii
@@ -96,8 +104,9 @@ public class CreateEventActivity extends AppCompatActivity {
 
         //Referinte catre tabelele de sporturi si locatii din baza de date
 
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
+
         DatabaseReference sportsRef = database.getReference("Sports");
+
         DatabaseReference locRef = database.getReference("SportLocations");
         List<Sport> allSports = new ArrayList<>();
         List<String> sports = new ArrayList<>();
@@ -301,6 +310,7 @@ public class CreateEventActivity extends AppCompatActivity {
         buttonCEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 int error = 0;
                 TextInputLayout firstErrorField = null; // Variabila pentru a stoca referința către primul câmp cu eroare(chat gpt)
 

@@ -57,22 +57,22 @@ public class EventdetailsParticipantActivity extends AppCompatActivity {
         }
 
 
-        title = findViewById(R.id.title);
-        sportImage = findViewById(R.id.sportImage);
-        detailsTitle = findViewById(R.id.detailsTitle);
-        detailsSport = findViewById(R.id.detailsSport);
-        detailsSportInput = findViewById(R.id.detailsSportInput);
-        detailsPlayers = findViewById(R.id.detailsPlayers);
-        detailsPlayersInput = findViewById(R.id.detailsPlayersInput);
-        detailsLoc = findViewById(R.id.detailsLoc);
-        detailsLocInput = findViewById(R.id.detailsLocInput);
-        detailsBtnMap = findViewById(R.id.detailsBtnMap);
-        detailsDate = findViewById(R.id.detailsDate);
-        detailsDateInput = findViewById(R.id.detailsDateInput);
-        detailsTime = findViewById(R.id.detailsTime);
-        detailsTimeInput = findViewById(R.id.detailsTimeInput);
-        detailsDesc = findViewById(R.id.detailsDesc);
-        detailsDescInput = findViewById(R.id.detailsDescInput);
+        title = findViewById(R.id.titleP);
+        sportImage = findViewById(R.id.sportImageP);
+        detailsTitle = findViewById(R.id.detailsTitleP);
+        detailsSport = findViewById(R.id.detailsSportP);
+        detailsSportInput = findViewById(R.id.detailsSportInputP);
+        detailsPlayers = findViewById(R.id.detailsPlayersP);
+        detailsPlayersInput = findViewById(R.id.detailsPlayersInputP);
+        detailsLoc = findViewById(R.id.detailsLocP);
+        detailsLocInput = findViewById(R.id.detailsLocInputP);
+        detailsBtnMap = findViewById(R.id.detailsBtnMapP);
+        detailsDate = findViewById(R.id.detailsDateP);
+        detailsDateInput = findViewById(R.id.detailsDateInputP);
+        detailsTime = findViewById(R.id.detailsTimeP);
+        detailsTimeInput = findViewById(R.id.detailsTimeInputP);
+        detailsDesc = findViewById(R.id.detailsDescP);
+        detailsDescInput = findViewById(R.id.detailsDescInputP);
 
 
 

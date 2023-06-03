@@ -302,7 +302,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/sports_martial_arts/baseline_sports_martial_arts_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/add_photo_alternate/baseline_add_photo_alternate_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -312,8 +312,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="baseline_sports_martial_arts_24" />
+                            <entry key="color" value="050505" />
+                            <entry key="outputName" value="baseline_add_photo_alternate_24" />
                             <entry key="sourceFile" value="C:\FACULTATE\SportMatchpre" />
                           </map>
                         </option>

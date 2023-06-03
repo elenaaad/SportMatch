@@ -1,23 +1,23 @@
 [
     {
-        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_images.jpeg.flat",
-        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\images.jpeg"
-    },
-    {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_handball.png.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\handball.png"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_basket3.png.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\basket3.png"
     },
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_background2.webp.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\background2.webp"
     },
     {
-        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_p3.jpg.flat",
-        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\p3.jpg"
-    },
-    {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_greensoccer.jpeg.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\greensoccer.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_volleball.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\volleball.jpeg"
     },
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\layout_activity_admin_events.xml.flat",
@@ -56,10 +56,6 @@
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\p11.jpg"
     },
     {
-        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_p2.jpg.flat",
-        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\p2.jpg"
-    },
-    {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\mipmap-xxhdpi\\ic_launcher.png"
     },
@@ -86,6 +82,10 @@
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_baseline_manage_accounts_24.xml.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\baseline_manage_accounts_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_tennis1.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\tennis1.jpeg"
     },
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\layout_activity_choose_avatar.xml.flat",
@@ -120,6 +120,10 @@
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\layout\\main_recycler_row_item.xml"
     },
     {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_volleyball3.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\volleyball3.jpeg"
+    },
+    {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\mipmap-mdpi\\ic_launcher_round.png"
     },
@@ -132,8 +136,8 @@
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\layout\\category_row_items.xml"
     },
     {
-        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_p1.jpg.flat",
-        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\p1.jpg"
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_basket2.jpg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\basket2.jpg"
     },
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_bowling.png.flat",
@@ -148,8 +152,20 @@
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\black_white_background.png"
     },
     {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_tennis3.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\tennis3.jpeg"
+    },
+    {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_feed_backg.jpg.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\feed_backg.jpg"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_volleyball2.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\volleyball2.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_badminton2.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\badminton2.jpeg"
     },
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
@@ -160,8 +176,16 @@
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\baseline_home_24.xml"
     },
     {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_basket.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\basket.jpeg"
+    },
+    {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\layout_list_time.xml.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\layout\\list_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_bowling2.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\bowling2.jpeg"
     },
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_background_feed.jpg.flat",
@@ -170,6 +194,10 @@
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_basketball.png.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\basketball.png"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_bowling3.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\bowling3.jpeg"
     },
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_item_selector.xml.flat",
@@ -184,10 +212,6 @@
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\bk1.jpeg"
     },
     {
-        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_images1.jpeg.flat",
-        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\images1.jpeg"
-    },
-    {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\layout_activity_profile.xml.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\layout\\activity_profile.xml"
     },
@@ -200,10 +224,6 @@
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\layout\\activity_maps.xml"
     },
     {
-        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_p4.jpg.flat",
-        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\p4.jpg"
-    },
-    {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_bottom_background.xml.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\bottom_background.xml"
     },
@@ -214,6 +234,10 @@
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\mipmap-xxhdpi_ic_launcher_round.png.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_football3.png.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\football3.png"
     },
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\xml_backup_rules.xml.flat",
@@ -232,12 +256,24 @@
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\xml\\data_extraction_rules.xml"
     },
     {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_pingpong2.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\pingpong2.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_baseline_add_photo_alternate_24.xml.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\baseline_add_photo_alternate_24.xml"
+    },
+    {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\mipmap-hdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\mipmap-hdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_badminton.png.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\badminton.png"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_handball2.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\handball2.jpeg"
     },
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_ic_launcher_background.xml.flat",
@@ -268,12 +304,24 @@
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\layout\\activity_chat.xml"
     },
     {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_volleyball1.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\volleyball1.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_football1.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\football1.jpeg"
+    },
+    {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_gradientdrawable.xml.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\gradientdrawable.xml"
     },
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_tennis.png.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\tennis.png"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_badminton1.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\badminton1.jpeg"
     },
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\layout_content_menu.xml.flat",
@@ -304,16 +352,20 @@
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\eventicon.png"
     },
     {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_tennis2.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\tennis2.jpeg"
+    },
+    {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\layout_activity_requests.xml.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\layout\\activity_requests.xml"
     },
     {
-        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\layout_activity_eventpreview.xml.flat",
-        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\layout\\activity_eventpreview.xml"
-    },
-    {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\layout_activity_eventpreview.xml.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\layout\\activity_eventpreview.xml"
     },
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\layout_activity_event_details_admin.xml.flat",
@@ -336,6 +388,10 @@
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\layout\\date_item.xml"
     },
     {
+        "merged": "com.example.sportmatch.app-merged_res-6:/layout_activity_event_details_participant.xml.flat",
+        "source": "com.example.sportmatch.app-main-8:/layout/activity_event_details_participant.xml"
+    },
+    {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\mipmap-xxxhdpi\\ic_launcher.png"
     },
@@ -348,6 +404,10 @@
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_badminton3.png.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\badminton3.png"
+    },
+    {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_whitebackground.jpeg.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\whitebackground.jpeg"
     },
@@ -356,12 +416,20 @@
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\volleyball.png"
     },
     {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_football2.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\football2.jpeg"
+    },
+    {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_usericon.jpg.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\usericon.jpg"
     },
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\layout_list_item.xml.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\layout\\list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_pingpong1.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\pingpong1.jpeg"
     },
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\layout_list_sport.xml.flat",
@@ -400,10 +468,6 @@
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\font\\akronim.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-merged_res-6:/layout_main_recycler_row_item.xml.flat",
-        "source": "com.example.sportmatch.app-main-8:/layout/main_recycler_row_item.xml"
-    },
-    {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\layout_activity_create_new_profile.xml.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\layout\\activity_create_new_profile.xml"
     },
@@ -434,6 +498,22 @@
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_map_active.png.flat",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\map_active.png"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_basket1.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\basket1.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_handball3jpeg.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\handball3jpeg.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_hanball1.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\hanball1.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\drawable_pingpong3.jpeg.flat",
+        "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\drawable\\pingpong3.jpeg"
     },
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-6:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",

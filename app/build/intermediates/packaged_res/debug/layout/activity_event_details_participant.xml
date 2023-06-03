@@ -9,7 +9,7 @@
     tools:context=".EventdetailsParticipantActivity">
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/titleP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -41,10 +41,10 @@
             android:paddingRight="30dp">
 
             <Button
-                android:id="@+id/detailsParticipantsButton"
+                android:id="@+id/detailsParticipantsButtonP"
                 android:layout_width="110dp"
                 android:layout_height="50dp"
-                android:layout_below="@+id/detailsDesc"
+                android:layout_below="@+id/detailsDescP"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="220dp"
                 android:layout_marginTop="40dp"
@@ -52,12 +52,12 @@
                 android:text="Players" />
 
             <Button
-                android:id="@+id/buttonToChat1"
+                android:id="@+id/buttonToChatP"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:backgroundTint="@color/verde5"
                 android:text="Chat"
-                android:layout_below="@+id/detailsDesc"
+                android:layout_below="@+id/detailsDescP"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="120dp"
                 android:layout_marginTop="40dp"
@@ -66,7 +66,7 @@
                 app:cardCornerRadius="40dp" />
 
             <ImageView
-                android:id="@+id/sportImage"
+                android:id="@+id/sportImageP"
                 android:layout_width="88dp"
                 android:layout_height="79dp"
                 android:layout_centerHorizontal="true"
@@ -75,10 +75,10 @@
                 android:src="@drawable/volleyball" />
 
             <TextView
-                android:id="@+id/detailsTitle"
+                android:id="@+id/detailsTitleP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/sportImage"
+                android:layout_below="@id/sportImageP"
                 android:layout_centerHorizontal="true"
                 android:text="TITLE"
                 android:textColor="#000000"
@@ -86,10 +86,10 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/detailsSport"
+                android:id="@+id/detailsSportP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detailsTitle"
+                android:layout_below="@id/detailsTitleP"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="40dp"
                 android:text="SPORT:"
@@ -98,19 +98,19 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/detailsSportInput"
+                android:id="@+id/detailsSportInputP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detailsTitle"
+                android:layout_below="@id/detailsTitleP"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="30dp"
-                android:layout_toEndOf="@+id/detailsSport"
+                android:layout_toEndOf="@+id/detailsSportP"
                 android:text="Volleyball"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/detailsPlayers"
+                android:id="@+id/detailsPlayersP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
@@ -122,22 +122,22 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/detailsPlayersInput"
+                android:id="@+id/detailsPlayersInputP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detailsSport"
+                android:layout_below="@id/detailsSportP"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="30dp"
-                android:layout_toEndOf="@+id/detailsPlayers"
+                android:layout_toEndOf="@+id/detailsPlayersP"
                 android:text="6 Players"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/detailsLoc"
+                android:id="@+id/detailsLocP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detailsPlayers"
+                android:layout_below="@id/detailsPlayersP"
                 android:layout_marginTop="30dp"
                 android:layout_marginLeft="40dp"
                 android:text="LOCATION:"
@@ -146,33 +146,33 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/detailsLocInput"
+                android:id="@+id/detailsLocInputP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detailsPlayers"
+                android:layout_below="@id/detailsPlayersP"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="30dp"
                 android:textColor="#000000"
-                android:layout_toEndOf="@+id/detailsLoc"
+                android:layout_toEndOf="@+id/detailsLocP"
                 android:text="Sportfield 1"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/detailsBtnMap"
+                android:id="@+id/detailsBtnMapP"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="20dp"
                 android:layout_marginTop="40dp"
-                android:layout_below="@+id/detailsDesc"
+                android:layout_below="@+id/detailsDescP"
                 android:backgroundTint="@color/verde5"
                 android:text="MAP" />
 
             <TextView
-                android:id="@+id/detailsDate"
+                android:id="@+id/detailsDateP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detailsLocInput"
+                android:layout_below="@id/detailsLocInputP"
                 android:layout_marginTop="18dp"
                 android:text="DATE:"
                 android:layout_marginLeft="40dp"
@@ -181,22 +181,22 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/detailsDateInput"
+                android:id="@+id/detailsDateInputP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detailsLocInput"
+                android:layout_below="@id/detailsLocInputP"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="18dp"
-                android:layout_toEndOf="@+id/detailsDate"
+                android:layout_toEndOf="@+id/detailsDateP"
                 android:text="dd/mm/yyyy"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/detailsTime"
+                android:id="@+id/detailsTimeP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detailsDate"
+                android:layout_below="@id/detailsDateP"
                 android:layout_marginTop="30dp"
                 android:text="TIME:"
                 android:layout_marginLeft="40dp"
@@ -205,22 +205,22 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/detailsTimeInput"
+                android:id="@+id/detailsTimeInputP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detailsDateInput"
+                android:layout_below="@id/detailsDateInputP"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="30dp"
-                android:layout_toEndOf="@+id/detailsTime"
+                android:layout_toEndOf="@+id/detailsTimeP"
                 android:text="hh:mm"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
             <TextView
-                android:id="@+id/detailsDesc"
+                android:id="@+id/detailsDescP"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detailsTime"
+                android:layout_below="@id/detailsTimeP"
                 android:layout_marginTop="30dp"
                 android:text="DESCRIPTION:"
                 android:layout_marginLeft="40dp"
@@ -229,14 +229,14 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/detailsDescInput"
+                android:id="@+id/detailsDescInputP"
                 android:layout_width="wrap_content"
                 android:textColor="#000000"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detailsTime"
+                android:layout_below="@id/detailsTimeP"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="30dp"
-                android:layout_toEndOf="@+id/detailsDesc"
+                android:layout_toEndOf="@+id/detailsDescP"
                 android:text="description"
                 android:textSize="18sp" />
 
