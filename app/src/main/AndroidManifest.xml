@@ -16,6 +16,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SportMatch"
         tools:targetApi="31">
+        <activity
+            android:name=".StartActivity"
+            android:exported="true"
+            android:theme="@style/Theme.SportMatch1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -65,33 +75,29 @@
             android:exported="false" />
         <activity
             android:name=".EventDetailsAdminActivity"
-        android:exported="false" />
+            android:exported="false" />
         <activity
             android:name=".EventPreview"
             android:exported="false" />
         <activity
             android:name=".OtherProfileActivity"
             android:exported="false" />
-
         <activity
             android:name=".RequestActivity"
-            android:theme="@style/DialogActivityTheme"
-            android:exported="false" />
-        <!--<activity
+            android:exported="false"
+            android:theme="@style/DialogActivityTheme" />
+
+        <!--
+<activity
             android:name=".RequestAdapter"
-            android:exported="false" />-->
+            android:exported="false" />
+        -->
         <activity
             android:name=".EditEventDetails"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false">
         </activity>
 
         <meta-data

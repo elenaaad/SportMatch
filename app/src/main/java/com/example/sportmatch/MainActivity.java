@@ -1,23 +1,14 @@
 package com.example.sportmatch;
 
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
+
+    private ImageView logoImageView;
 
     //TODO: DUPA SIGN IN SAU SIGN UP DE LEGAT CU FEEDUL
 
@@ -33,55 +24,60 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button buttonLogin = (Button)findViewById(R.id.button_login);
+        overridePendingTransition(R.anim.slide_up, R.anim.slide_up);
 
-        buttonLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, LoginActivity.class));
-            }
-        });
+        
 
-        Button buttonRegister = (Button)findViewById(R.id.button_register);
-
-        buttonRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(MainActivity.this, RegisterActivity.class));
-            }
-        });
+//        Button buttonLogin = (Button)findViewById(R.id.button_login);
+//
+//        buttonLogin.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+//            }
+//        });
+//
+//        Button buttonRegister = (Button)findViewById(R.id.button_register);
+//
+//        buttonRegister.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                startActivity(new Intent(MainActivity.this, BottomNavActivity.class));
+//            }
+//        });
 
 
         /////doar temporar spre meniu
-        Button menuBtn=(Button)findViewById(R.id.buttonMenu);
-        menuBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               /* DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Events");
-                ref.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        for (DataSnapshot eventSnapshot : dataSnapshot.getChildren()) {
-                            Event event = eventSnapshot.getValue(Event.class);
-                            if (event != null && event.getRequests() == null) {
-                                event.setRequests(new ArrayList<>()); // Initialize the requests list
-                                Log.d("Event", event.getEventName());
-                                eventSnapshot.getRef().setValue(event); // Update the event in the database
-                            }
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                        // Handle the error
-                        Log.d("Error", "Error while reading the database");
-                    }
-                });*/
-
-                startActivity(new Intent(MainActivity.this, BottomNavActivity.class));
-            }
-        });
-        /////final meniu
+//        Button menuBtn=(Button)findViewById(R.id.buttonMenu);
+//        menuBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//               /* DatabaseReference ref = FirebaseDatabase.getInstance().getReference("Events");
+//                ref.addListenerForSingleValueEvent(new ValueEventListener() {
+//                    @Override
+//                    public void onDataChange(DataSnapshot dataSnapshot) {
+//                        for (DataSnapshot eventSnapshot : dataSnapshot.getChildren()) {
+//                            Event event = eventSnapshot.getValue(Event.class);
+//                            if (event != null && event.getRequests() == null) {
+//                                event.setRequests(new ArrayList<>()); // Initialize the requests list
+//                                Log.d("Event", event.getEventName());
+//                                eventSnapshot.getRef().setValue(event); // Update the event in the database
+//                            }
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(DatabaseError databaseError) {
+//                        // Handle the error
+//                        Log.d("Error", "Error while reading the database");
+//                    }
+//                });*/
+//
+//                startActivity(new Intent(MainActivity.this, BottomNavActivity.class));
+//            }
+//        });
+//        /////final meniu
 
 
 
