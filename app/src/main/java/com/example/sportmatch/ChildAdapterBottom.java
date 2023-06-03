@@ -60,10 +60,10 @@ public class ChildAdapterBottom extends RecyclerView.Adapter<ChildAdapterBottom.
                 Intent intent;
                 if(data_position.getCreator() != null && data_position.getCreator().equals(currentUserId))
                 {
-                    Log.e("eventulll", "am intratinif");
                     intent = new Intent(v.getContext(), EventDetailsAdminActivity.class);
                 }
-                else  intent = new Intent(v.getContext(), EventDetailsActivity.class);
+                else intent = new Intent(v.getContext(), EventDetailsActivity.class);
+
                 if (data_position.getCreator() != null) {
                     Log.e("eventulll", data_position.getCreator());
                 }

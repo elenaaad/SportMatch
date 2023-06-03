@@ -144,8 +144,20 @@ public class EventDetailsActivity extends AppCompatActivity {
             Log.e(TAG, "onCreate: No user is currently logged in");
         }
         // Check if the user is in the requests list or participants list
-        boolean isRequestSent = mEvent.getRequests().contains(userId);
-        boolean isParticipant = mEvent.getParticipants().contains(userId);
+        boolean isRequestSent = false;
+        boolean isParticipant = false;
+        // Check if the user is in the requests list or participants list
+        if (mEvent.getRequests() != null && mEvent.getRequests().contains(userId)) {
+            isRequestSent = true;
+        } else {
+            isRequestSent = false;
+        }
+
+        if (mEvent.getParticipants() != null && mEvent.getParticipants().contains(userId)) {
+            isParticipant = true;
+        } else {
+            isParticipant = false;
+        }
 
 // Show or hide the "Participate" button based on the conditions
         if (isRequestSent || isParticipant) {
@@ -153,6 +165,7 @@ public class EventDetailsActivity extends AppCompatActivity {
         } else {
             detailsBtnParticipate.setVisibility(View.VISIBLE); // Show the button
         }
+
 
         detailsBtnParticipate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -231,6 +244,9 @@ public class EventDetailsActivity extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.bottom_home:
+                    startActivity(new Intent(getApplicationContext(), BottomNavActivity.class));
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
                     return true;
                 case R.id.bottom_admin_events:
                     startActivity(new Intent(getApplicationContext(), AdminEventsActivity.class));

@@ -1,9 +1,7 @@
 R_DEF: Internal format may change without notice
 local
-anim slide_down
 anim slide_in_right
 anim slide_out_left
-anim slide_up
 array com_google_android_gms_fonts_certs
 array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
@@ -25,7 +23,8 @@ color verdeFundal
 color white
 dimen fab_margin
 dimen navigation_bar_margin_bottom
-drawable backg
+drawable background2
+drawable background_feed
 drawable badminton
 drawable baseline_add_24
 drawable baseline_home_24
@@ -34,21 +33,30 @@ drawable baseline_person_outline_24
 drawable baseline_sports_kabaddi_24
 drawable baseline_sports_martial_arts_24
 drawable basketball
+drawable bk1
+drawable bk2
+drawable bk3
+drawable black_white_background
 drawable bottom_background
 drawable bowling
 drawable bowlingposter
 drawable editprofile
 drawable eventicon
+drawable feed
+drawable feed_backg
 drawable football
+drawable gradien
 drawable gradientdrawable
+drawable greensoccer
 drawable handball
 drawable handballposter
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_send
+drawable images
+drawable images1
 drawable item_selector
 drawable logo
-drawable logo_reverse
 drawable map_active
 drawable map_inactive
 drawable p1
@@ -63,6 +71,7 @@ drawable sports
 drawable tennis
 drawable usericon
 drawable volleyball
+drawable whitebackground
 drawable xicon
 font akronim
 id BirthDate
@@ -86,6 +95,7 @@ id activity_main_passwordEditText
 id activity_main_usernameEditText
 id age_profile
 id auto_complete_txt
+id auto_complete_txt2
 id autocomplete_loc
 id autocomplete_players
 id autocomplete_sport
@@ -103,6 +113,7 @@ id btn_close
 id buttonCEvent
 id buttonEEvent
 id buttonToChat
+id buttonToChat1
 id button_editprofile
 id button_first
 id button_login
@@ -122,6 +133,7 @@ id detailsDesc
 id detailsDescInput
 id detailsLoc
 id detailsLocInput
+id detailsParticipantsButton
 id detailsPlayers
 id detailsPlayersInput
 id detailsSport
@@ -207,11 +219,9 @@ id relativeLayout
 id relativeLayout1
 id root_vg
 id scrollView
-id searchBar
 id see_requests_button
 id sendButton
 id signupButton
-id splash_view
 id sportImage
 id textDateTime
 id textView
@@ -233,6 +243,7 @@ layout activity_editevent
 layout activity_editprofile
 layout activity_event_details_admin
 layout activity_event_details_feed
+layout activity_event_details_participant
 layout activity_eventpreview
 layout activity_login
 layout activity_main
@@ -244,11 +255,11 @@ layout activity_profile
 layout activity_register
 layout activity_request_item
 layout activity_requests
-layout activity_start
 layout activity_view_profile
 layout category_row_items
 layout content_choose_avatar
 layout content_menu
+layout date_item
 layout fragment_first
 layout fragment_second
 layout item_message
@@ -265,8 +276,6 @@ mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 navigation nav_graph
 navigation nav_graph2
-raw a
-raw b
 string Discuss
 string app_name
 string default_web_client_id
@@ -293,7 +302,6 @@ string title_activity_menu
 style DialogActivityTheme
 style SlideActivityAnimation
 style Theme.SportMatch
-style Theme.SportMatch1
 style Theme.SportMatch.AppBarOverlay
 style Theme.SportMatch.NoActionBar
 style Theme.SportMatch.PopupOverlay

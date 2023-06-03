@@ -45,10 +45,8 @@ anim nav_default_enter_anim
 anim nav_default_exit_anim
 anim nav_default_pop_enter_anim
 anim nav_default_pop_exit_anim
-anim slide_down
 anim slide_in_right
 anim slide_out_left
-anim slide_up
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -802,24 +800,6 @@ attr logo
 attr logoAdjustViewBounds
 attr logoDescription
 attr logoScaleType
-attr lottieAnimationViewStyle
-attr lottie_autoPlay
-attr lottie_cacheComposition
-attr lottie_colorFilter
-attr lottie_enableMergePathsForKitKatAndAbove
-attr lottie_fallbackRes
-attr lottie_fileName
-attr lottie_ignoreDisabledSystemAnimations
-attr lottie_imageAssetsFolder
-attr lottie_loop
-attr lottie_progress
-attr lottie_rawRes
-attr lottie_renderMode
-attr lottie_repeatCount
-attr lottie_repeatMode
-attr lottie_scale
-attr lottie_speed
-attr lottie_url
 attr mapId
 attr mapType
 attr marginHorizontal
@@ -2832,7 +2812,8 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
-drawable backg
+drawable background2
+drawable background_feed
 drawable badminton
 drawable baseline_add_24
 drawable baseline_home_24
@@ -2841,6 +2822,10 @@ drawable baseline_person_outline_24
 drawable baseline_sports_kabaddi_24
 drawable baseline_sports_martial_arts_24
 drawable basketball
+drawable bk1
+drawable bk2
+drawable bk3
+drawable black_white_background
 drawable bottom_background
 drawable bowling
 drawable bowlingposter
@@ -2878,10 +2863,14 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable editprofile
 drawable eventicon
+drawable feed
+drawable feed_backg
 drawable football
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable gradien
 drawable gradientdrawable
+drawable greensoccer
 drawable handball
 drawable handballposter
 drawable ic_arrow_back_black_24
@@ -2899,9 +2888,10 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_search_black_24
 drawable ic_send
+drawable images
+drawable images1
 drawable item_selector
 drawable logo
-drawable logo_reverse
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -2990,6 +2980,7 @@ drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable usericon
 drawable volleyball
+drawable whitebackground
 drawable xicon
 font akronim
 id ALT
@@ -3103,10 +3094,10 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id auto_complete_txt
+id auto_complete_txt2
 id autocomplete_loc
 id autocomplete_players
 id autocomplete_sport
-id automatic
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3138,6 +3129,7 @@ id buttonCEvent
 id buttonEEvent
 id buttonPanel
 id buttonToChat
+id buttonToChat1
 id button_editprofile
 id button_first
 id button_login
@@ -3208,6 +3200,7 @@ id detailsDesc
 id detailsDescInput
 id detailsLoc
 id detailsLocInput
+id detailsParticipantsButton
 id detailsPlayers
 id detailsPlayersInput
 id detailsSport
@@ -3295,7 +3288,6 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
-id hardware
 id header_title
 id hideable
 id home
@@ -3340,7 +3332,6 @@ id llemail_profile
 id llfull_name_profile
 id llpayment
 id locale
-id lottie_layer_name
 id ltr
 id m3_side_sheet
 id main_recycler
@@ -3493,8 +3484,6 @@ id rectangles
 id recyclerView
 id relativeLayout
 id relativeLayout1
-id restart
-id reverse
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3515,7 +3504,6 @@ id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
 id scrollable
-id searchBar
 id search_badge
 id search_bar
 id search_bar_text_view
@@ -3562,11 +3550,9 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
-id software
 id south
 id spacer
 id special_effects_controller_view_tag
-id splash_view
 id spline
 id split_action_bar
 id sportImage
@@ -3787,6 +3773,7 @@ layout activity_editevent
 layout activity_editprofile
 layout activity_event_details_admin
 layout activity_event_details_feed
+layout activity_event_details_participant
 layout activity_eventpreview
 layout activity_login
 layout activity_main
@@ -3798,7 +3785,6 @@ layout activity_profile
 layout activity_register
 layout activity_request_item
 layout activity_requests
-layout activity_start
 layout activity_view_profile
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -3806,6 +3792,7 @@ layout category_row_items
 layout content_choose_avatar
 layout content_menu
 layout custom_dialog
+layout date_item
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -3899,8 +3886,6 @@ mipmap ic_launcher_round
 navigation nav_graph
 navigation nav_graph2
 plurals mtrl_badge_content_description
-raw a
-raw b
 raw firebase_common_keep
 string Discuss
 string abc_action_bar_home_description
@@ -4719,7 +4704,6 @@ style Theme_SportMatch
 style Theme_SportMatch_AppBarOverlay
 style Theme_SportMatch_NoActionBar
 style Theme_SportMatch_PopupOverlay
-style Theme_SportMatch1
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark
@@ -5285,7 +5269,6 @@ styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width 
 styleable LinearProgressIndicator indeterminateAnimationType indicatorDirectionLinear
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
 styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
-styleable LottieAnimationView lottie_autoPlay lottie_cacheComposition lottie_colorFilter lottie_enableMergePathsForKitKatAndAbove lottie_fallbackRes lottie_fileName lottie_ignoreDisabledSystemAnimations lottie_imageAssetsFolder lottie_loop lottie_progress lottie_rawRes lottie_renderMode lottie_repeatCount lottie_repeatMode lottie_scale lottie_speed lottie_url
 styleable MapAttrs ambientEnabled backgroundColor cameraBearing cameraMaxZoomPreference cameraMinZoomPreference cameraTargetLat cameraTargetLng cameraTilt cameraZoom latLngBoundsNorthEastLatitude latLngBoundsNorthEastLongitude latLngBoundsSouthWestLatitude latLngBoundsSouthWestLongitude liteMode mapId mapType uiCompass uiMapToolbar uiRotateGestures uiScrollGestures uiScrollGesturesDuringRotateOrZoom uiTiltGestures uiZoomControls uiZoomGestures useViewLifecycle zOrderOnTop
 styleable MaterialAlertDialog backgroundInsetBottom backgroundInsetEnd backgroundInsetStart backgroundInsetTop
 styleable MaterialAlertDialogTheme materialAlertDialogBodyTextStyle materialAlertDialogButtonSpacerVisibility materialAlertDialogTheme materialAlertDialogTitleIconStyle materialAlertDialogTitlePanelStyle materialAlertDialogTitleTextStyle

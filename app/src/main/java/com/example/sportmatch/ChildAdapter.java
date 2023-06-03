@@ -70,7 +70,10 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHol
                 {
                     intent = new Intent(v.getContext(), EventDetailsAdminActivity.class);
                 }
-                else  intent = new Intent(v.getContext(), EventDetailsActivity.class);
+                else if(data_position.getCreator() != null &&!data_position.getCreator().equals(currentUserId) && !data_position.getParticipants().contains(currentUserId)) {
+                    intent =new Intent(v.getContext(), EventdetailsParticipantActivity.class);
+                }
+                else intent = new Intent(v.getContext(), EventDetailsActivity.class);
 
 
                 String str = data_position.getEventName();

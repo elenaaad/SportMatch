@@ -1,14 +1,23 @@
 package com.example.sportmatch;
 
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ImageView;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
-    private ImageView logoImageView;
+import java.util.ArrayList;
+
+public class MainActivity extends AppCompatActivity {
 
     //TODO: DUPA SIGN IN SAU SIGN UP DE LEGAT CU FEEDUL
 
@@ -24,31 +33,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        overridePendingTransition(R.anim.slide_up, R.anim.slide_up);
+        Button buttonLogin = (Button)findViewById(R.id.button_login);
 
-        
+        buttonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            }
+        });
 
-//        Button buttonLogin = (Button)findViewById(R.id.button_login);
-//
-//        buttonLogin.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(MainActivity.this, LoginActivity.class));
-//            }
-//        });
-//
-//        Button buttonRegister = (Button)findViewById(R.id.button_register);
-//
-//        buttonRegister.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//                startActivity(new Intent(MainActivity.this, BottomNavActivity.class));
-//            }
-//        });
+        Button buttonRegister = (Button)findViewById(R.id.button_register);
+
+        buttonRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, BottomNavActivity.class));
+            }
+        });
 
 
-        /////doar temporar spre meniu
+        ///doar temporar spre meniu
 //        Button menuBtn=(Button)findViewById(R.id.buttonMenu);
 //        menuBtn.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -77,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 //                startActivity(new Intent(MainActivity.this, BottomNavActivity.class));
 //            }
 //        });
-//        /////final meniu
+        /////final meniu
 
 
 
