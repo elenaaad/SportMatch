@@ -3,21 +3,21 @@ package com.example.sportmatch;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-
-import java.util.ArrayList;
-
 public class MainActivity extends AppCompatActivity {
+
+    ImageView backg;
+    LinearLayout splashtext, hometext, bottons;
+    Animation frombottom;
+
 
     //TODO: DUPA SIGN IN SAU SIGN UP DE LEGAT CU FEEDUL
 
@@ -33,6 +33,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        //sursa: https://www.youtube.com/watch?v=k_OJt71wEbc&t=260s&ab_channel=DesignWithHassan
+        frombottom = AnimationUtils.loadAnimation(this, R.anim.frombottom);
+
+        backg = findViewById(R.id.backG);
+        splashtext = findViewById(R.id.splashtext);
+        hometext = findViewById(R.id.hometext);
+        bottons = findViewById(R.id.bottons);
+
+        backg.animate().translationY(-2000).setDuration(600).setStartDelay(0);
+        splashtext.animate().translationY(140).alpha(0).setDuration(300).setStartDelay(0);
+        hometext.startAnimation(frombottom);
+        bottons.startAnimation(frombottom);
+
         Button buttonLogin = (Button)findViewById(R.id.button_login);
 
         buttonLogin.setOnClickListener(new View.OnClickListener() {
@@ -47,12 +61,13 @@ public class MainActivity extends AppCompatActivity {
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(MainActivity.this, BottomNavActivity.class));
             }
         });
 
 
-        ///doar temporar spre meniu
+        /////doar temporar spre meniu
 //        Button menuBtn=(Button)findViewById(R.id.buttonMenu);
 //        menuBtn.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -81,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 //                startActivity(new Intent(MainActivity.this, BottomNavActivity.class));
 //            }
 //        });
-        /////final meniu
+//        /////final meniu
 
 
 
