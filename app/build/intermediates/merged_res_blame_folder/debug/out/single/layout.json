@@ -88,10 +88,6 @@
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\layout\\date_item.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-mergeDebugResources-5:/layout/main_recycler_row_item.xml",
-        "source": "com.example.sportmatch.app-main-8:/layout/main_recycler_row_item.xml"
-    },
-    {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-mergeDebugResources-5:\\layout\\activity_register.xml",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\layout\\activity_register.xml"
     },
@@ -110,6 +106,10 @@
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-mergeDebugResources-5:\\layout\\list_sport.xml",
         "source": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-8:\\layout\\list_sport.xml"
+    },
+    {
+        "merged": "com.example.sportmatch.app-mergeDebugResources-5:/layout/activity_event_details_participant.xml",
+        "source": "com.example.sportmatch.app-main-8:/layout/activity_event_details_participant.xml"
     },
     {
         "merged": "C:\\Users\\Raluca\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-mergeDebugResources-5:\\layout\\activity_create_new_profile.xml",

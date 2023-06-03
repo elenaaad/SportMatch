@@ -160,11 +160,11 @@ public class EventDetailsActivity extends AppCompatActivity {
         }
 
 // Show or hide the "Participate" button based on the conditions
-        if (isRequestSent || isParticipant) {
-            detailsBtnParticipate.setVisibility(View.GONE); // Hide the button
-        } else {
-            detailsBtnParticipate.setVisibility(View.VISIBLE); // Show the button
-        }
+//        if (isRequestSent || isParticipant) {
+////            detailsBtnParticipate.setVisibility(View.GONE); // Hide the button
+//        } else {
+//            detailsBtnParticipate.setVisibility(View.VISIBLE); // Show the button
+//        }
 
 
         detailsBtnParticipate.setOnClickListener(new View.OnClickListener() {

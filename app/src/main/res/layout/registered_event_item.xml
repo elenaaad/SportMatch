@@ -83,7 +83,7 @@
             android:layout_height="130dp"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="75dp"
-            android:background="#364d5b"
+            android:background="#A7C957"
             app:srcCompat="@drawable/ic_launcher_background" />
 
         <Button

@@ -15,6 +15,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -40,6 +42,7 @@ public class BottomNavActivity extends AppCompatActivity {
 
     ParentAdapterBottom parentAdapter;
     ArrayList<AllCategory> allCategoryList;
+    ArrayList<Event> filteredList;
     ArrayList<Event> volleyballList;
     ArrayList<Event> footballList;
     ArrayList<Event> handballList;
@@ -82,13 +85,14 @@ public class BottomNavActivity extends AppCompatActivity {
         badmintonList=new ArrayList<>();
 
         databaseReference= FirebaseDatabase.getInstance().getReference("Events");
-
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         eventListener=databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot itemSnapshot:snapshot.getChildren())
                 {
                     Event event = itemSnapshot.getValue(Event.class);
+                    if(event.getParticipants() != null && event.getParticipants().contains(userId) && !userId.equals(event.getCreator()))
                     switch(event.getSport()) {
                         case "Volleyball":
                             volleyballList.add(event);
@@ -118,14 +122,14 @@ public class BottomNavActivity extends AppCompatActivity {
 
 
                 }
-                allCategoryList.add(new AllCategory("Ping Pong Events",pingpongList));
-                allCategoryList.add(new AllCategory("Volleyball Events",volleyballList));
-                allCategoryList.add(new AllCategory("Basketball Events",basketballList));
-                allCategoryList.add(new AllCategory("Bowling Events",bowlingList));
-                allCategoryList.add(new AllCategory("Handball Events",handballList));
-                allCategoryList.add(new AllCategory("Football Events",footballList));
-                allCategoryList.add(new AllCategory("Badminton Events",badmintonList));
-                allCategoryList.add(new AllCategory("Tennis Events",tennisList));
+                if(!pingpongList.isEmpty()) allCategoryList.add(new AllCategory("Ping Pong Events",pingpongList));
+                if(!volleyballList.isEmpty())allCategoryList.add(new AllCategory("Volleyball Events",volleyballList));
+                if(!basketballList.isEmpty())allCategoryList.add(new AllCategory("Basketball Events",basketballList));
+                if(!bowlingList.isEmpty())allCategoryList.add(new AllCategory("Bowling Events",bowlingList));
+                if(!handballList.isEmpty())allCategoryList.add(new AllCategory("Handball Events",handballList));
+                if(!footballList.isEmpty())allCategoryList.add(new AllCategory("Football Events",footballList));
+                if(!badmintonList.isEmpty())allCategoryList.add(new AllCategory("Badminton Events",badmintonList));
+                if(!tennisList.isEmpty())allCategoryList.add(new AllCategory("Tennis Events",tennisList));
                 setParentRecycler(allCategoryList);
                 parentAdapter.notifyDataSetChanged();
                 dialog.dismiss();
@@ -182,6 +186,7 @@ public class BottomNavActivity extends AppCompatActivity {
         adapterItems= new ArrayAdapter<String>(this,R.layout.list_item,item);
 
         autoCompleteTextView.setAdapter(adapterItems);
+
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long id) {
