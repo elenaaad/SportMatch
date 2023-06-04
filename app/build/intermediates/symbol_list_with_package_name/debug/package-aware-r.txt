@@ -1408,6 +1408,7 @@ color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
 color background_material_light
+color beige
 color black
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
@@ -1415,6 +1416,7 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
+color brown_border
 color browser_actions_bg_grey
 color browser_actions_divider_color
 color browser_actions_text_color
@@ -1436,6 +1438,7 @@ color common_google_signin_btn_text_light_disabled
 color common_google_signin_btn_text_light_focused
 color common_google_signin_btn_text_light_pressed
 color common_google_signin_btn_tint
+color dark_brown
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1485,6 +1488,7 @@ color foreground_material_light
 color grey
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color light_brown
 color m3_appbar_overlay_color
 color m3_assist_chip_icon_tint_color
 color m3_assist_chip_stroke_color
@@ -2025,6 +2029,8 @@ color secondary_text_default_material_dark
 color secondary_text_default_material_light
 color secondary_text_disabled_material_dark
 color secondary_text_disabled_material_light
+color send_button_border_beige
+color send_button_brown
 color switch_thumb_disabled_material_dark
 color switch_thumb_disabled_material_light
 color switch_thumb_material_dark
@@ -2847,6 +2853,7 @@ drawable baseline_add_photo_alternate_24
 drawable baseline_home_24
 drawable baseline_manage_accounts_24
 drawable baseline_person_outline_24
+drawable baseline_send_24
 drawable baseline_sports_kabaddi_24
 drawable baseline_sports_martial_arts_24
 drawable basket
@@ -3015,6 +3022,7 @@ drawable pingpong
 drawable pingpong1
 drawable pingpong2
 drawable pingpong3
+drawable rounded_edittext
 drawable roz
 drawable sports
 drawable tennis
@@ -3241,7 +3249,6 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
-id deleteButton
 id deltaRelative
 id dependency_ordering
 id desc
@@ -3329,6 +3336,7 @@ id eventIcon
 id eventParticipants
 id eventTime
 id eventTitle
+id eventTitleInChat
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3359,6 +3367,7 @@ id glide_custom_view_target_tag
 id gone
 id graph
 id graph_wrap
+id greenBackground
 id group_divider
 id grouping
 id groups
@@ -3405,7 +3414,6 @@ id listMode
 id list_item
 id llbio_profile
 id llemail_profile
-id llfull_name_profile
 id llpayment
 id locale
 id logoMain
@@ -3717,7 +3725,9 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
-id tvTitle
+id tvMessage
+id tvMessageTime
+id tvUsername
 id txtUsername
 id txttite
 id unchecked
@@ -4054,8 +4064,10 @@ string fab_transformation_sheet_behavior
 string fallback_menu_item_copy_link
 string fallback_menu_item_open_in_browser
 string fallback_menu_item_share_link
+string fcm_fallback_notification_channel_label
 string first_fragment_label
 string gcm_defaultSenderId
+string gcm_fallback_notification_channel_label
 string google_api_key
 string google_app_id
 string google_crash_reporting_api_key

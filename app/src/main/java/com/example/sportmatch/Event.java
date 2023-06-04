@@ -55,7 +55,7 @@ public class Event  implements Serializable {
     String getChatId() {
         return chatId;
     }
-    public Event(String eventName, String sport, String nrPlayers, String location, String date, String time, String description, String creator, List<String> participants, String chatId) {
+    public Event(String eventName, String sport, String nrPlayers, String location, String date, String time, String description, String creator, List<String> participants) {
         this.key = null;
         this.eventName = eventName;
         this.sport = sport;
@@ -67,7 +67,6 @@ public class Event  implements Serializable {
         this.creator = creator;
         this.participants = participants;
         this.requests = new ArrayList<>();
-        this.chatId = chatId;
         // Add the event creator to the registered players list
     }
 
