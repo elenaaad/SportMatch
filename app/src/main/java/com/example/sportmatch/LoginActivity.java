@@ -1,9 +1,12 @@
 package com.example.sportmatch;
 
 
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
@@ -14,11 +17,15 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class  LoginActivity extends AppCompatActivity {
     private EditText usernameEditText;
@@ -27,7 +34,25 @@ public class  LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     //todo: add a button to go to register activity
     //todo: add a button to go to forgot password activity
+    private void saveDeviceToken(String userId, String deviceToken) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference usersRef = database.getReference("Users");
+        DatabaseReference userRef = usersRef.child(userId);
 
+        userRef.child("deviceToken").setValue(deviceToken)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d("TAG", "Device token saved in the database");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e("TAG", "Failed to save device token in the database: " + e.getMessage());
+                    }
+                });
+    }
     SharedPreferences sharedPreferences;
 
     private static final String SHARED_PREF = "pref";
@@ -85,12 +110,41 @@ public class  LoginActivity extends AppCompatActivity {
 
                                         //Request.createRequestTable();
                                         Toast.makeText(LoginActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();
-                                        //to chanche the activity to menuactivity
-                                        //Intent intent = new Intent(LoginActivity.this, BottomNavActivity.class);
+                                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                                            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+
+                                            if (!notificationManager.isNotificationPolicyAccessGranted() || !notificationManager.areNotificationsEnabled()) {
+
+                                                Intent settingsIntent = new Intent(android.provider.Settings.ACTION_APP_NOTIFICATION_SETTINGS);
+                                                settingsIntent.putExtra(android.provider.Settings.EXTRA_APP_PACKAGE, getPackageName());
+                                                startActivity(settingsIntent);
+                                                Log.d("login", "Opened notification settings");
+                                            }
+
+                                        }
+                                        FirebaseUser user =mAuth.getCurrentUser();
+                                        if (user != null) {
+                                            // Obtain the device token
+                                            FirebaseMessaging.getInstance().getToken()
+                                                    .addOnCompleteListener(new OnCompleteListener<String>() {
+                                                        @Override
+                                                        public void onComplete(@NonNull Task<String> task) {
+                                                            if (task.isSuccessful() && task.getResult() != null) {
+                                                                String deviceToken = task.getResult();
+
+                                                                // Save the device token in the database under the user's node
+                                                                saveDeviceToken(user.getUid(), deviceToken);
+
+                                                                // Start the ViewProfileActivity
                                         Intent intent = new Intent(LoginActivity.this, BottomNavActivity.class);
                                         startActivity(intent);
-                                        finish();
-                                    } else {
+                                                            } else {
+                                                                Log.e("TAG", "Failed to obtain device token: " + task.getException());
+                                                            }
+                                                        }
+                                                    });
+                                        }
+                                    }  else {
                                         Toast.makeText(LoginActivity.this, "Login failed!", Toast.LENGTH_SHORT).show();
                                     }
                                 }
