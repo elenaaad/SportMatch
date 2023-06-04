@@ -2,6 +2,7 @@ package com.example.sportmatch;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,14 +19,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHolder> {
 
     ArrayList<Event> eventList;
     Context context;
-
+    static int cardColor;
     private ChildAdapter.OnChatClickListener onChatClickListener;
     public interface OnChatClickListener {
         void onChatClick(String eventId);
@@ -129,8 +135,6 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHol
                 }
                 else intent = new Intent(v.getContext(), EventDetailsActivity.class);
 
-
-
                 String str = data_position.getEventName();
                 intent.putExtra("valTitle",str );
                 intent.putExtra("valSport",data_position.getSport());
@@ -185,6 +189,7 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHol
             nbrParticipants=itemView.findViewById(R.id.eventParticipants);
             cardView = itemView.findViewById(R.id.cardEvent);
             eventChat = itemView.findViewById(R.id.buttonToChat);
+
         }
     }
 }
