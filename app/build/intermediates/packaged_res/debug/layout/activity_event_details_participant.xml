@@ -45,13 +45,12 @@
 
             <Button
                 android:id="@+id/detailsParticipantsButtonP"
-                android:layout_width="120dp"
-                android:layout_height="50dp"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/detailsDescP"
-                android:layout_alignParentEnd="true"
-                android:layout_marginEnd="200dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="40dp"
-                android:layout_marginStart="20dp"
+                android:textSize="15sp"
                 android:backgroundTint="@color/verde5"
                 android:text="Players" />
 
@@ -158,12 +157,13 @@
 
             <Button
                 android:id="@+id/detailsBtnMapP"
-                android:layout_width="120dp"
-                android:layout_height="50dp"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="20dp"
+                android:layout_marginEnd="10dp"
                 android:layout_marginTop="40dp"
                 android:layout_below="@+id/detailsDescP"
+                android:textSize="15sp"
                 android:backgroundTint="@color/verde5"
                 android:text="MAP" />
 
