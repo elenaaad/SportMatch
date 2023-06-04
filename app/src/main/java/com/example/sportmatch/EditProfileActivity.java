@@ -1,14 +1,13 @@
 package com.example.sportmatch;
-
 import static android.content.ContentValues.TAG;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,6 +21,22 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class EditProfileActivity extends AppCompatActivity {
     String _oldname, _oldpasss, _newpasss, userId, newName, _passdb, _bio, newbio;
@@ -152,10 +167,10 @@ public class EditProfileActivity extends AppCompatActivity {
             reference.child(userId).child("fullName").setValue(newName);
             return true;
         }
-        else {
-            Log.e(TAG, "Probleme cu schimbarea numelui");
-            return false;
-        }}
+     else {
+        Log.e(TAG, "Probleme cu schimbarea numelui");
+        return false;
+    }}
 
     private boolean updateBio(){
         if( !_bio.isEmpty())
@@ -218,4 +233,6 @@ public class EditProfileActivity extends AppCompatActivity {
     }
 
 
+
 }
+

@@ -10,6 +10,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 
 public class Event  implements Serializable {
@@ -136,6 +137,7 @@ public class Event  implements Serializable {
     }
 
     public List<String> getParticipants() {
+        participants =removeDuplicates(participants);
         return participants;
     }
 
@@ -171,6 +173,7 @@ public class Event  implements Serializable {
 
 
     public void setParticipants(List<String> participants) {
+        participants=removeDuplicates(participants);
         this.participants = participants;
     }
 
@@ -193,6 +196,7 @@ public class Event  implements Serializable {
     }
 
     public List<String> getRequests() {
+        requests= removeDuplicates(requests);
         return requests;
     }
 
@@ -266,7 +270,15 @@ public class Event  implements Serializable {
 
 
     public void setRequests(List<String> requests) {
+        requests= removeDuplicates(requests);
         this.requests = requests;
+    }
+
+    public static <T> List<T> removeDuplicates(List<T> list) {
+        if (list == null) {
+            return null;
+        }
+        return new ArrayList<>(new HashSet<>(list));
     }
 
 }

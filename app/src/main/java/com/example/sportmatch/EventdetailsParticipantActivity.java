@@ -75,7 +75,23 @@ public class EventdetailsParticipantActivity extends AppCompatActivity {
         buttonToChatP = findViewById(R.id.buttonToChatP);
         backhomeP = findViewById(R.id.backhomeP);
 
+        Button popupButton = findViewById(R.id.detailsParticipantsButtonP);
+        /*if(mEvent.areRequestsEmpty()) {
+            popupButton.setText("No requests pending");
+            popupButton.setEnabled(false);
+            popupButton.setClickable(false);
+            popupButton.setBackgroundColor(getResources().getColor(R.color.grey));
+        }*/
+        popupButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                Intent intent = new Intent(EventdetailsParticipantActivity.this, ParticipantActivity.class);
+                intent.putExtra("eventul actual", mEvent);
+                startActivity(intent);
+
+            }
+        });
 
         String valueTitle = getIntent().getStringExtra("valTitle");
         String valTitle = getIntent().getStringExtra("valTitle").toUpperCase();

@@ -2007,7 +2007,6 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
-color orange
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -2872,7 +2871,6 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
-drawable chaticon
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -2916,7 +2914,6 @@ drawable handball
 drawable handball2
 drawable handball3jpeg
 drawable handballposter
-drawable home
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
@@ -2948,7 +2945,6 @@ drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
 drawable map_active
 drawable map_inactive
-drawable mapfordetails
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -3151,9 +3147,6 @@ id autocomplete_players
 id autocomplete_sport
 id automatic
 id backG
-id backhomeA
-id backhomeF
-id backhomeP
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3584,7 +3577,6 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
-id scrollViewE
 id scrollable
 id search_badge
 id search_bar
@@ -3869,6 +3861,7 @@ layout activity_maps
 layout activity_menu
 layout activity_newevent
 layout activity_only_participates_events
+layout activity_part_item
 layout activity_profile
 layout activity_register
 layout activity_request_item
