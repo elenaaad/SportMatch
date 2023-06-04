@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
@@ -62,6 +63,12 @@ public final class ActivityRegisterBinding implements ViewBinding {
   public final TextInputEditText UsernameInserted;
 
   @NonNull
+  public final Button choosePictureButton;
+
+  @NonNull
+  public final ImageView profilePicture;
+
+  @NonNull
   public final Button signupButton;
 
   private ActivityRegisterBinding(@NonNull RelativeLayout rootView,
@@ -71,7 +78,8 @@ public final class ActivityRegisterBinding implements ViewBinding {
       @NonNull TextInputEditText GenderInserted, @NonNull TextInputLayout Password,
       @NonNull TextInputEditText PasswordConfirmed, @NonNull TextInputEditText PasswordInserted,
       @NonNull TextView Register, @NonNull TextInputLayout Username,
-      @NonNull TextInputEditText UsernameInserted, @NonNull Button signupButton) {
+      @NonNull TextInputEditText UsernameInserted, @NonNull Button choosePictureButton,
+      @NonNull ImageView profilePicture, @NonNull Button signupButton) {
     this.rootView = rootView;
     this.BirthDate = BirthDate;
     this.BirthDateInserted = BirthDateInserted;
@@ -86,6 +94,8 @@ public final class ActivityRegisterBinding implements ViewBinding {
     this.Register = Register;
     this.Username = Username;
     this.UsernameInserted = UsernameInserted;
+    this.choosePictureButton = choosePictureButton;
+    this.profilePicture = profilePicture;
     this.signupButton = signupButton;
   }
 
@@ -194,6 +204,18 @@ public final class ActivityRegisterBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.choosePictureButton;
+      Button choosePictureButton = ViewBindings.findChildViewById(rootView, id);
+      if (choosePictureButton == null) {
+        break missingId;
+      }
+
+      id = R.id.profilePicture;
+      ImageView profilePicture = ViewBindings.findChildViewById(rootView, id);
+      if (profilePicture == null) {
+        break missingId;
+      }
+
       id = R.id.signupButton;
       Button signupButton = ViewBindings.findChildViewById(rootView, id);
       if (signupButton == null) {
@@ -202,7 +224,8 @@ public final class ActivityRegisterBinding implements ViewBinding {
 
       return new ActivityRegisterBinding((RelativeLayout) rootView, BirthDate, BirthDateInserted,
           ConfirmPassword, FullName, FullNameInserted, Gender, GenderInserted, Password,
-          PasswordConfirmed, PasswordInserted, Register, Username, UsernameInserted, signupButton);
+          PasswordConfirmed, PasswordInserted, Register, Username, UsernameInserted,
+          choosePictureButton, profilePicture, signupButton);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

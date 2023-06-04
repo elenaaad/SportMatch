@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/verdeFundal"
+    android:background="@drawable/fundalverdeinchis"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -16,10 +16,10 @@
         android:layout_height="586dp"
         android:layout_gravity="center"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         android:layout_marginRight="50dp"
-        android:layout_marginBottom="100dp"
-        android:background="#ffff"
+        android:layout_marginBottom="80dp"
+        android:background="#BCF8BA"
         card_view:cardCornerRadius="8dp"
         card_view:cardElevation="8dp">
 
@@ -42,8 +42,31 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="10dp"
                     android:text="Register"
+                    android:fontFamily="@font/fontsport"
                     android:textAlignment="center"
-                    android:textSize="36sp" />
+                    android:textColor="@color/grey"
+                    android:textSize="56sp" />
+
+<!--                chat gpt astea 2-->
+                <ImageView
+                    android:id="@+id/profilePicture"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_below="@id/Register"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:src="@drawable/default_pfp" />
+
+                <Button
+                    android:id="@+id/choosePictureButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/profilePicture"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:backgroundTint="@color/grey"
+                    android:text="Choose Profile Picture" />
 
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -51,8 +74,8 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/Register"
-                    android:layout_marginTop="30dp"
+                    android:layout_below="@id/choosePictureButton"
+                    android:layout_marginTop="20dp"
                     android:hint="Full Name">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -117,13 +140,13 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/ConfirmPassword"
                     android:layout_marginTop="30dp"
+                    android:onClick="showDatePickerDialog"
                     android:hint="BirthDate">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/BirthDateInserted"
                         android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:onClick="showDatePickerDialog"/>
+                        android:layout_height="60dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -141,8 +164,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="60dp" />
 
-                </com.google.android.material.textfield.TextInputLayout>
+<!--                    <Spinner-->
+<!--                        android:id="@+id/genderSpinner"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_below="@id/Gender"-->
+<!--                        android:layout_marginTop="30dp"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:hint="GenderS"/>-->
 
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <Button
                     android:id="@+id/signupButton"
@@ -151,10 +181,9 @@
                     android:layout_below="@+id/Gender"
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="30dp"
-                    android:backgroundTint="@color/verde5"
+                    android:backgroundTint="@color/grey"
                     android:text="REGISTER"
                     android:textSize="22sp" />
-
 
             </RelativeLayout>
         </ScrollView>

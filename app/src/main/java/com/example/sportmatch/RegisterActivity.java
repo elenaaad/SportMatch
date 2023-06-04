@@ -7,6 +7,7 @@ import android.app.DatePickerDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -25,6 +26,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.ktx.Firebase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.Calendar;
 
@@ -52,6 +55,7 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     private FirebaseAuth mAuth;
+    private static final int PICK_IMAGE_REQUEST = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,8 +96,16 @@ public class RegisterActivity extends AppCompatActivity {
                 datePickerDialog.show();
             }
         });
-        //deci problema e ca trb sa apas pe titlul casutei sau inca o data in casuta ca sa apara datepickerul si nuj sa rezolv
 
+        Button chooseProfilePictureButton = findViewById(R.id.choosePictureButton);
+        chooseProfilePictureButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_PICK);
+                intent.setType("image/*");
+                startActivityForResult(intent, PICK_IMAGE_REQUEST);
+            }
+        });
         setListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -103,8 +115,35 @@ public class RegisterActivity extends AppCompatActivity {
             }
         };
 
-
         mAuth = FirebaseAuth.getInstance();
+
+    }
+
+    //chat gpt partea cu image
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
+            Uri imageUri = data.getData();
+
+            // Upload image to Firebase Storage
+            StorageReference storageRef = FirebaseStorage.getInstance().getReference();
+            StorageReference imageRef = storageRef.child("profilePictures/" + imageUri.getLastPathSegment());
+            imageRef.putFile(imageUri)
+                    .addOnSuccessListener(taskSnapshot -> {
+                        // Image uploaded successfully
+                        // Get the download URL of the uploaded image
+                        imageRef.getDownloadUrl().addOnSuccessListener(uri -> {
+                            String imageUrl = uri.toString();
+                            // Save the image URL to Firebase Realtime Database or Firestore as the user's profile picture
+                            // Update the user's profile picture in your user data structure
+                        });
+                    })
+                    .addOnFailureListener(exception -> {
+                        // Handle any errors that occurred during the image upload
+                    });
+        }
     }
         //check if the username is already in use - copiat de pe stackoverflow
         //https://stackoverflow.com/questions/61523624/android-firebase-database-check-if-username-is-already-use
@@ -158,7 +197,7 @@ public class RegisterActivity extends AppCompatActivity {
             FullNameInserted.setError("Please enter all the fields");
             UsernameInserted.requestFocus();
         }
-        else if(txtPassword.equals(txtPasswordConfirmed)){
+        else if(!txtPassword.equals(txtPasswordConfirmed)){
             PasswordInserted.setError("Passwords do not match");
             PasswordConfirmed.setError("Passwords do not match");
         }
@@ -191,7 +230,6 @@ public class RegisterActivity extends AppCompatActivity {
                                                 } else {
                                                     Toast.makeText(RegisterActivity.this, "User failed to register", Toast.LENGTH_LONG).show();
 
-                                                    //display a failure message
                                                 }
                                             }
                                         });
@@ -203,4 +241,6 @@ public class RegisterActivity extends AppCompatActivity {
                     });
         }
     }
+
+
 }
