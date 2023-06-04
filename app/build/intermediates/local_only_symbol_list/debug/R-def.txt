@@ -12,6 +12,7 @@ array com_google_android_gms_fonts_certs_prod
 array preloaded_fonts
 color black
 color grey
+color orange
 color purple_200
 color purple_500
 color purple_700
@@ -56,6 +57,7 @@ drawable bowling
 drawable bowling2
 drawable bowling3
 drawable bowlingposter
+drawable chaticon
 drawable editprofile
 drawable eventicon
 drawable feed
@@ -73,6 +75,7 @@ drawable handball
 drawable handball2
 drawable handball3jpeg
 drawable handballposter
+drawable home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_send
@@ -81,6 +84,7 @@ drawable logo
 drawable logo_reverse
 drawable map_active
 drawable map_inactive
+drawable mapfordetails
 drawable p11
 drawable ping_pong
 drawable pingpong
@@ -129,6 +133,9 @@ id autocomplete_loc
 id autocomplete_players
 id autocomplete_sport
 id backG
+id backhomeA
+id backhomeF
+id backhomeP
 id bio_profile
 id bio_profile_edit
 id bottomNavigationView
@@ -270,6 +277,7 @@ id relativeLayout
 id relativeLayout1
 id root_vg
 id scrollView
+id scrollViewE
 id see_requests_button
 id sendButton
 id signupButton

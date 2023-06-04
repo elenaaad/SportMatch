@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
-INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
-INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
-INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
+ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-110:12
+INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-110:12
+INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-110:12
+INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-110:12
 MERGED from [androidx.databinding:viewbinding:7.4.2] C:\Users\tabma\.gradle\caches\transforms-3\9ab523b113898a0706fa388ab5ca5516\transformed\viewbinding-7.4.2\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-ui:2.5.3] C:\Users\tabma\.gradle\caches\transforms-3\670fcbd9f10f2b5a7b424d723d6a721f\transformed\navigation-ui-2.5.3\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\tabma\.gradle\caches\transforms-3\182faf041fdcb262ef4ea683b4175339\transformed\material-1.8.0\AndroidManifest.xml:17:1-26:12
@@ -81,22 +81,22 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\tabma\.gradle\ca
 MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\tabma\.gradle\caches\transforms-3\705af1d4a665eccd48cef655c900d24f\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\tabma\.gradle\caches\transforms-3\2397f23810b8035de4f82d065aff48cd\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\tabma\.gradle\caches\transforms-3\aadbfca95168fc936950a55ba0e054bd\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
-INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
-INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
+INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-110:12
+INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-110:12
+INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-110:12
 	package
 		INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
+		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-110:12
 		INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
+		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-110:12
 		INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-111:12
+		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:1-110:12
 		INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:2:11-69
@@ -125,7 +125,7 @@ MERGED from [com.google.firebase:firebase-storage:20.1.0] C:\Users\tabma\.gradle
 	android:name
 		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:8:22-64
 application
-ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:10:5-109:19
+ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:10:5-108:19
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\tabma\.gradle\caches\transforms-3\182faf041fdcb262ef4ea683b4175339\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\tabma\.gradle\caches\transforms-3\182faf041fdcb262ef4ea683b4175339\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\tabma\.gradle\caches\transforms-3\d8979af8a73764c39a8cadc6fefa7acf\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -324,38 +324,46 @@ ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\A
 		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:84:13-37
 	android:name
 		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:83:13-41
-activity#com.example.sportmatch.OtherProfileActivity
-ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:85:9-87:40
+activity#com.example.sportmatch.ParticipantActivity
+ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:85:9-88:57
 	android:exported
 		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:87:13-37
-	android:name
-		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:86:13-49
-activity#com.example.sportmatch.RequestActivity
-ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:88:9-91:58
-	android:exported
-		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:90:13-37
 	android:theme
-		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:91:13-55
+		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:88:13-55
 	android:name
-		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:89:13-44
+		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:86:13-48
+activity#com.example.sportmatch.OtherProfileActivity
+ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:89:9-91:40
+	android:exported
+		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:91:13-37
+	android:name
+		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:90:13-49
+activity#com.example.sportmatch.RequestActivity
+ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:92:9-95:58
+	android:exported
+		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:94:13-37
+	android:theme
+		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:95:13-55
+	android:name
+		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:93:13-44
 activity#com.example.sportmatch.EditEventDetails
-ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:98:9-100:40
+ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:97:9-99:40
 	android:exported
-		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:100:13-37
+		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:99:13-37
 	android:name
-		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:99:13-45
+		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:98:13-45
 activity#com.example.sportmatch.MainActivity
-ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:101:9-104:20
+ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:100:9-103:20
 	android:exported
-		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:103:13-37
+		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:102:13-37
 	android:name
-		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:102:13-41
+		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:101:13-41
 meta-data#preloaded_fonts
-ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:106:9-108:57
+ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:105:9-107:57
 	android:resource
-		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:108:13-54
+		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:107:13-54
 	android:name
-		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:107:13-43
+		ADDED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml:106:13-43
 uses-sdk
 INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\tabma\OneDrive\Documents\GitHub\SportMatchpre\app\src\main\AndroidManifest.xml
