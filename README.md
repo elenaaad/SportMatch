@@ -20,3 +20,7 @@ contactează terenul de sport pentru închiriere și acceptă participanții pen
 experiența de organizare a evenimentelor. SportMatch își propune să faciliteze organizarea de evenimente sportive și să promoveze o comunitate de pasionați de sport
 cu interese comune în București.
 
+# Flowchart
+
+
+![SportMatch Flowchart](https://github.com/elenaaad/SportMatch/assets/94315701/e947eee2-56ab-499b-aa21-f15bf4d09bfa)
