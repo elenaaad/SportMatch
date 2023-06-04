@@ -19,6 +19,7 @@
     </array>
     <color name="black">#FF000000</color>
     <color name="grey">#888888</color>
+    <color name="orange">#fc8803</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -54,6 +55,7 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="project_id" translatable="false">sportsmatch-97ff3</string>
+    <string name="register_text">Ready to embrace the thrill of friendly matches and meet fellow sports enthusiasts?                                                                Join our community today!</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="title_activity_menu">MenuActivity</string>
@@ -62,7 +64,7 @@
     <item name="android:windowBackground">@android:color/transparent</item>
     <item name="android:windowNoTitle">true</item>
     <item name="android:windowCloseOnTouchOutside">true</item>
-</style>
+    </style>
     <style name="SlideActivityAnimation" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
         <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
@@ -78,7 +80,7 @@
         <item name="colorSecondaryVariant">@color/verde3</item>
         <item name="colorOnSecondary">@color/black</item>
         
-        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:statusBarColor">@color/verde3</item>
         
     </style>
     <style name="Theme.SportMatch.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
@@ -87,4 +89,23 @@
         <item name="windowNoTitle">true</item>
     </style>
     <style name="Theme.SportMatch.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="Theme.SportMatch1" parent="Theme.MaterialComponents.Light.NoActionBar">
+        
+        <item name="colorPrimary">@color/verde4</item>
+        <item name="colorPrimaryVariant">@color/verde5</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorOnBackground">@color/verdeFundal</item>
+        
+        <item name="colorSecondary">@color/verde1</item>
+        <item name="colorSecondaryVariant">@color/verde3</item>
+        <item name="colorOnSecondary">@color/black</item>
+        
+        <item name="android:statusBarColor">@color/verde3</item>
+        
+    </style>
+    <style name="roundImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">15dp</item>
+        <item name="color">@color/white</item>
+    </style>
 </resources>

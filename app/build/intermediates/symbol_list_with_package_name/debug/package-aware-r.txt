@@ -11,6 +11,7 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+anim backganim
 anim btn_checkbox_to_checked_box_inner_merged_animation
 anim btn_checkbox_to_checked_box_outer_merged_animation
 anim btn_checkbox_to_checked_icon_null_animation
@@ -28,6 +29,7 @@ anim design_bottom_sheet_slide_out
 anim design_snackbar_in
 anim design_snackbar_out
 anim fragment_fast_out_extra_slow_in
+anim frombottom
 anim linear_indeterminate_line1_head_interpolator
 anim linear_indeterminate_line1_tail_interpolator
 anim linear_indeterminate_line2_head_interpolator
@@ -45,8 +47,10 @@ anim nav_default_enter_anim
 anim nav_default_exit_anim
 anim nav_default_pop_enter_anim
 anim nav_default_pop_exit_anim
+anim slide_down
 anim slide_in_right
 anim slide_out_left
+anim slide_up
 animator design_appbar_state_list_animator
 animator design_fab_hide_motion_spec
 animator design_fab_show_motion_spec
@@ -800,6 +804,24 @@ attr logo
 attr logoAdjustViewBounds
 attr logoDescription
 attr logoScaleType
+attr lottieAnimationViewStyle
+attr lottie_autoPlay
+attr lottie_cacheComposition
+attr lottie_colorFilter
+attr lottie_enableMergePathsForKitKatAndAbove
+attr lottie_fallbackRes
+attr lottie_fileName
+attr lottie_ignoreDisabledSystemAnimations
+attr lottie_imageAssetsFolder
+attr lottie_loop
+attr lottie_progress
+attr lottie_rawRes
+attr lottie_renderMode
+attr lottie_repeatCount
+attr lottie_repeatMode
+attr lottie_scale
+attr lottie_speed
+attr lottie_url
 attr mapId
 attr mapType
 attr marginHorizontal
@@ -1985,6 +2007,7 @@ color mtrl_textinput_focused_box_stroke_color
 color mtrl_textinput_hovered_box_stroke_color
 color notification_action_color_filter
 color notification_icon_bg_color
+color orange
 color primary_dark_material_dark
 color primary_dark_material_light
 color primary_material_dark
@@ -2812,6 +2835,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable backg
 drawable background2
 drawable background_feed
 drawable badminton
@@ -2830,6 +2854,7 @@ drawable basket1
 drawable basket2
 drawable basket3
 drawable basketball
+drawable basketballplayer
 drawable bk1
 drawable bk2
 drawable bk3
@@ -2847,6 +2872,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable chaticon
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -2879,6 +2905,7 @@ drawable football
 drawable football1
 drawable football2
 drawable football3
+drawable footballplayers
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable gradien
@@ -2889,6 +2916,7 @@ drawable handball
 drawable handball2
 drawable handball3jpeg
 drawable handballposter
+drawable home
 drawable ic_arrow_back_black_24
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
@@ -2906,6 +2934,7 @@ drawable ic_search_black_24
 drawable ic_send
 drawable item_selector
 drawable logo
+drawable logo_reverse
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -2919,6 +2948,7 @@ drawable m3_tabs_rounded_line_indicator
 drawable m3_tabs_transparent_background
 drawable map_active
 drawable map_inactive
+drawable mapfordetails
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -3018,6 +3048,7 @@ id Gender
 id GenderInserted
 id META
 id NO_DEBUG
+id Or
 id Password
 id PasswordConfirmed
 id PasswordInserted
@@ -3118,6 +3149,11 @@ id auto_complete_txt2
 id autocomplete_loc
 id autocomplete_players
 id autocomplete_sport
+id automatic
+id backG
+id backhomeA
+id backhomeF
+id backhomeP
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -3133,6 +3169,7 @@ id bottom_create_event
 id bottom_events_participates
 id bottom_home
 id bottom_view_profile
+id bottons
 id bounce
 id bounceBoth
 id bounceEnd
@@ -3207,6 +3244,7 @@ id default_activity_button
 id deleteButton
 id deltaRelative
 id dependency_ordering
+id desc
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -3324,10 +3362,12 @@ id graph_wrap
 id group_divider
 id grouping
 id groups
+id hardware
 id header_title
 id hideable
 id home
 id homeAsUp
+id hometext
 id honorRequest
 id horizontal_only
 id hybrid
@@ -3368,6 +3408,8 @@ id llemail_profile
 id llfull_name_profile
 id llpayment
 id locale
+id logoMain
+id lottie_layer_name
 id ltr
 id m3_side_sheet
 id main_recycler
@@ -3462,6 +3504,7 @@ id newEventPlayers
 id newEventSport
 id newEventTime
 id newEventTimeEdt
+id newhere
 id newpass
 id noScroll
 id noState
@@ -3520,6 +3563,8 @@ id rectangles
 id recyclerView
 id relativeLayout
 id relativeLayout1
+id restart
+id reverse
 id reverseSawtooth
 id right
 id rightToLeft
@@ -3539,6 +3584,7 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
+id scrollViewE
 id scrollable
 id search_badge
 id search_bar
@@ -3586,9 +3632,12 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id software
 id south
 id spacer
 id special_effects_controller_view_tag
+id splash_view
+id splashtext
 id spline
 id split_action_bar
 id sportImage
@@ -3647,6 +3696,7 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id textlogin
 id textview_first
 id textview_second
 id time
@@ -3823,6 +3873,7 @@ layout activity_profile
 layout activity_register
 layout activity_request_item
 layout activity_requests
+layout activity_start
 layout activity_view_profile
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -3924,6 +3975,8 @@ mipmap ic_launcher_round
 navigation nav_graph
 navigation nav_graph2
 plurals mtrl_badge_content_description
+raw a
+raw b
 raw firebase_common_keep
 string Discuss
 string abc_action_bar_home_description
@@ -4116,6 +4169,7 @@ string path_password_eye_mask_visible
 string path_password_strike_through
 string previous
 string project_id
+string register_text
 string search_menu_title
 string searchbar_scrolling_view_behavior
 string searchview_clear_text_content_description
@@ -4742,6 +4796,7 @@ style Theme_SportMatch
 style Theme_SportMatch_AppBarOverlay
 style Theme_SportMatch_NoActionBar
 style Theme_SportMatch_PopupOverlay
+style Theme_SportMatch1
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
 style ThemeOverlay_AppCompat_Dark
@@ -5225,6 +5280,7 @@ style Widget_MaterialComponents_Toolbar_PrimarySurface
 style Widget_MaterialComponents_Toolbar_Surface
 style Widget_MaterialComponents_Tooltip
 style Widget_Support_CoordinatorLayout
+style roundImageView
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth
@@ -5307,6 +5363,7 @@ styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width 
 styleable LinearProgressIndicator indeterminateAnimationType indicatorDirectionLinear
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
 styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
+styleable LottieAnimationView lottie_autoPlay lottie_cacheComposition lottie_colorFilter lottie_enableMergePathsForKitKatAndAbove lottie_fallbackRes lottie_fileName lottie_ignoreDisabledSystemAnimations lottie_imageAssetsFolder lottie_loop lottie_progress lottie_rawRes lottie_renderMode lottie_repeatCount lottie_repeatMode lottie_scale lottie_speed lottie_url
 styleable MapAttrs ambientEnabled backgroundColor cameraBearing cameraMaxZoomPreference cameraMinZoomPreference cameraTargetLat cameraTargetLng cameraTilt cameraZoom latLngBoundsNorthEastLatitude latLngBoundsNorthEastLongitude latLngBoundsSouthWestLatitude latLngBoundsSouthWestLongitude liteMode mapId mapType uiCompass uiMapToolbar uiRotateGestures uiScrollGestures uiScrollGesturesDuringRotateOrZoom uiTiltGestures uiZoomControls uiZoomGestures useViewLifecycle zOrderOnTop
 styleable MaterialAlertDialog backgroundInsetBottom backgroundInsetEnd backgroundInsetStart backgroundInsetTop
 styleable MaterialAlertDialogTheme materialAlertDialogBodyTextStyle materialAlertDialogButtonSpacerVisibility materialAlertDialogTheme materialAlertDialogTitleIconStyle materialAlertDialogTitlePanelStyle materialAlertDialogTitleTextStyle

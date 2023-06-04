@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -19,7 +18,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHolder> {
 
@@ -120,18 +118,14 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHol
                 String currentUserId = currentUser.getUid();
                 Intent intent;
 
-                if (data_position.getCreator() != null) {
-                    Log.e("eventulll1", data_position.getCreator());
-                }
-                Log.e("eventullll1", currentUserId);
-
                 if(data_position.getCreator() != null && data_position.getCreator().equals(currentUserId))
                 {
                     intent = new Intent(v.getContext(), EventDetailsAdminActivity.class);
                 }
-                else {
-                    intent = new Intent(v.getContext(), EventdetailsParticipantActivity.class);
+                else if(data_position.getParticipants()!=null && data_position.getParticipants().contains(currentUserId)) {
+                    intent =new Intent(v.getContext(), EventdetailsParticipantActivity.class);
                 }
+                else intent = new Intent(v.getContext(), EventDetailsActivity.class);
 
 
 

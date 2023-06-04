@@ -58,7 +58,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDLCBmP9VNRDUHLpWWptp6AZhUSIThi_nY" />
+            android:value="AIzaSyBC8Lri5ziGp9CFbXyS8rMeW-8IYaAOMyU" />
 
         <activity
             android:name="com.example.sportmatch.MapsActivity"
@@ -104,6 +104,9 @@
             android:exported="false" />
         <activity
             android:name="com.example.sportmatch.EventDetailsAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.sportmatch.EventdetailsParticipantActivity"
             android:exported="false" />
         <activity
             android:name="com.example.sportmatch.EventPreview"

@@ -23,10 +23,13 @@ public final class ActivityEventDetailsParticipantBinding implements ViewBinding
   private final RelativeLayout rootView;
 
   @NonNull
+  public final ImageView backhomeP;
+
+  @NonNull
   public final BottomNavigationView bottomNavigationView;
 
   @NonNull
-  public final Button buttonToChatP;
+  public final ImageView buttonToChatP;
 
   @NonNull
   public final Button detailsBtnMapP;
@@ -80,16 +83,18 @@ public final class ActivityEventDetailsParticipantBinding implements ViewBinding
   public final TextView titleP;
 
   private ActivityEventDetailsParticipantBinding(@NonNull RelativeLayout rootView,
-      @NonNull BottomNavigationView bottomNavigationView, @NonNull Button buttonToChatP,
-      @NonNull Button detailsBtnMapP, @NonNull TextView detailsDateInputP,
-      @NonNull TextView detailsDateP, @NonNull TextView detailsDescInputP,
-      @NonNull TextView detailsDescP, @NonNull TextView detailsLocInputP,
-      @NonNull TextView detailsLocP, @NonNull Button detailsParticipantsButtonP,
-      @NonNull TextView detailsPlayersInputP, @NonNull TextView detailsPlayersP,
-      @NonNull TextView detailsSportInputP, @NonNull TextView detailsSportP,
-      @NonNull TextView detailsTimeInputP, @NonNull TextView detailsTimeP,
-      @NonNull TextView detailsTitleP, @NonNull ImageView sportImageP, @NonNull TextView titleP) {
+      @NonNull ImageView backhomeP, @NonNull BottomNavigationView bottomNavigationView,
+      @NonNull ImageView buttonToChatP, @NonNull Button detailsBtnMapP,
+      @NonNull TextView detailsDateInputP, @NonNull TextView detailsDateP,
+      @NonNull TextView detailsDescInputP, @NonNull TextView detailsDescP,
+      @NonNull TextView detailsLocInputP, @NonNull TextView detailsLocP,
+      @NonNull Button detailsParticipantsButtonP, @NonNull TextView detailsPlayersInputP,
+      @NonNull TextView detailsPlayersP, @NonNull TextView detailsSportInputP,
+      @NonNull TextView detailsSportP, @NonNull TextView detailsTimeInputP,
+      @NonNull TextView detailsTimeP, @NonNull TextView detailsTitleP,
+      @NonNull ImageView sportImageP, @NonNull TextView titleP) {
     this.rootView = rootView;
+    this.backhomeP = backhomeP;
     this.bottomNavigationView = bottomNavigationView;
     this.buttonToChatP = buttonToChatP;
     this.detailsBtnMapP = detailsBtnMapP;
@@ -138,6 +143,12 @@ public final class ActivityEventDetailsParticipantBinding implements ViewBinding
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.backhomeP;
+      ImageView backhomeP = ViewBindings.findChildViewById(rootView, id);
+      if (backhomeP == null) {
+        break missingId;
+      }
+
       id = R.id.bottomNavigationView;
       BottomNavigationView bottomNavigationView = ViewBindings.findChildViewById(rootView, id);
       if (bottomNavigationView == null) {
@@ -145,7 +156,7 @@ public final class ActivityEventDetailsParticipantBinding implements ViewBinding
       }
 
       id = R.id.buttonToChatP;
-      Button buttonToChatP = ViewBindings.findChildViewById(rootView, id);
+      ImageView buttonToChatP = ViewBindings.findChildViewById(rootView, id);
       if (buttonToChatP == null) {
         break missingId;
       }
@@ -252,7 +263,7 @@ public final class ActivityEventDetailsParticipantBinding implements ViewBinding
         break missingId;
       }
 
-      return new ActivityEventDetailsParticipantBinding((RelativeLayout) rootView,
+      return new ActivityEventDetailsParticipantBinding((RelativeLayout) rootView, backhomeP,
           bottomNavigationView, buttonToChatP, detailsBtnMapP, detailsDateInputP, detailsDateP,
           detailsDescInputP, detailsDescP, detailsLocInputP, detailsLocP,
           detailsParticipantsButtonP, detailsPlayersInputP, detailsPlayersP, detailsSportInputP,

@@ -29,7 +29,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDLCBmP9VNRDUHLpWWptp6AZhUSIThi_nY" />
+            android:value="AIzaSyBC8Lri5ziGp9CFbXyS8rMeW-8IYaAOMyU" />
 
         <activity
             android:name=".MapsActivity"
@@ -75,6 +75,9 @@
             android:exported="false" />
         <activity
             android:name=".EventDetailsAdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EventdetailsParticipantActivity"
             android:exported="false" />
         <activity
             android:name=".EventPreview"

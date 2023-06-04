@@ -1,14 +1,16 @@
 package com.example.sportmatch;
+
 import static android.content.ContentValues.TAG;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputEditText;
@@ -21,22 +23,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.time.LocalDate;
-import java.time.Period;
-import java.time.format.DateTimeFormatter;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
-
-import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-
 public class EditProfileActivity extends AppCompatActivity {
     String _oldname, _oldpasss, _newpasss, userId, newName, _passdb, _bio, newbio;
     DatabaseReference reference;
@@ -44,6 +30,7 @@ public class EditProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editprofile);
+
 
         reference = FirebaseDatabase.getInstance().getReference("Users");
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -55,9 +42,19 @@ public class EditProfileActivity extends AppCompatActivity {
             return;
         }
 
+        countEventsForUser(userId, new ViewProfileActivity.OnEventsCountedListener() {
+            @Override
+            public void onEventsCounted(int eventCount) {
+                TextView view = findViewById(R.id.payment_label);
+                view.setText(String.valueOf(eventCount));
+            }
+        });
+
         reference.child(userId).child("fullName").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                TextView t =  findViewById(R.id.fullname_field);
+                t.setText(dataSnapshot.getValue(String.class));
                 String fullName = dataSnapshot.getValue(String.class);
                 Log.d("EditProfileActivity", "oldname: " + fullName);
                 TextInputLayout textInputLayout_newName = (TextInputLayout) findViewById(R.id.full_name_editprofile);
@@ -155,10 +152,10 @@ public class EditProfileActivity extends AppCompatActivity {
             reference.child(userId).child("fullName").setValue(newName);
             return true;
         }
-     else {
-        Log.e(TAG, "Probleme cu schimbarea numelui");
-        return false;
-    }}
+        else {
+            Log.e(TAG, "Probleme cu schimbarea numelui");
+            return false;
+        }}
 
     private boolean updateBio(){
         if( !_bio.isEmpty())
@@ -191,4 +188,34 @@ public class EditProfileActivity extends AppCompatActivity {
             return false;
         }
     }
+    interface OnEventsCountedListener {
+        void onEventsCounted(int eventCount);
+    }
+    public void countEventsForUser(String userId, ViewProfileActivity.OnEventsCountedListener listener) {
+        DatabaseReference eventsRef = FirebaseDatabase.getInstance().getReference("Events");
+        eventsRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                int eventCount = 0;
+
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    Event event = snapshot.getValue(Event.class);
+
+                    if (event.getCreator()!=null && event.getCreator().equals(userId)) {
+                        eventCount++;
+                    }
+                }
+
+                listener.onEventsCounted(eventCount);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                // Handle any errors that occur during the database query
+                listener.onEventsCounted(0);
+            }
+        });
+    }
+
+
 }
