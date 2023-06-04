@@ -57,21 +57,12 @@
 
 
 
-            <ImageView
-                android:id="@+id/buttonToChat1"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignRight="@id/sportImage"
-                android:layout_marginEnd="-110dp"
-                android:layout_marginTop="30dp"
-                android:src="@drawable/chaticon"/>
-
 
             <Button
                 android:id="@+id/detailsBtnEdit"
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="60dp"
                 android:layout_toLeftOf="@+id/sportImage"
                 android:backgroundTint="#8BC34A"
                 android:textSize="15sp"
@@ -81,9 +72,8 @@
                 android:id="@+id/detailsBtnMap"
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detailsBtnEdit"
-                android:layout_marginTop="15dp"
-                android:layout_toLeftOf="@+id/sportImage"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="235dp"
                 android:backgroundTint="#8BC34A"
                 android:text="Map"
                 android:textSize="15sp" />
