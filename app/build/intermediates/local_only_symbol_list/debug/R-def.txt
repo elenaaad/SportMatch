@@ -159,8 +159,6 @@ id btn_close
 id buttonCEvent
 id buttonEEvent
 id buttonToChat
-id buttonToChat1
-id buttonToChatP
 id button_editprofile
 id button_first
 id button_login

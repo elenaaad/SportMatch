@@ -41,7 +41,7 @@ public class EventDetailsAdminActivity extends AppCompatActivity {
     ImageView buttonToChat1;
     ImageView backhomeA;
 
-
+//    EventDetailsAdapter eventDetailsAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,7 +74,7 @@ public class EventDetailsAdminActivity extends AppCompatActivity {
         detailsDesc = findViewById(R.id.detailsDesc);
         detailsDescInput = findViewById(R.id.detailsDescInput);
         detailsBtnMap = findViewById(R.id.detailsBtnMap);
-        buttonToChat1 = findViewById(R.id.buttonToChat1);
+        buttonToChat1 = findViewById(R.id.buttonToChat);
         backhomeA = findViewById(R.id.backhomeA);
 
 

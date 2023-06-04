@@ -95,5 +95,6 @@
             android:textAlignment="center"
             android:textColor="#FFFFFF" />
 
+
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
