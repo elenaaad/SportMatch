@@ -1,7 +1,8 @@
 # SportMatch
 
 Proiect realizat pentru Metode de Dezvoltare Software
-Studenti: 
+
+# Studenti: 
 * [Deleanu Debora](https://github.com/simonadeboradeleanu)
 * [Dobre Elena](https://github.com/elenaaad)
 * [Ionescu Raluca](https://github.com/RalucaIonescu12)
