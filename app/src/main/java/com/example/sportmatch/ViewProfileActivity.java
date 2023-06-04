@@ -2,19 +2,19 @@ package com.example.sportmatch;
 
 import static android.content.ContentValues.TAG;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.textfield.TextInputEditText;
@@ -29,12 +29,15 @@ import com.google.firebase.database.ValueEventListener;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicBoolean;
-import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class ViewProfileActivity extends AppCompatActivity {
+
+    SharedPreferences sharedPreferences;
+
+    private static final String SHARED_PREF = "pref";
+    private static final String Username = "username";
+    private static final String Password = "password";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -98,7 +101,7 @@ public class ViewProfileActivity extends AppCompatActivity {
             public void onEventsCounted(int eventCount) {
                 TextView view = findViewById(R.id.payment_label);
                 view.setText(String.valueOf(eventCount));
-                String message = "Number of events: " + eventCount;
+                //String message = "Number of events: " + eventCount;
             }
         });
 
@@ -129,6 +132,12 @@ public class ViewProfileActivity extends AppCompatActivity {
                         Log.e("Logout", "Logout");
                         FirebaseAuth.getInstance().signOut();
                         Log.e("Logout", "Logout");
+
+                        sharedPreferences = getSharedPreferences(SHARED_PREF, MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.clear();
+                        editor.commit();
+                        finish();
 
                         startActivity(new Intent(ViewProfileActivity.this, MainActivity.class));
                     }

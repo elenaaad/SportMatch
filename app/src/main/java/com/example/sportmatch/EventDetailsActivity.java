@@ -14,10 +14,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -52,6 +50,7 @@ public class EventDetailsActivity extends AppCompatActivity {
     Button detailsBtnParticipate;
     private FirebaseDatabase database;
     Event mEvent;
+    ImageView backhomeF;
 
 
     @Override
@@ -79,6 +78,7 @@ public class EventDetailsActivity extends AppCompatActivity {
         detailsDesc = findViewById(R.id.detailsDesc);
         detailsDescInput = findViewById(R.id.detailsDescInput);
         detailsBtnParticipate = findViewById(R.id.detailsBtnParticipate);
+        backhomeF = findViewById(R.id.backhomeF);
 
         String valTitle = getIntent().getStringExtra("valTitle");
         detailsTitle.setText(valTitle);
@@ -231,6 +231,13 @@ public class EventDetailsActivity extends AppCompatActivity {
                         }
                     });
 
+            }
+        });
+
+        backhomeF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(EventDetailsActivity.this, BottomNavActivity.class));
             }
         });
 

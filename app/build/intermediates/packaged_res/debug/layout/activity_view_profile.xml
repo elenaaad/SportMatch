@@ -43,7 +43,7 @@
 
         <Button
             android:id="@+id/button_logout"
-            android:layout_width="94dp"
+            android:layout_width="110dp"
             android:layout_height="36dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
@@ -54,7 +54,7 @@
 
         <Button
             android:id="@+id/button_editprofile"
-            android:layout_width="94dp"
+            android:layout_width="110dp"
             android:layout_height="36dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"

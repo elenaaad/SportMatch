@@ -16,7 +16,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -38,7 +37,6 @@ public class BottomNavActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     DatabaseReference databaseReference;
     ValueEventListener eventListener;
-
 
     ParentAdapterBottom parentAdapter;
     ArrayList<AllCategory> allCategoryList;
@@ -93,32 +91,32 @@ public class BottomNavActivity extends AppCompatActivity {
                 {
                     Event event = itemSnapshot.getValue(Event.class);
                     if(event.getParticipants() != null && event.getParticipants().contains(userId) && !userId.equals(event.getCreator()))
-                    switch(event.getSport()) {
-                        case "Volleyball":
-                            volleyballList.add(event);
-                            break;
-                        case "Football":
-                            footballList.add(event);
-                            break;
-                        case "Handball":
-                            handballList.add(event);
-                            break;
-                        case "Tennis":
-                            tennisList.add(event);
-                            break;
-                        case "Badminton":
-                            badmintonList.add(event);
-                            break;
-                        case "Ping-Pong":
-                            pingpongList.add(event);
-                            break;
-                        case "Basketball":
-                            basketballList.add(event);
-                            break;
-                        case "Bowling":
-                            bowlingList.add(event);
-                            break;
-                    }
+                        switch(event.getSport()) {
+                            case "Volleyball":
+                                volleyballList.add(event);
+                                break;
+                            case "Football":
+                                footballList.add(event);
+                                break;
+                            case "Handball":
+                                handballList.add(event);
+                                break;
+                            case "Tennis":
+                                tennisList.add(event);
+                                break;
+                            case "Badminton":
+                                badmintonList.add(event);
+                                break;
+                            case "Ping-Pong":
+                                pingpongList.add(event);
+                                break;
+                            case "Basketball":
+                                basketballList.add(event);
+                                break;
+                            case "Bowling":
+                                bowlingList.add(event);
+                                break;
+                        }
 
 
                 }
