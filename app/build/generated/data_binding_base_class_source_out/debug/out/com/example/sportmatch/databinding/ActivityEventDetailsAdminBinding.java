@@ -29,9 +29,6 @@ public final class ActivityEventDetailsAdminBinding implements ViewBinding {
   public final BottomNavigationView bottomNavigationView;
 
   @NonNull
-  public final ImageView buttonToChat1;
-
-  @NonNull
   public final Button detailsBtnEdit;
 
   @NonNull
@@ -90,8 +87,7 @@ public final class ActivityEventDetailsAdminBinding implements ViewBinding {
 
   private ActivityEventDetailsAdminBinding(@NonNull RelativeLayout rootView,
       @NonNull ImageView backhomeA, @NonNull BottomNavigationView bottomNavigationView,
-      @NonNull ImageView buttonToChat1, @NonNull Button detailsBtnEdit,
-      @NonNull Button detailsBtnMap, @NonNull TextView detailsDate,
+      @NonNull Button detailsBtnEdit, @NonNull Button detailsBtnMap, @NonNull TextView detailsDate,
       @NonNull TextView detailsDateInput, @NonNull TextView detailsDesc,
       @NonNull TextView detailsDescInput, @NonNull TextView detailsLoc,
       @NonNull TextView detailsLocInput, @NonNull Button detailsParticipantsButton,
@@ -103,7 +99,6 @@ public final class ActivityEventDetailsAdminBinding implements ViewBinding {
     this.rootView = rootView;
     this.backhomeA = backhomeA;
     this.bottomNavigationView = bottomNavigationView;
-    this.buttonToChat1 = buttonToChat1;
     this.detailsBtnEdit = detailsBtnEdit;
     this.detailsBtnMap = detailsBtnMap;
     this.detailsDate = detailsDate;
@@ -161,12 +156,6 @@ public final class ActivityEventDetailsAdminBinding implements ViewBinding {
       id = R.id.bottomNavigationView;
       BottomNavigationView bottomNavigationView = ViewBindings.findChildViewById(rootView, id);
       if (bottomNavigationView == null) {
-        break missingId;
-      }
-
-      id = R.id.buttonToChat1;
-      ImageView buttonToChat1 = ViewBindings.findChildViewById(rootView, id);
-      if (buttonToChat1 == null) {
         break missingId;
       }
 
@@ -285,11 +274,10 @@ public final class ActivityEventDetailsAdminBinding implements ViewBinding {
       }
 
       return new ActivityEventDetailsAdminBinding((RelativeLayout) rootView, backhomeA,
-          bottomNavigationView, buttonToChat1, detailsBtnEdit, detailsBtnMap, detailsDate,
-          detailsDateInput, detailsDesc, detailsDescInput, detailsLoc, detailsLocInput,
-          detailsParticipantsButton, detailsPlayers, detailsPlayersInput, detailsSport,
-          detailsSportInput, detailsTime, detailsTimeInput, detailsTitle, seeRequestsButton,
-          sportImage, title);
+          bottomNavigationView, detailsBtnEdit, detailsBtnMap, detailsDate, detailsDateInput,
+          detailsDesc, detailsDescInput, detailsLoc, detailsLocInput, detailsParticipantsButton,
+          detailsPlayers, detailsPlayersInput, detailsSport, detailsSportInput, detailsTime,
+          detailsTimeInput, detailsTitle, seeRequestsButton, sportImage, title);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
