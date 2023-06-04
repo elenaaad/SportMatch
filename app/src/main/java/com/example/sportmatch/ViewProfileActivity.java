@@ -55,9 +55,9 @@ public class ViewProfileActivity extends AppCompatActivity {
                 String name = dataSnapshot.child("fullName").getValue(String.class);
                 TextView nameTextView = findViewById(R.id.fullname_field);
                 nameTextView.setText(name);
-                TextInputLayout nameTextInputLayout = findViewById(R.id.full_name_profile);
+                /*TextInputLayout nameTextInputLayout = findViewById(R.id.full_name_profile);
                 TextInputEditText nameEditText = (TextInputEditText) nameTextInputLayout.getEditText();
-                nameEditText.setText(name);
+                nameEditText.setText(name);*/
 
 
                 String email = dataSnapshot.child("username").getValue(String.class);
