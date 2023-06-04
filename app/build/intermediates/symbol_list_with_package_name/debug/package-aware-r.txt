@@ -2046,6 +2046,7 @@ color verde2
 color verde3
 color verde4
 color verde5
+color verde6
 color verdeBox
 color verdeFundal
 color white
