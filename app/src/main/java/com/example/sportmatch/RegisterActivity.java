@@ -1,9 +1,11 @@
 package com.example.sportmatch;
 
 import android.app.DatePickerDialog;
+import android.app.NotificationManager;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,23 +14,30 @@ import android.widget.DatePicker;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.Calendar;
 
 public class RegisterActivity extends AppCompatActivity {
 
+    private static final int PERMISSION_REQUEST_CODE = 123;
     TextInputLayout FullName;
     TextInputEditText FullNameInserted;
 
@@ -51,6 +60,25 @@ public class RegisterActivity extends AppCompatActivity {
 
 
     private FirebaseAuth mAuth;
+    private void saveDeviceToken(String userId, String deviceToken) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference usersRef = database.getReference("Users");
+        DatabaseReference userRef = usersRef.child(userId);
+
+        userRef.child("deviceToken").setValue(deviceToken)
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d("TAG", "Device token saved in the database");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e("TAG", "Failed to save device token in the database: " + e.getMessage());
+                    }
+                });
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -179,21 +207,57 @@ public class RegisterActivity extends AppCompatActivity {
                                 FirebaseDatabase.getInstance().getReference("Users")
                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                         .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @RequiresApi(api = Build.VERSION_CODES.O)
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 if (task.isSuccessful()) {
                                                     Toast.makeText(RegisterActivity.this, "User has been registered successfully", Toast.LENGTH_LONG).show();
-                                                    Intent intent = new Intent(RegisterActivity.this, BottomNavActivity.class);
-                                                    startActivity(intent);
-                                                    finish();
-                                                    //startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
-                                                } else {
+                                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                                                        NotificationManager notificationManager = getSystemService(NotificationManager.class);
+                                                        if (!notificationManager.isNotificationPolicyAccessGranted() || !notificationManager.areNotificationsEnabled()) {
+                                                            Intent settingsIntent;
+                                                            if (!notificationManager.isNotificationPolicyAccessGranted()) {
+                                                                settingsIntent = new Intent(android.provider.Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS);
+                                                            } else {
+                                                                settingsIntent = new Intent(android.provider.Settings.ACTION_APP_NOTIFICATION_SETTINGS);
+                                                                settingsIntent.putExtra(android.provider.Settings.EXTRA_APP_PACKAGE, getPackageName());
+                                                            }
+                                                            startActivity(settingsIntent);
+                                                            Log.d("login", "Opened notification settings");
+                                                        }
+                                                    }
+
+                                                    FirebaseUser user =mAuth.getCurrentUser();
+                                                    if (user != null) {
+                                                        // Obtain the device token
+                                                        FirebaseMessaging.getInstance().getToken()
+                                                                .addOnCompleteListener(new OnCompleteListener<String>() {
+                                                                    @Override
+                                                                    public void onComplete(@NonNull Task<String> task) {
+                                                                        if (task.isSuccessful() && task.getResult() != null) {
+                                                                            String deviceToken = task.getResult();
+
+                                                                            // Save the device token in the database under the user's node
+                                                                            saveDeviceToken(user.getUid(), deviceToken);
+
+                                                                            // Start the ViewProfileActivity
+                                                                            Intent intent = new Intent(RegisterActivity.this, ViewProfileActivity.class);
+                                                                            startActivity(intent);
+                                                                            finish();
+                                                                        } else {
+                                                                            Log.e("TAG", "Failed to obtain device token: " + task.getException());
+                                                                        }
+                                                                    }
+                                                                });
+                                                    }
+                                                    } else {
                                                     Toast.makeText(RegisterActivity.this, "User failed to register", Toast.LENGTH_LONG).show();
 
                                                     //display a failure message
                                                 }
                                             }
                                         });
+
                             }
                             else {
                                 Toast.makeText(RegisterActivity.this, "User failed to register", Toast.LENGTH_LONG).show();
