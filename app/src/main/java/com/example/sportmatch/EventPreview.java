@@ -154,7 +154,7 @@ public class EventPreview extends AppCompatActivity {
                 registeredPlayers.add(FirebaseAuth.getInstance().getCurrentUser().getUid());
 
 
-                Event event = new Event(valTitle, valueSport, valuePlayers, valueLoc, valueDate, valueTime, valueDesc,FirebaseAuth.getInstance().getCurrentUser().getUid(), registeredPlayers, chatId);
+                Event event = new Event(valTitle, valueSport, valuePlayers, valueLoc, valueDate, valueTime, valueDate,FirebaseAuth.getInstance().getCurrentUser().getUid(), registeredPlayers);
                 event.setUid(eventId);
 
                 // Adaugă evenimentul la tabelul "events" folosind cheia unică generată

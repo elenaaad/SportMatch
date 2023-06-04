@@ -2,7 +2,12 @@ package com.example.sportmatch;
 
 import static android.content.ContentValues.TAG;
 
+import static com.example.sportmatch.FCMSend.pushNotification;
+
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -27,10 +32,15 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class EventDetailsActivity extends AppCompatActivity {
 
     public static final int REQUEST_CODE_MAPS_ACTIVITY = 1001;
+    private static final String CHANNEL_ID = "event_request_channel";
+    private static final String CHANNEL_NAME = "Event Request Channel";
+    private static final String CHANNEL_DESC = "Event Request Channel";
+
     TextView title;
     ImageView sportImage;
     TextView detailsTitle;
@@ -51,7 +61,54 @@ public class EventDetailsActivity extends AppCompatActivity {
     private FirebaseDatabase database;
     Event mEvent;
     ImageView backhomeF;
+    private void sendNotificationToAdmin(String adminId, String eventTitle) {
+        // Create a notification channel (required for Android 8.0 and above)
+        createNotificationChannel();
 
+        // Build the notification
+
+        NotificationManager notificationManager = getSystemService(NotificationManager.class);
+        if (notificationManager != null && notificationManager.isNotificationPolicyAccessGranted()) {
+
+            DatabaseReference adminRef = database.getReference("Users").child(adminId).child("deviceToken");
+            adminRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        String adminNotificationToken = dataSnapshot.getValue(String.class);
+
+
+                        // Send the notification to the admin's device using the obtained token
+                        if (adminNotificationToken!=null)
+                            pushNotification( getApplicationContext(),adminNotificationToken, eventTitle, "New participation request");
+
+
+                    } else {
+                        Log.d(TAG, "Admin's device token not found in the database");
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    // Handle the error
+                    Log.d(TAG, "Error retrieving admin's device token from the database: " + databaseError.getMessage());
+                }
+            });
+        } else {
+            Log.d(TAG, "Cannot send notification to admin: notification policy access not granted");
+        }
+    }
+
+
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, CHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT);
+            channel.setDescription(CHANNEL_DESC);
+
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -147,7 +204,7 @@ public class EventDetailsActivity extends AppCompatActivity {
         boolean isRequestSent = false;
         boolean isParticipant = false;
         // Check if the user is in the requests list or participants list
-        if (mEvent.getRequests() != null && mEvent.getRequests().contains(userId)) {
+        if (userId!=null && mEvent.getRequests() != null && mEvent.getRequests().contains(userId)) {
             isRequestSent = true;
         } else {
             isRequestSent = false;
@@ -190,7 +247,18 @@ public class EventDetailsActivity extends AppCompatActivity {
 
                         if (dataSnapshot.exists()) {
                             // If "requests" field already exists, retrieve its current value
-                            requestsList.addAll((List<String>) dataSnapshot.getValue());
+                            Object value = dataSnapshot.getValue();
+                            if (value instanceof List) {
+                                // If the value is a List, cast it and assign to requestsList
+                                requestsList.addAll((List<String>) value);
+                            } else if (value instanceof Map) {
+                                // If the value is a Map, iterate over its values and add to requestsList
+                                for (Object item : ((Map<?, ?>) value).values()) {
+                                    if (item instanceof String) {
+                                        requestsList.add((String) item);
+                                    }
+                                }
+                            }
                         }
 
                         // Add the new request to the list
@@ -215,6 +283,7 @@ public class EventDetailsActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(Void aVoid) {
                             // Request saved successfully
+                            sendNotificationToAdmin(mEvent.getCreator(), mEvent.getEventName());
 
                             Toast.makeText(getApplicationContext(), "Request sent", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), BottomNavActivity.class));

@@ -10,12 +10,18 @@ array com_google_android_gms_fonts_certs
 array com_google_android_gms_fonts_certs_dev
 array com_google_android_gms_fonts_certs_prod
 array preloaded_fonts
+color beige
 color black
+color brown_border
+color dark_brown
 color grey
+color light_brown
 color orange
 color purple_200
 color purple_500
 color purple_700
+color send_button_border_beige
+color send_button_brown
 color teal_200
 color teal_700
 color verde1
@@ -40,6 +46,7 @@ drawable baseline_add_photo_alternate_24
 drawable baseline_home_24
 drawable baseline_manage_accounts_24
 drawable baseline_person_outline_24
+drawable baseline_send_24
 drawable baseline_sports_kabaddi_24
 drawable baseline_sports_martial_arts_24
 drawable basket
@@ -91,6 +98,7 @@ drawable pingpong
 drawable pingpong1
 drawable pingpong2
 drawable pingpong3
+drawable rounded_edittext
 drawable roz
 drawable sports
 drawable tennis
@@ -162,7 +170,6 @@ id button_savechanges
 id button_second
 id cardEvent
 id category_title
-id deleteButton
 id desc
 id detailsBtnEdit
 id detailsBtnMap
@@ -215,10 +222,12 @@ id eventIcon
 id eventParticipants
 id eventTime
 id eventTitle
+id eventTitleInChat
 id fab
 id full_name_editprofile
 id full_name_profile
 id fullname_field
+id greenBackground
 id hometext
 id imageView
 id item_image
@@ -226,7 +235,6 @@ id item_recycler
 id l1Message
 id llbio_profile
 id llemail_profile
-id llfull_name_profile
 id llpayment
 id logoMain
 id main_recycler
@@ -295,7 +303,9 @@ id textview_second
 id title
 id titleP
 id toolbar
-id tvTitle
+id tvMessage
+id tvMessageTime
+id tvUsername
 id txtUsername
 id txttite
 layout activity_admin_events
