@@ -28,16 +28,16 @@
         "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-51:\\layout\\activity_requests.xml"
     },
     {
-        "merged": "com.example.sportmatch.app-mergeDebugResources-48:/layout/activity_event_details_participant.xml",
-        "source": "com.example.sportmatch.app-main-51:/layout/activity_event_details_participant.xml"
-    },
-    {
         "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-mergeDebugResources-48:\\layout\\activity_eventpreview.xml",
         "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-51:\\layout\\activity_eventpreview.xml"
     },
     {
         "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-mergeDebugResources-48:\\layout\\activity_request_item.xml",
         "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-51:\\layout\\activity_request_item.xml"
+    },
+    {
+        "merged": "com.example.sportmatch.app-mergeDebugResources-48:/layout/activity_bottom_nav.xml",
+        "source": "com.example.sportmatch.app-main-51:/layout/activity_bottom_nav.xml"
     },
     {
         "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-mergeDebugResources-48:\\layout\\content_choose_avatar.xml",
@@ -76,12 +76,12 @@
         "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-51:\\layout\\activity_login.xml"
     },
     {
-        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-mergeDebugResources-48:\\layout\\activity_part_item.xml",
-        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-51:\\layout\\activity_part_item.xml"
-    },
-    {
         "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-mergeDebugResources-48:\\layout\\activity_bottom_nav.xml",
         "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-51:\\layout\\activity_bottom_nav.xml"
+    },
+    {
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-mergeDebugResources-48:\\layout\\activity_part_item.xml",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-51:\\layout\\activity_part_item.xml"
     },
     {
         "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-mergeDebugResources-48:\\layout\\activity_event_details_feed.xml",

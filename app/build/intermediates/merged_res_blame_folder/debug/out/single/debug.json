@@ -236,12 +236,12 @@
         "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-51:\\anim\\slide_in_right.xml"
     },
     {
-        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-49:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-51:\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
         "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-49:\\layout_activity_event_details_admin.xml.flat",
         "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-51:\\layout\\activity_event_details_admin.xml"
+    },
+    {
+        "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-49:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-51:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
         "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-49:\\drawable_baseline_sports_kabaddi_24.xml.flat",
@@ -406,10 +406,6 @@
     {
         "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-49:\\drawable_map_inactive.png.flat",
         "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-51:\\drawable\\map_inactive.png"
-    },
-    {
-        "merged": "com.example.sportmatch.app-merged_res-49:/layout_activity_event_details_participant.xml.flat",
-        "source": "com.example.sportmatch.app-main-51:/layout/activity_event_details_participant.xml"
     },
     {
         "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-49:\\drawable_basket2.jpg.flat",
@@ -586,5 +582,9 @@
     {
         "merged": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-merged_res-49:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\tabma\\.gradle\\daemon\\7.5\\com.example.sportmatch.app-main-51:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "com.example.sportmatch.app-merged_res-49:/layout_activity_bottom_nav.xml.flat",
+        "source": "com.example.sportmatch.app-main-51:/layout/activity_bottom_nav.xml"
     }
 ]
