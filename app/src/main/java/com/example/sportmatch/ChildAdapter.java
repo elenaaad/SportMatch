@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
@@ -22,16 +21,12 @@ import com.google.firebase.auth.FirebaseUser;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import java.util.Locale;
 import java.util.Random;
 public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHolder> {
 
     ArrayList<Event> eventList;
     Context context;
-    static int cardColor;
+
     private ChildAdapter.OnChatClickListener onChatClickListener;
     public interface OnChatClickListener {
         void onChatClick(String eventId);
@@ -189,7 +184,6 @@ public class ChildAdapter extends RecyclerView.Adapter<ChildAdapter.ChildViewHol
             nbrParticipants=itemView.findViewById(R.id.eventParticipants);
             cardView = itemView.findViewById(R.id.cardEvent);
             eventChat = itemView.findViewById(R.id.buttonToChat);
-
         }
     }
 }

@@ -77,8 +77,15 @@
             android:name=".EventDetailsAdminActivity"
             android:exported="false" />
         <activity
+            android:name=".EventdetailsParticipantActivity"
+            android:exported="false" />
+        <activity
             android:name=".EventPreview"
             android:exported="false" />
+        <activity
+            android:name=".ParticipantActivity"
+            android:exported="false"
+            android:theme="@style/DialogActivityTheme"/>
         <activity
             android:name=".OtherProfileActivity"
             android:exported="false" />
@@ -87,14 +94,6 @@
             android:exported="false"
             android:theme="@style/DialogActivityTheme" />
 
-        <!--
-<activity
-            android:name=".RequestAdapter"
-            android:exported="false" />
-        -->
-        <activity
-            android:name=".EventdetailsParticipantActivity"
-            android:exported="false" />
         <activity
             android:name=".EditEventDetails"
             android:exported="false" />

@@ -42,7 +42,6 @@ public class BottomNavActivity extends AppCompatActivity {
     DatabaseReference databaseReference;
     ValueEventListener eventListener;
 
-
     ParentAdapterBottom parentAdapter;
     ArrayList<AllCategory> allCategoryList;
     ArrayList<Event> expiredEvents;

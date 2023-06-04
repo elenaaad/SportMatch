@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -22,7 +23,7 @@ import java.lang.String;
 
 public final class ActivityViewProfileBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
   public final TextInputLayout ageProfile;
@@ -75,7 +76,7 @@ public final class ActivityViewProfileBinding implements ViewBinding {
   @NonNull
   public final RelativeLayout relativeLayout1;
 
-  private ActivityViewProfileBinding(@NonNull RelativeLayout rootView,
+  private ActivityViewProfileBinding(@NonNull ScrollView rootView,
       @NonNull TextInputLayout ageProfile, @NonNull TextInputLayout bioProfile,
       @NonNull BottomNavigationView bottomNavigationView, @NonNull Button buttonEditprofile,
       @NonNull Button buttonLogout, @NonNull TextInputLayout emailProfile,
@@ -107,7 +108,7 @@ public final class ActivityViewProfileBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -234,7 +235,7 @@ public final class ActivityViewProfileBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityViewProfileBinding((RelativeLayout) rootView, ageProfile, bioProfile,
+      return new ActivityViewProfileBinding((ScrollView) rootView, ageProfile, bioProfile,
           bottomNavigationView, buttonEditprofile, buttonLogout, emailProfile, fullNameProfile,
           fullnameField, llbioProfile, llemailProfile, llfullNameProfile, llpayment, paymentDesc,
           paymentLabel, profileImage, relativeLayout, relativeLayout1);
