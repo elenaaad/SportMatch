@@ -29,9 +29,6 @@ public final class ActivityEventDetailsParticipantBinding implements ViewBinding
   public final BottomNavigationView bottomNavigationView;
 
   @NonNull
-  public final ImageView buttonToChatP;
-
-  @NonNull
   public final Button detailsBtnMapP;
 
   @NonNull
@@ -84,19 +81,17 @@ public final class ActivityEventDetailsParticipantBinding implements ViewBinding
 
   private ActivityEventDetailsParticipantBinding(@NonNull RelativeLayout rootView,
       @NonNull ImageView backhomeP, @NonNull BottomNavigationView bottomNavigationView,
-      @NonNull ImageView buttonToChatP, @NonNull Button detailsBtnMapP,
-      @NonNull TextView detailsDateInputP, @NonNull TextView detailsDateP,
-      @NonNull TextView detailsDescInputP, @NonNull TextView detailsDescP,
-      @NonNull TextView detailsLocInputP, @NonNull TextView detailsLocP,
-      @NonNull Button detailsParticipantsButtonP, @NonNull TextView detailsPlayersInputP,
-      @NonNull TextView detailsPlayersP, @NonNull TextView detailsSportInputP,
-      @NonNull TextView detailsSportP, @NonNull TextView detailsTimeInputP,
-      @NonNull TextView detailsTimeP, @NonNull TextView detailsTitleP,
-      @NonNull ImageView sportImageP, @NonNull TextView titleP) {
+      @NonNull Button detailsBtnMapP, @NonNull TextView detailsDateInputP,
+      @NonNull TextView detailsDateP, @NonNull TextView detailsDescInputP,
+      @NonNull TextView detailsDescP, @NonNull TextView detailsLocInputP,
+      @NonNull TextView detailsLocP, @NonNull Button detailsParticipantsButtonP,
+      @NonNull TextView detailsPlayersInputP, @NonNull TextView detailsPlayersP,
+      @NonNull TextView detailsSportInputP, @NonNull TextView detailsSportP,
+      @NonNull TextView detailsTimeInputP, @NonNull TextView detailsTimeP,
+      @NonNull TextView detailsTitleP, @NonNull ImageView sportImageP, @NonNull TextView titleP) {
     this.rootView = rootView;
     this.backhomeP = backhomeP;
     this.bottomNavigationView = bottomNavigationView;
-    this.buttonToChatP = buttonToChatP;
     this.detailsBtnMapP = detailsBtnMapP;
     this.detailsDateInputP = detailsDateInputP;
     this.detailsDateP = detailsDateP;
@@ -152,12 +147,6 @@ public final class ActivityEventDetailsParticipantBinding implements ViewBinding
       id = R.id.bottomNavigationView;
       BottomNavigationView bottomNavigationView = ViewBindings.findChildViewById(rootView, id);
       if (bottomNavigationView == null) {
-        break missingId;
-      }
-
-      id = R.id.buttonToChatP;
-      ImageView buttonToChatP = ViewBindings.findChildViewById(rootView, id);
-      if (buttonToChatP == null) {
         break missingId;
       }
 
@@ -264,10 +253,10 @@ public final class ActivityEventDetailsParticipantBinding implements ViewBinding
       }
 
       return new ActivityEventDetailsParticipantBinding((RelativeLayout) rootView, backhomeP,
-          bottomNavigationView, buttonToChatP, detailsBtnMapP, detailsDateInputP, detailsDateP,
-          detailsDescInputP, detailsDescP, detailsLocInputP, detailsLocP,
-          detailsParticipantsButtonP, detailsPlayersInputP, detailsPlayersP, detailsSportInputP,
-          detailsSportP, detailsTimeInputP, detailsTimeP, detailsTitleP, sportImageP, titleP);
+          bottomNavigationView, detailsBtnMapP, detailsDateInputP, detailsDateP, detailsDescInputP,
+          detailsDescP, detailsLocInputP, detailsLocP, detailsParticipantsButtonP,
+          detailsPlayersInputP, detailsPlayersP, detailsSportInputP, detailsSportP,
+          detailsTimeInputP, detailsTimeP, detailsTitleP, sportImageP, titleP);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

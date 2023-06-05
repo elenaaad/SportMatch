@@ -72,7 +72,6 @@ public class EventdetailsParticipantActivity extends AppCompatActivity {
         detailsTimeInput = findViewById(R.id.detailsTimeInputP);
         detailsDesc = findViewById(R.id.detailsDescP);
         detailsDescInput = findViewById(R.id.detailsDescInputP);
-        buttonToChatP = findViewById(R.id.buttonToChatP);
         backhomeP = findViewById(R.id.backhomeP);
 
         Button popupButton = findViewById(R.id.detailsParticipantsButtonP);

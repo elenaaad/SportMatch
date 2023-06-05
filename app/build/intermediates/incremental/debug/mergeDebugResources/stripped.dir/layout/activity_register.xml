@@ -5,7 +5,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< Updated upstream
     android:background="@color/verdeFundal"
+=======
+    android:background="@drawable/fundalverdeinchis"
+>>>>>>> Stashed changes
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -13,6 +17,7 @@
     <androidx.cardview.widget.CardView
 
         android:layout_width="300dp"
+<<<<<<< Updated upstream
         android:layout_height="586dp"
         android:layout_gravity="center"
         android:layout_marginLeft="50dp"
@@ -20,6 +25,14 @@
         android:layout_marginRight="50dp"
         android:layout_marginBottom="100dp"
         android:background="#ffff"
+=======
+        android:layout_height="800dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="0dp"
+        android:background="#BCF8BA"
+>>>>>>> Stashed changes
         card_view:cardCornerRadius="8dp"
         card_view:cardElevation="8dp">
 
@@ -42,8 +55,16 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="10dp"
                     android:text="Register"
+<<<<<<< Updated upstream
                     android:textAlignment="center"
                     android:textSize="36sp" />
+=======
+                    android:fontFamily="@font/fontsport"
+                    android:textAlignment="center"
+                    android:textColor="@color/grey"
+                    android:textSize="45sp" />
+
+>>>>>>> Stashed changes
 
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -52,7 +73,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/Register"
+<<<<<<< Updated upstream
                     android:layout_marginTop="30dp"
+=======
+                    android:layout_marginTop="20dp"
+>>>>>>> Stashed changes
                     android:hint="Full Name">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -69,7 +94,11 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/FullName"
                     android:layout_marginTop="30dp"
+<<<<<<< Updated upstream
                     android:hint="Username">
+=======
+                    android:hint="Email">
+>>>>>>> Stashed changes
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/UsernameInserted"
@@ -90,7 +119,12 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/PasswordInserted"
                         android:layout_width="match_parent"
+<<<<<<< Updated upstream
                         android:layout_height="60dp" />
+=======
+                        android:layout_height="60dp"
+                        android:inputType="textPassword"/>
+>>>>>>> Stashed changes
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -106,7 +140,12 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/PasswordConfirmed"
                         android:layout_width="match_parent"
+<<<<<<< Updated upstream
                         android:layout_height="60dp" />
+=======
+                        android:layout_height="60dp"
+                        android:inputType="textPassword"/>
+>>>>>>> Stashed changes
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -116,12 +155,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/ConfirmPassword"
+<<<<<<< Updated upstream
+=======
+                    android:onClick="showDatePickerDialog"
+>>>>>>> Stashed changes
                     android:layout_marginTop="30dp"
                     android:hint="BirthDate">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/BirthDateInserted"
                         android:layout_width="match_parent"
+<<<<<<< Updated upstream
                         android:layout_height="60dp"
                         android:onClick="showDatePickerDialog"/>
 
@@ -139,15 +183,39 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/GenderInserted"
                         android:layout_width="match_parent"
+=======
+>>>>>>> Stashed changes
                         android:layout_height="60dp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+<<<<<<< Updated upstream
+=======
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:id="@+id/Gender"-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/BirthDate"-->
+<!--                    android:layout_marginTop="30dp"-->
+<!--                    app:errorEnabled="true"-->
+<!--                    android:hint="Gender">-->
+
+<!--                    <AutoCompleteTextView-->
+<!--                        android:id="@+id/GenderInserted"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="60dp"-->
+<!--                        android:inputType="none"/>-->
+
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
+>>>>>>> Stashed changes
 
                 <Button
                     android:id="@+id/signupButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+<<<<<<< Updated upstream
                     android:layout_below="@+id/Gender"
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="30dp"
@@ -156,10 +224,22 @@
                     android:textSize="22sp" />
 
 
+=======
+                    android:layout_below="@+id/BirthDate"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:backgroundTint="@color/grey"
+                    android:text="REGISTER"
+                    android:textSize="22sp" />
+
+>>>>>>> Stashed changes
             </RelativeLayout>
         </ScrollView>
 
     </androidx.cardview.widget.CardView>
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 </RelativeLayout>
