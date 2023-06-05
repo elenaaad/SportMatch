@@ -31,7 +31,6 @@ public class AdminEventsActivity extends AppCompatActivity {
     DatabaseReference databaseReference;
     ValueEventListener eventListener;
 
-
     ParentAdapter parentAdapter;
     ArrayList<AllCategory> allCategoryList;
     ArrayList<Event> volleyballList;

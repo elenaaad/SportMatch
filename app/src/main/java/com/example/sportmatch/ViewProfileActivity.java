@@ -220,7 +220,4 @@ public class ViewProfileActivity extends AppCompatActivity {
     }
 
 
-
-
-
 }

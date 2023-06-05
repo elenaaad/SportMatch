@@ -2046,7 +2046,6 @@ color verde2
 color verde3
 color verde4
 color verde5
-color verde6
 color verdeBox
 color verdeFundal
 color white
@@ -3195,8 +3194,6 @@ id buttonCEvent
 id buttonEEvent
 id buttonPanel
 id buttonToChat
-id buttonToChat1
-id buttonToChatP
 id button_editprofile
 id button_first
 id button_login
