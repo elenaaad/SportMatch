@@ -148,8 +148,6 @@ public class CreateEventActivity extends AppCompatActivity {
 
 
         //Setare liste autocomplete
-
-        //TODO: Schimba input locatie, players inapoi la hint daca schimb sportul selectat
         autocomplete_sport.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

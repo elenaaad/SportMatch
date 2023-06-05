@@ -43,11 +43,11 @@
         android:layout_alignParentEnd="true"
         android:layout_marginStart="94dp"
         android:layout_marginEnd="93dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:text="Admin Events"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="34sp" />
+        android:textSize="24sp" />
 
 
 </RelativeLayout>

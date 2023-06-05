@@ -2848,6 +2848,10 @@ drawable badminton
 drawable badminton1
 drawable badminton2
 drawable badminton3
+drawable baiat1
+drawable baiat2
+drawable baiat3
+drawable baiat4
 drawable baseline_add_24
 drawable baseline_add_photo_alternate_24
 drawable baseline_home_24
@@ -2899,6 +2903,7 @@ drawable common_google_signin_btn_text_light
 drawable common_google_signin_btn_text_light_focused
 drawable common_google_signin_btn_text_light_normal
 drawable common_google_signin_btn_text_light_normal_background
+drawable default_pfp
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -2906,6 +2911,11 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable editprofile
 drawable eventicon
+drawable fata1
+drawable fata2
+drawable fata3
+drawable fata4
+drawable fata5
 drawable feed
 drawable feed_backg
 drawable football
@@ -2913,6 +2923,8 @@ drawable football1
 drawable football2
 drawable football3
 drawable footballplayers
+drawable fundalcolorat
+drawable fundalverdeinchis
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable gradien
@@ -3041,6 +3053,8 @@ drawable volleyball3
 drawable whitebackground
 drawable xicon
 font akronim
+font fontsport
+font fonturi
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -3052,8 +3066,7 @@ id FUNCTION
 id FirstFragment
 id FullName
 id FullNameInserted
-id Gender
-id GenderInserted
+id Login
 id META
 id NO_DEBUG
 id Or
@@ -3863,7 +3876,6 @@ layout abc_tooltip
 layout activity_admin_events
 layout activity_bottom_nav
 layout activity_chat
-layout activity_choose_avatar
 layout activity_create_new_profile
 layout activity_editevent
 layout activity_editprofile
