@@ -13,12 +13,11 @@
     <androidx.cardview.widget.CardView
 
         android:layout_width="300dp"
-        android:layout_height="586dp"
+        android:layout_height="800dp"
         android:layout_gravity="center"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="80dp"
         android:layout_marginRight="50dp"
-        android:layout_marginBottom="80dp"
+        android:layout_marginBottom="0dp"
         android:background="#BCF8BA"
         card_view:cardCornerRadius="8dp"
         card_view:cardElevation="8dp">
@@ -45,28 +44,8 @@
                     android:fontFamily="@font/fontsport"
                     android:textAlignment="center"
                     android:textColor="@color/grey"
-                    android:textSize="56sp" />
+                    android:textSize="45sp" />
 
-<!--                chat gpt astea 2-->
-                <ImageView
-                    android:id="@+id/profilePicture"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_below="@id/Register"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="30dp"
-                    android:src="@drawable/default_pfp" />
-
-                <Button
-                    android:id="@+id/choosePictureButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/profilePicture"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="30dp"
-                    android:layout_marginBottom="20dp"
-                    android:backgroundTint="@color/grey"
-                    android:text="Choose Profile Picture" />
 
 
                 <com.google.android.material.textfield.TextInputLayout
@@ -74,7 +53,7 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/choosePictureButton"
+                    android:layout_below="@id/Register"
                     android:layout_marginTop="20dp"
                     android:hint="Full Name">
 
@@ -92,7 +71,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/FullName"
                     android:layout_marginTop="30dp"
-                    android:hint="Username">
+                    android:hint="Email">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/UsernameInserted"
@@ -113,7 +92,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/PasswordInserted"
                         android:layout_width="match_parent"
-                        android:layout_height="60dp" />
+                        android:layout_height="60dp"
+                        android:inputType="textPassword"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,7 +109,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/PasswordConfirmed"
                         android:layout_width="match_parent"
-                        android:layout_height="60dp" />
+                        android:layout_height="60dp"
+                        android:inputType="textPassword"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -139,8 +120,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/ConfirmPassword"
-                    android:layout_marginTop="30dp"
                     android:onClick="showDatePickerDialog"
+                    android:layout_marginTop="30dp"
                     android:hint="BirthDate">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -150,35 +131,30 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/Gender"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/BirthDate"
-                    android:layout_marginTop="30dp"
-                    android:hint="Gender">
+<!--                <com.google.android.material.textfield.TextInputLayout-->
+<!--                    android:id="@+id/Gender"-->
+<!--                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_below="@id/BirthDate"-->
+<!--                    android:layout_marginTop="30dp"-->
+<!--                    app:errorEnabled="true"-->
+<!--                    android:hint="Gender">-->
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/GenderInserted"
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp" />
-
-<!--                    <Spinner-->
-<!--                        android:id="@+id/genderSpinner"-->
+<!--                    <AutoCompleteTextView-->
+<!--                        android:id="@+id/GenderInserted"-->
 <!--                        android:layout_width="match_parent"-->
-<!--                        android:layout_below="@id/Gender"-->
-<!--                        android:layout_marginTop="30dp"-->
 <!--                        android:layout_height="60dp"-->
-<!--                        android:hint="GenderS"/>-->
+<!--                        android:inputType="none"/>-->
 
-                </com.google.android.material.textfield.TextInputLayout>
+
+<!--                </com.google.android.material.textfield.TextInputLayout>-->
 
                 <Button
                     android:id="@+id/signupButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/Gender"
+                    android:layout_below="@+id/BirthDate"
                     android:layout_marginTop="30dp"
                     android:layout_marginBottom="30dp"
                     android:backgroundTint="@color/grey"
@@ -189,6 +165,5 @@
         </ScrollView>
 
     </androidx.cardview.widget.CardView>
-
 
 </RelativeLayout>

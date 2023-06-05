@@ -2815,6 +2815,10 @@ drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
 drawable badminton
+drawable baiat1
+drawable baiat2
+drawable baiat3
+drawable baiat4
 drawable baseline_add_24
 drawable baseline_home_24
 drawable baseline_manage_accounts_24
@@ -2860,6 +2864,11 @@ drawable design_password_eye
 drawable design_snackbar_background
 drawable editprofile
 drawable eventicon
+drawable fata1
+drawable fata2
+drawable fata3
+drawable fata4
+drawable fata5
 drawable football
 drawable fundalcolorat
 drawable fundalverdeinchis
@@ -2988,8 +2997,7 @@ id FUNCTION
 id FirstFragment
 id FullName
 id FullNameInserted
-id Gender
-id GenderInserted
+id Login
 id META
 id NO_DEBUG
 id Password
@@ -3145,7 +3153,6 @@ id chain2
 id chains
 id checkbox
 id checked
-id choosePictureButton
 id chronometer
 id circle_center
 id clear_text
@@ -3467,7 +3474,6 @@ id previewSportInput
 id previewTime
 id previewTimeInput
 id previewTitle
-id profilePicture
 id profile_image
 id progress_circular
 id progress_horizontal

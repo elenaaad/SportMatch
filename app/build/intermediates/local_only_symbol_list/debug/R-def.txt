@@ -26,6 +26,10 @@ color white
 dimen fab_margin
 dimen navigation_bar_margin_bottom
 drawable badminton
+drawable baiat1
+drawable baiat2
+drawable baiat3
+drawable baiat4
 drawable baseline_add_24
 drawable baseline_home_24
 drawable baseline_manage_accounts_24
@@ -39,6 +43,11 @@ drawable bowlingposter
 drawable default_pfp
 drawable editprofile
 drawable eventicon
+drawable fata1
+drawable fata2
+drawable fata3
+drawable fata4
+drawable fata5
 drawable football
 drawable fundalcolorat
 drawable fundalverdeinchis
@@ -74,8 +83,7 @@ id ConfirmPassword
 id FirstFragment
 id FullName
 id FullNameInserted
-id Gender
-id GenderInserted
+id Login
 id Password
 id PasswordConfirmed
 id PasswordInserted
@@ -115,7 +123,6 @@ id button_savechanges
 id button_second
 id cardEvent
 id category_title
-id choosePictureButton
 id deleteButton
 id detailsBtnEdit
 id detailsBtnMap
@@ -205,7 +212,6 @@ id previewSportInput
 id previewTime
 id previewTimeInput
 id previewTitle
-id profilePicture
 id profile_image
 id recyclerView
 id relativeLayout

@@ -11,6 +11,8 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.Toast;
@@ -29,7 +31,10 @@ import com.google.firebase.ktx.Firebase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -49,9 +54,13 @@ public class RegisterActivity extends AppCompatActivity {
     TextInputEditText BirthDateInserted;
 
     TextInputLayout Gender;
-    TextInputEditText GenderInserted;
+    AutoCompleteTextView GenderInserted;
 
     DatePickerDialog.OnDateSetListener setListener;
+
+    //String[] genders = {"Female", "Male"};
+    //ArrayAdapter<String> adapterGender;
+
 
 
     private FirebaseAuth mAuth;
@@ -80,8 +89,11 @@ public class RegisterActivity extends AppCompatActivity {
         PasswordConfirmed =  findViewById(R.id.PasswordConfirmed);
         BirthDate =  findViewById(R.id.BirthDate);
         BirthDateInserted =  findViewById(R.id.BirthDateInserted);
-        Gender =  findViewById(R.id.Gender);
-        GenderInserted =  findViewById(R.id.GenderInserted);
+        //Gender =  findViewById(R.id.Gender);
+        //GenderInserted =  findViewById(R.id.GenderInserted);
+
+        //ArrayAdapter<String> adapterGender = new ArrayAdapter<String>(this, R.layout.list_sport, genders);
+        //GenderInserted.setAdapter(adapterGender);
 
         Calendar calendar = Calendar.getInstance();
         final int year = calendar.get(Calendar.YEAR);
@@ -97,20 +109,14 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
-        Button chooseProfilePictureButton = findViewById(R.id.choosePictureButton);
-        chooseProfilePictureButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_PICK);
-                intent.setType("image/*");
-                startActivityForResult(intent, PICK_IMAGE_REQUEST);
-            }
-        });
         setListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 month=month+1;
-                String date = dayOfMonth + "/" + month + "/" + year;
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                String date = String.format("%02d/%02d/%d", day, month, year);
+
+
                 BirthDateInserted.setText(date);
             }
         };
@@ -119,32 +125,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
-    //chat gpt partea cu image
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
 
-        if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
-            Uri imageUri = data.getData();
-
-            // Upload image to Firebase Storage
-            StorageReference storageRef = FirebaseStorage.getInstance().getReference();
-            StorageReference imageRef = storageRef.child("profilePictures/" + imageUri.getLastPathSegment());
-            imageRef.putFile(imageUri)
-                    .addOnSuccessListener(taskSnapshot -> {
-                        // Image uploaded successfully
-                        // Get the download URL of the uploaded image
-                        imageRef.getDownloadUrl().addOnSuccessListener(uri -> {
-                            String imageUrl = uri.toString();
-                            // Save the image URL to Firebase Realtime Database or Firestore as the user's profile picture
-                            // Update the user's profile picture in your user data structure
-                        });
-                    })
-                    .addOnFailureListener(exception -> {
-                        // Handle any errors that occurred during the image upload
-                    });
-        }
-    }
         //check if the username is already in use - copiat de pe stackoverflow
         //https://stackoverflow.com/questions/61523624/android-firebase-database-check-if-username-is-already-use
 
@@ -175,6 +156,7 @@ public class RegisterActivity extends AppCompatActivity {
         String txtPassword = PasswordInserted.getText().toString().trim();
         String txtPasswordConfirmed = PasswordConfirmed.getText().toString().trim();
         String txtBirthDate = BirthDateInserted.getText().toString().trim();
+        //String txtGender = GenderInserted.getText().toString().trim();
 
 
         if(txtUserName.isEmpty() ){
@@ -193,6 +175,10 @@ public class RegisterActivity extends AppCompatActivity {
             BirthDateInserted.setError("Please enter all the fields");
             UsernameInserted.requestFocus();
         }
+//        else if(txtGender.isEmpty()){
+//            GenderInserted.setError("Please enter all the fields");
+//            UsernameInserted.requestFocus();
+//        }
         else if(txtFullName.isEmpty()) {
             FullNameInserted.setError("Please enter all the fields");
             UsernameInserted.requestFocus();
@@ -223,7 +209,7 @@ public class RegisterActivity extends AppCompatActivity {
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 if (task.isSuccessful()) {
                                                     Toast.makeText(RegisterActivity.this, "User has been registered successfully", Toast.LENGTH_LONG).show();
-                                                    Intent intent = new Intent(RegisterActivity.this, BottomNavActivity.class);
+                                                    Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                                     startActivity(intent);
                                                     finish();
                                                     //startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
