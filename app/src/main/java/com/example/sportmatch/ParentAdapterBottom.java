@@ -19,6 +19,7 @@ public class ParentAdapterBottom extends RecyclerView.Adapter<ParentAdapterBotto
 
     private ArrayList<AllCategory> allCategoryList;
     private Context context;
+
     public ParentAdapterBottom(ArrayList<AllCategory> allCategoryList, Context context) {
         this.allCategoryList = allCategoryList;
         this.context = context;

@@ -4,38 +4,42 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#8BC34A"
+    android:background="@color/verde3"
     tools:context=".EventDetailsActivity">
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
-        android:fontFamily="monospace"
         android:text="Event Details"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
         android:textSize="24sp" />
+
+    <ImageView
+        android:id="@+id/backhomeF"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="340dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/home"/>
+
 
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/greensoccer"
         android:layout_marginTop="60dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="680dp"
             android:layout_marginBottom="4dp"
-            android:background="#FFFFFF"
-            android:paddingLeft="60dp"
-            android:paddingRight="60dp">
-
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp">
 
             <ImageView
                 android:id="@+id/sportImage"
@@ -53,7 +57,7 @@
                 android:layout_below="@id/sportImage"
                 android:layout_centerHorizontal="true"
                 android:text="TITLE"
-                android:textColor="@color/verde4"
+                android:textColor="#000000"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
@@ -63,8 +67,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/detailsTitle"
                 android:layout_marginTop="30dp"
+                android:layout_marginLeft="40dp"
                 android:text="SPORT:"
-                android:textColor="@color/verde4"
+                android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -77,16 +82,18 @@
                 android:layout_marginTop="30dp"
                 android:layout_toEndOf="@+id/detailsSport"
                 android:text="Volleyball"
+                android:textColor="#000000"
                 android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/detailsPlayers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detailsSport"
-                android:layout_marginTop="30dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="234dp"
+                android:layout_marginLeft="40dp"
                 android:text="NUMBER PLAYERS:"
-                android:textColor="@color/verde4"
+                android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -96,9 +103,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/detailsSport"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="29dp"
                 android:layout_toEndOf="@+id/detailsPlayers"
                 android:text="6 Players"
+                android:textColor="#000000"
                 android:textSize="18sp" />
 
             <TextView
@@ -107,8 +115,9 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/detailsPlayers"
                 android:layout_marginTop="30dp"
+                android:layout_marginLeft="40dp"
                 android:text="LOCATION:"
-                android:textColor="@color/verde4"
+                android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -119,28 +128,31 @@
                 android:layout_below="@id/detailsPlayers"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="30dp"
+                android:textColor="#000000"
                 android:layout_toEndOf="@+id/detailsLoc"
                 android:text="Sportfield 1"
                 android:textSize="18sp" />
 
             <Button
                 android:id="@+id/detailsBtnMap"
-                android:layout_width="wrap_content"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/detailsLocInput"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="7dp"
-                android:layout_toEndOf="@+id/detailsLoc"
-                android:text="SEE MAP" />
+                android:layout_toEndOf="@+id/sportImage"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="#8BC34A"
+                android:textSize="15sp"
+                android:text="MAP" />
 
             <TextView
                 android:id="@+id/detailsDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detailsBtnMap"
-                android:layout_marginTop="7dp"
+                android:layout_below="@id/detailsLocInput"
+                android:layout_marginTop="18dp"
                 android:text="DATE:"
-                android:textColor="@color/verde4"
+                android:layout_marginLeft="40dp"
+                android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -148,11 +160,12 @@
                 android:id="@+id/detailsDateInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detailsBtnMap"
+                android:layout_below="@id/detailsLocInput"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginTop="18dp"
                 android:layout_toEndOf="@+id/detailsDate"
                 android:text="dd/mm/yyyy"
+                android:textColor="#000000"
                 android:textSize="18sp" />
 
             <TextView
@@ -162,7 +175,8 @@
                 android:layout_below="@id/detailsDate"
                 android:layout_marginTop="30dp"
                 android:text="TIME:"
-                android:textColor="@color/verde4"
+                android:layout_marginLeft="40dp"
+                android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -170,11 +184,12 @@
                 android:id="@+id/detailsTimeInput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/detailsDate"
+                android:layout_below="@id/detailsDateInput"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="30dp"
                 android:layout_toEndOf="@+id/detailsTime"
                 android:text="hh:mm"
+                android:textColor="#000000"
                 android:textSize="18sp" />
 
             <TextView
@@ -184,13 +199,15 @@
                 android:layout_below="@id/detailsTime"
                 android:layout_marginTop="30dp"
                 android:text="DESCRIPTION:"
-                android:textColor="@color/verde4"
+                android:layout_marginLeft="40dp"
+                android:textColor="#000000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/detailsDescInput"
                 android:layout_width="wrap_content"
+                android:textColor="#000000"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/detailsTime"
                 android:layout_marginStart="20dp"
@@ -198,14 +215,13 @@
                 android:layout_toEndOf="@+id/detailsDesc"
                 android:text="description"
                 android:textSize="18sp" />
-
             <Button
                 android:id="@+id/detailsBtnParticipate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/detailsDescInput"
                 android:layout_centerInParent="true"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="50dp"
                 android:layout_marginBottom="70dp"
                 android:backgroundTint="@color/verde5"
                 android:text="Participate"
