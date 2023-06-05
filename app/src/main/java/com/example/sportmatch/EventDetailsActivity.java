@@ -2,7 +2,12 @@ package com.example.sportmatch;
 
 import static android.content.ContentValues.TAG;
 
+import static com.example.sportmatch.FCMSend.pushNotification;
+
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,10 +19,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -29,10 +32,15 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class EventDetailsActivity extends AppCompatActivity {
 
     public static final int REQUEST_CODE_MAPS_ACTIVITY = 1001;
+    private static final String CHANNEL_ID = "event_request_channel";
+    private static final String CHANNEL_NAME = "Event Request Channel";
+    private static final String CHANNEL_DESC = "Event Request Channel";
+
     TextView title;
     ImageView sportImage;
     TextView detailsTitle;
@@ -52,7 +60,55 @@ public class EventDetailsActivity extends AppCompatActivity {
     Button detailsBtnParticipate;
     private FirebaseDatabase database;
     Event mEvent;
+    ImageView backhomeF;
+    private void sendNotificationToAdmin(String adminId, String eventTitle) {
+        // Create a notification channel (required for Android 8.0 and above)
+        createNotificationChannel();
 
+        // Build the notification
+
+        NotificationManager notificationManager = getSystemService(NotificationManager.class);
+        if (notificationManager != null && notificationManager.isNotificationPolicyAccessGranted()) {
+
+            DatabaseReference adminRef = database.getReference("Users").child(adminId).child("deviceToken");
+            adminRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        String adminNotificationToken = dataSnapshot.getValue(String.class);
+
+
+                        // Send the notification to the admin's device using the obtained token
+                        if (adminNotificationToken!=null)
+                            pushNotification( getApplicationContext(),adminNotificationToken, eventTitle, "New participation request");
+
+
+                    } else {
+                        Log.d(TAG, "Admin's device token not found in the database");
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+                    // Handle the error
+                    Log.d(TAG, "Error retrieving admin's device token from the database: " + databaseError.getMessage());
+                }
+            });
+        } else {
+            Log.d(TAG, "Cannot send notification to admin: notification policy access not granted");
+        }
+    }
+
+
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, CHANNEL_NAME, NotificationManager.IMPORTANCE_DEFAULT);
+            channel.setDescription(CHANNEL_DESC);
+
+            NotificationManager notificationManager = getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +135,7 @@ public class EventDetailsActivity extends AppCompatActivity {
         detailsDesc = findViewById(R.id.detailsDesc);
         detailsDescInput = findViewById(R.id.detailsDescInput);
         detailsBtnParticipate = findViewById(R.id.detailsBtnParticipate);
+        backhomeF = findViewById(R.id.backhomeF);
 
         String valTitle = getIntent().getStringExtra("valTitle");
         detailsTitle.setText(valTitle);
@@ -144,15 +201,28 @@ public class EventDetailsActivity extends AppCompatActivity {
             Log.e(TAG, "onCreate: No user is currently logged in");
         }
         // Check if the user is in the requests list or participants list
-        boolean isRequestSent = mEvent.getRequests().contains(userId);
-        boolean isParticipant = mEvent.getParticipants().contains(userId);
+        boolean isRequestSent = false;
+        boolean isParticipant = false;
+        // Check if the user is in the requests list or participants list
+        if (userId!=null && mEvent.getRequests() != null && mEvent.getRequests().contains(userId)) {
+            isRequestSent = true;
+        } else {
+            isRequestSent = false;
+        }
+
+        if (mEvent.getParticipants() != null && mEvent.getParticipants().contains(userId)) {
+            isParticipant = true;
+        } else {
+            isParticipant = false;
+        }
 
 // Show or hide the "Participate" button based on the conditions
-        if (isRequestSent || isParticipant) {
-            detailsBtnParticipate.setVisibility(View.GONE); // Hide the button
-        } else {
-            detailsBtnParticipate.setVisibility(View.VISIBLE); // Show the button
-        }
+//        if (isRequestSent || isParticipant) {
+////            detailsBtnParticipate.setVisibility(View.GONE); // Hide the button
+//        } else {
+//            detailsBtnParticipate.setVisibility(View.VISIBLE); // Show the button
+//        }
+
 
         detailsBtnParticipate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -177,7 +247,18 @@ public class EventDetailsActivity extends AppCompatActivity {
 
                         if (dataSnapshot.exists()) {
                             // If "requests" field already exists, retrieve its current value
-                            requestsList.addAll((List<String>) dataSnapshot.getValue());
+                            Object value = dataSnapshot.getValue();
+                            if (value instanceof List) {
+                                // If the value is a List, cast it and assign to requestsList
+                                requestsList.addAll((List<String>) value);
+                            } else if (value instanceof Map) {
+                                // If the value is a Map, iterate over its values and add to requestsList
+                                for (Object item : ((Map<?, ?>) value).values()) {
+                                    if (item instanceof String) {
+                                        requestsList.add((String) item);
+                                    }
+                                }
+                            }
                         }
 
                         // Add the new request to the list
@@ -202,6 +283,7 @@ public class EventDetailsActivity extends AppCompatActivity {
                         @Override
                         public void onSuccess(Void aVoid) {
                             // Request saved successfully
+                            sendNotificationToAdmin(mEvent.getCreator(), mEvent.getEventName());
 
                             Toast.makeText(getApplicationContext(), "Request sent", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(getApplicationContext(), BottomNavActivity.class));
@@ -221,6 +303,13 @@ public class EventDetailsActivity extends AppCompatActivity {
             }
         });
 
+        backhomeF.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(EventDetailsActivity.this, BottomNavActivity.class));
+            }
+        });
+
 
         ////inceput meniu
 
@@ -231,6 +320,9 @@ public class EventDetailsActivity extends AppCompatActivity {
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {
                 case R.id.bottom_home:
+                    startActivity(new Intent(getApplicationContext(), BottomNavActivity.class));
+//                    overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+                    finish();
                     return true;
                 case R.id.bottom_admin_events:
                     startActivity(new Intent(getApplicationContext(), AdminEventsActivity.class));
