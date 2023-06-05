@@ -12,12 +12,12 @@
         android:id="@+id/titleP"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
         android:text="Event Details"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="34sp" />
+        android:textSize="24sp" />
 
     <ImageView
         android:id="@+id/backhomeP"
@@ -54,14 +54,6 @@
                 android:backgroundTint="@color/verde5"
                 android:text="Players" />
 
-            <ImageView
-                android:id="@+id/buttonToChatP"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignRight="@id/sportImageP"
-                android:layout_marginEnd="-110dp"
-                android:src="@drawable/chaticon"
-                android:layout_marginTop="30dp"/>
 
             <ImageView
                 android:id="@+id/sportImageP"

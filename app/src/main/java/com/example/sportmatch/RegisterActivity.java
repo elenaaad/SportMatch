@@ -1,43 +1,43 @@
 package com.example.sportmatch;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.app.DatePickerDialog;
-import android.app.NotificationManager;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.os.Build;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.messaging.FirebaseMessaging;
+import com.google.firebase.ktx.Firebase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private static final int PERMISSION_REQUEST_CODE = 123;
     TextInputLayout FullName;
     TextInputEditText FullNameInserted;
 
@@ -54,31 +54,17 @@ public class RegisterActivity extends AppCompatActivity {
     TextInputEditText BirthDateInserted;
 
     TextInputLayout Gender;
-    TextInputEditText GenderInserted;
+    AutoCompleteTextView GenderInserted;
 
     DatePickerDialog.OnDateSetListener setListener;
 
+    //String[] genders = {"Female", "Male"};
+    //ArrayAdapter<String> adapterGender;
+
+
 
     private FirebaseAuth mAuth;
-    private void saveDeviceToken(String userId, String deviceToken) {
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference usersRef = database.getReference("Users");
-        DatabaseReference userRef = usersRef.child(userId);
-
-        userRef.child("deviceToken").setValue(deviceToken)
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Log.d("TAG", "Device token saved in the database");
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.e("TAG", "Failed to save device token in the database: " + e.getMessage());
-                    }
-                });
-    }
+    private static final int PICK_IMAGE_REQUEST = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,8 +89,11 @@ public class RegisterActivity extends AppCompatActivity {
         PasswordConfirmed =  findViewById(R.id.PasswordConfirmed);
         BirthDate =  findViewById(R.id.BirthDate);
         BirthDateInserted =  findViewById(R.id.BirthDateInserted);
-        Gender =  findViewById(R.id.Gender);
-        GenderInserted =  findViewById(R.id.GenderInserted);
+        //Gender =  findViewById(R.id.Gender);
+        //GenderInserted =  findViewById(R.id.GenderInserted);
+
+        //ArrayAdapter<String> adapterGender = new ArrayAdapter<String>(this, R.layout.list_sport, genders);
+        //GenderInserted.setAdapter(adapterGender);
 
         Calendar calendar = Calendar.getInstance();
         final int year = calendar.get(Calendar.YEAR);
@@ -119,20 +108,24 @@ public class RegisterActivity extends AppCompatActivity {
                 datePickerDialog.show();
             }
         });
-        //deci problema e ca trb sa apas pe titlul casutei sau inca o data in casuta ca sa apara datepickerul si nuj sa rezolv
 
         setListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                 month=month+1;
-                String date = dayOfMonth + "/" + month + "/" + year;
+                SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                String date = String.format("%02d/%02d/%d", day, month, year);
+
+
                 BirthDateInserted.setText(date);
             }
         };
 
-
         mAuth = FirebaseAuth.getInstance();
+
     }
+
+
         //check if the username is already in use - copiat de pe stackoverflow
         //https://stackoverflow.com/questions/61523624/android-firebase-database-check-if-username-is-already-use
 
@@ -163,6 +156,7 @@ public class RegisterActivity extends AppCompatActivity {
         String txtPassword = PasswordInserted.getText().toString().trim();
         String txtPasswordConfirmed = PasswordConfirmed.getText().toString().trim();
         String txtBirthDate = BirthDateInserted.getText().toString().trim();
+        //String txtGender = GenderInserted.getText().toString().trim();
 
 
         if(txtUserName.isEmpty() ){
@@ -181,11 +175,15 @@ public class RegisterActivity extends AppCompatActivity {
             BirthDateInserted.setError("Please enter all the fields");
             UsernameInserted.requestFocus();
         }
+//        else if(txtGender.isEmpty()){
+//            GenderInserted.setError("Please enter all the fields");
+//            UsernameInserted.requestFocus();
+//        }
         else if(txtFullName.isEmpty()) {
             FullNameInserted.setError("Please enter all the fields");
             UsernameInserted.requestFocus();
         }
-        else if(txtPassword.equals(txtPasswordConfirmed)){
+        else if(!txtPassword.equals(txtPasswordConfirmed)){
             PasswordInserted.setError("Passwords do not match");
             PasswordConfirmed.setError("Passwords do not match");
         }
@@ -207,57 +205,20 @@ public class RegisterActivity extends AppCompatActivity {
                                 FirebaseDatabase.getInstance().getReference("Users")
                                         .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
                                         .setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
-                                            @RequiresApi(api = Build.VERSION_CODES.O)
                                             @Override
                                             public void onComplete(@NonNull Task<Void> task) {
                                                 if (task.isSuccessful()) {
                                                     Toast.makeText(RegisterActivity.this, "User has been registered successfully", Toast.LENGTH_LONG).show();
-                                                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                                                        NotificationManager notificationManager = getSystemService(NotificationManager.class);
-                                                        if (!notificationManager.isNotificationPolicyAccessGranted() || !notificationManager.areNotificationsEnabled()) {
-                                                            Intent settingsIntent;
-                                                            if (!notificationManager.isNotificationPolicyAccessGranted()) {
-                                                                settingsIntent = new Intent(android.provider.Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS);
-                                                            } else {
-                                                                settingsIntent = new Intent(android.provider.Settings.ACTION_APP_NOTIFICATION_SETTINGS);
-                                                                settingsIntent.putExtra(android.provider.Settings.EXTRA_APP_PACKAGE, getPackageName());
-                                                            }
-                                                            startActivity(settingsIntent);
-                                                            Log.d("login", "Opened notification settings");
-                                                        }
-                                                    }
-
-                                                    FirebaseUser user =mAuth.getCurrentUser();
-                                                    if (user != null) {
-                                                        // Obtain the device token
-                                                        FirebaseMessaging.getInstance().getToken()
-                                                                .addOnCompleteListener(new OnCompleteListener<String>() {
-                                                                    @Override
-                                                                    public void onComplete(@NonNull Task<String> task) {
-                                                                        if (task.isSuccessful() && task.getResult() != null) {
-                                                                            String deviceToken = task.getResult();
-
-                                                                            // Save the device token in the database under the user's node
-                                                                            saveDeviceToken(user.getUid(), deviceToken);
-
-                                                                            // Start the ViewProfileActivity
-                                                                            Intent intent = new Intent(RegisterActivity.this, ViewProfileActivity.class);
-                                                                            startActivity(intent);
-                                                                            finish();
-                                                                        } else {
-                                                                            Log.e("TAG", "Failed to obtain device token: " + task.getException());
-                                                                        }
-                                                                    }
-                                                                });
-                                                    }
-                                                    } else {
+                                                    Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                                                    startActivity(intent);
+                                                    finish();
+                                                    //startActivity(new Intent(RegisterActivity.this, LoginActivity.class));
+                                                } else {
                                                     Toast.makeText(RegisterActivity.this, "User failed to register", Toast.LENGTH_LONG).show();
 
-                                                    //display a failure message
                                                 }
                                             }
                                         });
-
                             }
                             else {
                                 Toast.makeText(RegisterActivity.this, "User failed to register", Toast.LENGTH_LONG).show();
@@ -266,4 +227,6 @@ public class RegisterActivity extends AppCompatActivity {
                     });
         }
     }
+
+
 }

@@ -112,8 +112,4 @@ public class User implements Serializable {
         usersRef.child(userId).addListenerForSingleValueEvent(valueEventListener);
     }
 
-
-
-
-
 }
