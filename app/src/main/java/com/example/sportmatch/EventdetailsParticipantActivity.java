@@ -162,7 +162,7 @@ public class EventdetailsParticipantActivity extends AppCompatActivity {
         ////inceput meniu
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
-        bottomNavigationView.setSelectedItemId(R.id.bottom_admin_events);
+        bottomNavigationView.setSelectedItemId(R.id.bottom_events_participates);
 
         bottomNavigationView.setOnItemSelectedListener(item -> {
             switch (item.getItemId()) {

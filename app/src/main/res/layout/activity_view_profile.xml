@@ -20,7 +20,7 @@
             android:layout_height="100dp"
             android:layout_centerVertical="true"
             android:layout_marginStart="50dp"
-            android:src="@drawable/roz" />
+            android:src="@drawable/avatar6" />
 
         <TextView
             android:id="@+id/fullname_field"
@@ -216,7 +216,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_height="wrap_content"
                     android:layout_width="match_parent"
-                    android:text="69"
+                    android:text="20"
                     android:editable="false"
 
                     />

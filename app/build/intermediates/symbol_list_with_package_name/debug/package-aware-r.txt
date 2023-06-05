@@ -2046,6 +2046,7 @@ color verde2
 color verde3
 color verde4
 color verde5
+color verde6
 color verdeBox
 color verdeFundal
 color white
@@ -2839,6 +2840,14 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable avatar1
+drawable avatar2
+drawable avatar3
+drawable avatar4
+drawable avatar5
+drawable avatar6
+drawable avatar7
+drawable avatar8
 drawable avd_hide_password
 drawable avd_show_password
 drawable backg
