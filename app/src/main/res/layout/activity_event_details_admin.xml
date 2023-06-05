@@ -13,11 +13,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="10dp"
         android:text="Event Details"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="24sp" />
+        android:textSize="34sp" />
 
     <ImageView
         android:id="@+id/backhomeA"
@@ -63,13 +63,14 @@
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
+                android:layout_toLeftOf="@+id/sportImage"
                 android:backgroundTint="#8BC34A"
                 android:textSize="15sp"
                 android:text="EDIT" />
 
             <Button
                 android:id="@+id/detailsBtnMap"
-                android:layout_width="120dp"
+                android:layout_width="110dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
                 android:layout_marginLeft="235dp"
@@ -92,6 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/sportImage"
                 android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
                 android:text="TITLE"
                 android:textColor="#000000"
                 android:textSize="30sp"
